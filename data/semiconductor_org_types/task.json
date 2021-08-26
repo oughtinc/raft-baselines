@@ -1,0 +1,1 @@
+{"name": "semiconductor_org_types", "description": "", "data_columns": ["Paper title", "Organization name", "ID"], "label_columns": {"Label": ["company", "research institute", "university"]}}

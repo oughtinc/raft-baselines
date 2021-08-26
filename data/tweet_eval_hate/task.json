@@ -1,0 +1,1 @@
+{"name": "tweet_eval_hate", "description": "", "data_columns": ["Tweet", "ID"], "label_columns": {"Label": ["hate speech", "not hate speech"]}}

@@ -1,0 +1,1 @@
+{"name": "systematic_review_inclusion", "description": "", "data_columns": ["Title", "Abstract", "Authors", "Journal", "ID"], "label_columns": {"Label": ["included", "not included"]}}

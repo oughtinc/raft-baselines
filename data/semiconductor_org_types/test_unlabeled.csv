@@ -1,0 +1,450 @@
+Paper title,Organization name,ID
+An enhanced 130 nm generation logic technology featuring 60 nm transistors optimized for high performance and low power at 0.7 - 1.4 V,"Portland Technology Development, Hillsboro, OR, USA",50
+Monolithic integration of O-band photonic transceivers in a “zero-change” 32nm SOI CMOS,"Department of Electrical Engineering and Computer Science, University of California, Berkeley, USA",51
+"High-performance low-leakage enhancement-mode high-K dielectric GaN MOSHEMTs for energy-efficient, compact voltage regulators and RF power amplifiers for low-power mobile SoCs","Intel Corporation,Components Research,Technology and Manufacturing Group,Hillsboro,OR,USA",52
+"Implant-Free SiGe Quantum Well pFET: A novel, highly scalable and low thermal budget device, featuring raised source/drain and high-mobility channel","Dep. Material Engineering, Univ. Leuven, Leuven",53
+Mobility in high-K metal gate UTBB-FDSOI devices: From NEGF to TCAD perspectives,"STMicroelectronics, Crolles, France",54
+Fast switching and long retention Fe-O ReRAM and its switching mechanism,"Advanced Devices Development Center, Matsushita Elecrric Indusrrial Company Limited, Moriguchi, Osaka, Japan",55
+5.9 An 18.75µW dynamic-distributing-bias temperature sensor with 0.87°C(3σ) untrimmed inaccuracy and 0.00946mm2 area,"TSMC,Austin,TX,United States of America",56
+A 1-V 299/spl mu/W Flashing UWB Transceiver Based on Double Thresholding Scheme,"Center for collaborative Res.,Tokyo Univ.",57
+"High performance low temperature activated devices and optimization guidelines for 3D VLSI integration of FD, TriGate, FinFET on insulator","IMEP-LAHC,Minatec/INPG,France",58
+Quantitative assessment of mobility degradation by remote Coulomb scattering in ultra-thin oxide MOSFETs: measurements and simulations,"DIEGM, Udine, Italy",59
+A new cell-based performance metric for novel CMOS device architectures,"Philips Research, Leuven, Belgium",60
+"In-situ multi-step (IMS) CVD process of (Ba,Sr)TiO/sub 3/ using hot wall batch type reactor for DRAM capacitor dielectrics","Microelectron. Eng. Lab.,Toshiba Corp.,Yokohama,Japan",61
+A novel method for evaluating electron/hole mismatch in scaled split-gate SONOS memories,"Microcomputer Operation Unit, NECEL Corporation, Sagamihara, Kanagawa, Japan",62
+A 120mm2 16Gb 4-MLC NAND Flash Memory with 43nm CMOS Technology,"SanDisk,Yokohama,Japan",63
+High power 4H-SiC static induction transistors,"Westinghouse Science and Technology Center, Pittsburgh, PA, USA",64
+Nano-wires for room temperature operated hybrid CMOS-NANO integrated circuits,"Swiss Fed. Inst. of Technol.,Lausanne,Switzerland",65
+Clock-powered CMOS VLSI graphics processor for embedded display controller application,"Synopsys Corporation,Mountain View,CA,USA",66
+Thermally robust high quality HfN/HfO/sub 2/ gate stack for advanced CMOS devices,"Institute of Microelectronics, Singapore",67
+A 622 Mb/s fully-integrated optical IC with a wide range input,"Sony Corp.,Kanagawa,Japan",68
+Fabrication of a nonvolatile lookup-table circuit chip using magneto/semiconductor-hybrid structure for an immediate-power-up field programmable gate array,"Hitachi Advanced Research Laboratory,Tokyo,,Japan",69
+The impact of sub monolayers of HfO/sub 2/ on the device performance of high-k based transistors [MOSFETs],"Renesas, Leuven, Belgium",70
+30.5 A 0.5V BLE Transceiver with a 1.9mW RX Achieving −96.4dBm Sensitivity and 4.1dB Adjacent Channel Rejection at 1MHz Offset in 22nm FDSOI,"Sony LSI Design,Atsugi,Japan",71
+Optimization of Sub-Melt Laser Anneal: Performance and Reliability,"K. U. Leuven, ESAT-INSYS, Belgium",72
+A 0.5-28GB/S Wireline Tranceiver with 15-Tap DFE and Fast-Locking Digital CDR in 7NM FinFET,"Xilinx,Inc.,San Jose,CA,USA",73
+Dual channel FinFETs as a single high-k/metal gate solution beyond 22nm node,"Intel Assignee, USA",74
+50 nm-Gate All Around (GAA)-Silicon On Nothing (SON)-devices: a simple way to co-integration of GAA transistors within bulk MOSFET process,"R&D France Telecom,Grenoble,France",75
+Temperature compensation of silicon micromechanical resonators via degenerate doping,"School of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta, GA, USA",76
+A phase change memory cell with metallic surfactant layer as a resistance drift stabilizer,"ULVAC, Inc.,14 Suyama Susono, Shizuoka, Japan",77
+"A flexible, lightweight Braille sheet display with plastic actuators driven by an organic field-effect transistor active matrix","National Institute for Advanced Industrial Science and Technology, Osaka, Japan",78
+Oxide-field dependence of the NMOS hot-carrier degradation rate and its impact on AC-lifetime prediction,"Department of Electrical Engineering & Computer Science, Microsystems Technology Laboratories, Massachusetts Institute of Technology, Cambridge, MA, USA",79
+Experimental observation and physics of “negative” capacitance and steeper than 40mV/decade subthreshold swing in Al0.83In0.17N/AlN/GaN MOS-HEMT on SiC substrate,"Components Research, Intel Corporation, Hillsboro, USA",80
+Application-oriented performance of RF CMOS technologies on flexible substrates,"Institut d'Electronique de Microélectronique et de Nanotechnologie - IEMN UMR8520, Grenoble, France",81
+A novel SPRAM (SPin-transfer torque RAM)-based reconfigurable logic block for 3D-stacked reconfigurable spin processor,"Advanced Research Laboratory, Hitachi and Limited, Sendai, Japan",82
+Asymmetrically-dope buried layer (ADB) structure CMOS for low-voltage mixed analog-digital applications,"Semicond. Dev. Center,Hitachi Ltd.,Kokubunji,Japan",83
+Highly sensitive and reliable X-ray detector with HgI2 photoconductor and oxide drive TFT,"Samsung Advanced Institute of Technology, Samsung Electronics Corporation, South Korea",84
+Large scale plane-wave based density-functional theory simulations for electronic devices,"Lawrence Berkeley National Laboratory,Berkeley,CA,USA",85
+A 76dBΩ 1.7GHz 0.18µm CMOS tunable transimpedance amplifier using broadband current pre-amplifier for high frequency lateral micromechanical oscillators,"Georgia Institute of Technology,Atlanta,USA",86
+Coulomb oscillations in 100 nm and 50 nm CMOS devices,"Departement de Recherche Fondamentale sur la Matiere Condensee, DSM, Grenoble, France",87
+Oxide thin film transistor technology: Capturing device-circuit interactions,"IGNIS Innovation Inc., Waterloo, ON, Canada",88
+Tetragonal Phase Stabilization by Doping as an Enabler of Thermally Stable HfO2 based MIM and MIS Capacitors for sub 50nm Deep Trench DRAM,"Qimonda Dresden GmbH and Company OHG, Dresden, Germany",89
+Light emitting silicon nanostructures,"Charles Stark Draper Laboratories, Inc., Cambridge, MA, USA",90
+Effective Schottky Barrier Height modulation using dielectric dipoles for source/drain specific contact resistivity improvement,"College of Nanoscale Science and Engineering, Albany, NY, USA",91
+Energy-efficient all fiber-based local body heat mapping circuitry combining thermistor and memristor for wearable healthcare device,"KIMS Changwon, Korea",92
+"Bidirectional TaO-diode-selected, complementary atom switch (DCAS) for area-efficient, nonvolatile crossbar switch block","Low-power Electronics Association & Project (LEAP),West,Onogawa,Tsukuba,Ibaraki,Japan",93
+A 1/2.5 inch 8.1Mpixel CMOS Image Sensor for Digital Cameras,"Micron Technology,Pasadena,CA",94
+A 0.2-/spl mu/m 180-GHz-f/sub max/ 6.7-ps-ECL SOI/HRS self aligned SEG SiGe HBT/CMOS technology for microwave and high-speed digital applications,"Musashino office, Hitachi Device Engineering Company Limited, Japan",95
+A unified physical model of switching behavior in oxide-based RRAM,"NASA Ames Research Center,Moffett Field,CA,USA",96
+I.McIC: A single-chip MPEG2 video encoder for storage,"Philips Res. Lab.,Eindhoven,Netherlands",97
+A highly linear filter and VGA chain with novel DC-offset correction in 90nm digital CMOS process,"Intel R&D,Intel Corp.,Hillsboro,OR,USA",98
+A high performance phase change memory with fast switching speed and high temperature retention by engineering the GexSbyTez phase change material,"Macronix Emerging Central Laboratory, Macronix International Company Limited, Hsinchu, Taiwan",99
+Adaptive cancellation of gain and nonlinearity errors in pipelined ADCs,"Asahi Kasei Microdevices,Atsugi,Japan",100
+A 4 GOPS 3 way-VLIW image recognition processor based on a configurable media-processor,"Toshiba Corp.,Kanagawa,Japan",101
+Hot carrier reliability for 0.13 /spl mu/m CMOS technology with dual gate oxide thickness,"UMC, Hopewell Junction, NY, USA",102
+Implementation of the CELL Broadband Engine in a 65nm SOI Technology Featuring Dual-Supply SRAM Arrays Supporting 6GHz at 1.3V,"Toshiba,Austin,TX",103
+A fully working 0.14 /spl mu/m DRAM technology with polymetal (W/WN/sub x//poly-Si) gate,"Hyundai Electron. Ind. Co. Ltd., Cheongju, South Korea",104
+Potential well engineering by partial oxidation of TiN for high-speed and low-voltage Flash memory with good 125°C data retention and excellent endurance,"Thin-Film Materials Research Center, Korea Institute of Science and Technology, Seoul, South Korea",105
+A programmable MEMS-based clock generator with sub-ps jitter performance,"Masdar Institute,Abu Dhabi,UAE",106
+Impact of Fermi level pinning inside conduction band on electron mobility of InxGa1−xAs MOSFETs and mobility enhancement by pinning modulation,"National Institute of Advanced Industrial Science and Technology, Tsukuba, Ibaraki, Japan",107
+Equivalent Oxide Thickness (EOT) Scaling With Hafnium Zirconium Oxide High-κ Dielectric Near Morphotropic Phase Boundary,"Kurt J. Lesker Co., PA, USA",108
+3.3 A 5GS/s 158.6mW 12b Passive-Sampling 8×-Interleaved Hybrid ADC with 9.4 ENOB and 160.5dB FoMS in 28nm CMOS,"KU Leuven,Heverlee,Belgium",109
+Characteristics of AlGaN/GaN HEMT devices with SiN passivation,"DaimlerChrysler AG Research and Technology, Ulm, Germany",110
+A novel resist and post-etch residue removal process using ozonated chemistries,"IMEC,Philips Research,Eindhoven,Netherlands",111
+14.5 Envision: A 0.26-to-10TOPS/W subword-parallel dynamic-voltage-accuracy-frequency-scalable Convolutional Neural Network processor in 28nm FDSOI,"KU Leuven,Belgium",112
+A 0.063 µm2 FinFET SRAM cell demonstration with conventional lithography using a novel integration scheme with aggressively scaled fin and gate pitch,"Toshiba America Electronic Components Inc.,Albany Nano Tech,NY,USA",113
+Scaling rules of piezoelectric nanowires in view of sensor and energy harvester integration,"CEA-Leti, Grenoble, France",114
+A 0.9 V 1.5 mW continuous-time /spl Delta//spl Sigma/ modulator for WCDMA,"Toshiba,Kawasaki,Japan",115
+A study for 0.18 /spl mu/m high-density MRAM,"Technol. Dev. Group,Sony Corp.,Kanagawa,Japan",116
+A Fractional-N PLL for SONET-Quality Clock-Syntlhesis Applicationis,"Silicon Laboratories,Nashua,NH",117
+On-line calibration and digital correction of multi-bit sigma-delta modulators,"Dept. of Electr. Eng.,Pavia Univ.,Italy",118
+Intrinsic retention statistics in phase change memory (PCM) arrays,"Micron, R&D Unit, Agrate Brianza, Italy",119
+Multi-level metal CMOS manufacturing with deuterium for improved hot carrier reliability,"Lucent Technologies Bell Laboratories, Orlando, FL, USA",120
+An adaptive reference generation scheme for 1T1C FeRAMs,"Dept. of Electr. & Comput. Eng.,Toronto Univ.,Ont.,Canada",121
+Ferroelectric hafnium oxide: A CMOS-compatible and highly scalable approach to future ferroelectric memories,"Fraunhofer IPMS-CNT, Dresden, Germany",122
+High-Field Electron Mobility in Biaxially-tensile Strained SOI: Low Temperature Measurement and Correlation with the Surface Morphology,"CEA/LETI Minatec,rue des Martyrs,Grenoble,France",123
+Threshold voltage control in NiSi-gated MOSFETs through silicidation induced impurity segregation (SIIS),"Microelectronics Division, Hopewell Junction, NY, USA",124
+Higher hole mobility induced by twisted Direct Silicon Bonding (DSB),"IBM Research Division,T.J. Watson Research Center,Yorktown Heights,NY,USA.",125
+Realizing a production ATE custom processor and timing IC containing 400 independent low-power and high-linearity timing verniers,"Credence Syst.,Fremont,CA,USA",126
+22.4 A 24Gb/s 0.71pJ/b Si-photonic source-synchronous receiver with adaptive equalization and microring wavelength stabilization,"Hewlett-Packard Labs,Palo Alto,CA",127
+A 7.9μW remotely powered addressed sensor node using EPC HF and UHF RFID technology with −10.3dBm sensitivity,"Infineon Technologies,Graz,Austria",128
+Bridging design and manufacture of analog/mixed-signal circuits in advanced CMOS,"AMD,Inc.,Sunnyvale,E. Arques Ave.,CA,USA",129
+Experience of IP-reuse in system-on-chip design for ADSL,"Alcatel Bell Telephone,Antwerp,Belgium",130
+Analysis of trap-assisted conduction mechanisms through silicon dioxide films using quantum yield,"Bell Laboratories, Lucent Technologies, Inc., Murray Hill, NJ, USA",131
+SRAM Cell Static Noise Margin and VMIN Sensitivity to Transistor Degradation,"Silicon Technology Development, Dallas, TX, USA",132
+"Vacancy-modulated conductive oxide resistive RAM (VMCO-RRAM): An area-scalable switching current, self-compliant, highly nonlinear and wide on/off-window resistive switching cell","K.U. Leuven, Leuven, Belgium",133
+Highly Reliable Thin MIM Capacitor on Metal (CoM) Structure with Vertical Scalability for Analog/RF Applications,"NEC Corporation Limited, Sagamihara, Kanagawa, Japan",134
+A 4.4mW 76dB complex /spl Sigma//spl Delta/ ADC for Bluetooth receivers,"Philips Res. Labs.,Eindhoven,Netherlands",135
+"A 210mV 7.3MHz 8T SRAM with dual data-aware write-assists and negative read wordline for high cell-stability, speed and area-efficiency","Fukuoka Institute of Technology,Japan",136
+Digital background calibration of a 10 b 40 M sample/s parallel pipelined ADC,"California Univ.,Davis,CA,USA",137
+Aluminum Plasma-CVD for VLSI Circuit Interconnections,"Fujitsu Laboratories Ltd. Kamikodanaka,Nakahara,Kawasaki,Japan",138
+A 1.4GHz 20.5Gbps GZIP decompression accelerator in 14nm CMOS featuring dual-path out-of-order speculative Huffman decoder and multi-write enabled register file array,"Circuits Research Lab,Intel Corporation,Hillsboro,OR,USA",139
+4.4 Energy-efficient microserver based on a 12-core 1.8GHz 188K-CoreMark 28nm bulk CMOS 64b SoC for big-data applications with 159GB/S/L memory bandwidth system density,"Freescale Semiconductor,Austin,TX",140
+Understanding and Physical Modeling Superior Hot-Carrier Reliability of Ge pNWFETs,"Nanolayers, London, UK",141
+Lattice strain design in W/WN/poly-Si gate DRAM for improving data retention time,"System Devices Research Laboratories, NEC Corporation Limited, Sagamihara, Kanagawa, Japan",142
+Highly endurable floating body cell memory: Vertical biristor,"Department of EE, KAIST, Daejeon, South Korea",143
+A 58.6mW real-time programmable object detector with multi-scale multi-object support using deformable parts model on 1920×1080 video at 30fps,"Massachusetts Institute of Technology,USA",144
+"Multipurpose, Fully-Integrated 128×128 Event-Driven MD-SiPM with 512 16-Bit TDCs with 45 PS LSB and 20 NS Gating","EPFL,Switzerland",145
+A 5Gb/s link with clock edge matching and embedded common mode clock for low power interfaces,"NVIDIA Corporation,India",146
+A new vertically stacked poly-Si MOSFET for 533 MHz high speed 64Mbit SRAM,"Renesas Technology Corp., Tokyo, Japan",147
+The implementation of POWER7TM: A highly parallel and scalable multi-core high-end server processor,"IBM,Poughkeepsie,NY,USA",148
+A Machine-Learning-Resistant 3D PUF with 8-layer Stacking Vertical RRAM and 0.014% Bit Error Rate Using In-Cell Stabilization Scheme for IoT Security Applications,"Zhejiang Lab,Hangzhou,China",149
+45nm low power CMOS logic compatible embedded STT MRAM utilizing a reverse-connection 1T/1MTJ cell,"Qualcomm Incorporated, San Diego, CA, USA",150
+Full integration and characterization of Localized ONO Memory (LONOM) for embedded flash technology,"Syst. LSI Div.,Samsung Electron. Co. Ltd.,Kyunggi-Do,South Korea",151
+A digital terrestrial television (ISDB-T) tuner for mobile applications,"Sharp Corp.,Tenri,Japan",152
+The roles of hydrogen and holes in trap generation and breakdown in ultra-thin SiON dielectrics,"Silicon Technology Development, Texas Instruments, Inc., Dallas, TX, USA",153
+Memory technology for the terabit era: From 2D to 3D,"KU Leuven,ESAT Department,Leuven,Belgium,and imec,Leuven,Belgium",154
+"A 1.5 V, 4.1 mW dual channel audio delta-sigma D/A converter","Asahi-Kasei Microsyst.,Kanagawa,Japan",155
+CMOS current-controlled oscillators using multiple-feedback-loop ring architectures,"Korea Adv. Energy Res. Inst.,Taejon,South Korea",156
+Aggressive design of millisecond annealing junctions for near-scaling-limit bulk CMOS using raised source/drain extensions,"NEC Informatec Systems Limited, Sagamihara, Japan",157
+Simultaneous Extraction of Recoverable and Permanent Components Contributing to Bias-Temperature Instability,"IMEC, Leuven, Belgium",158
+A Fully Digital 65nm CMOS Transmitter for the 2.4-to-2.7GHz WiFi/WiMAX Bands using 5.4GHz ΔΣ RF DACs,"STMicroelectronics,Geneva,Switzerland",159
+Low RA Magnetic Tunnel Junction Arrays in Conjunction with Low Switching Current and High Breakdown Voltage for STT-MRAM at 10 nm and Beyond,"Corporate Research and Development,Qualcomm Technologies,Inc.,San Diego,CA,USA",160
+A CMOS 6b 400 M sample/s ADC with error correction,"Fujitsu VLSI Limited,Aichi,Japan",161
+A digital wideband CDR with ±15.6kppm frequency tracking at 8Gb/s in 40nm CMOS,"Broadcom,Irvine,CA",162
+Understanding of Tunable Selector Performance in Si-Ge-As-Se OTS Devices by Extended Percolation Cluster Model Considering Operation Scheme and Material Design,"IMEC,Leuven,Belgium",163
+Self-limiting laser thermal process for ultra-shallow junction formation of 50-nm gate CMOS,"Device Development Center, Hitachi and Limited, Ome, Tokyo, Japan",164
+Soft error considerations for deep-submicron CMOS circuit applications,"Intel Corporation, Hudson, MA, USA",165
+A Low Power Continuous-Time Zoom ADC for Audio Applications,"NXP Semiconductors,Eindhoven,The Netherlands",166
+Dual-damascene interconnects with 0.28 /spl mu/m vias using in situ copper doped aluminum chemical vapor deposition,"ULSI Device Develop. Laboratories, NEC Corporation Limited, Sagamihara, Kanagawa, Japan",167
+"Experimental study on BTI variation impacts in SRAM based on high-k/metal gate FinFET: From transistor level Vth mismatch, cell level SNM to product level Vmin","Quality and Reliability Team, Samsung Electronics Co. Ltd., Yongin-City, Gyeonggi-Do, Korea",168
+Enabling Efficient Design-Technology Interaction by Spec-Driven Extraction Flow,"ProPlus Design Solutions,Inc,San Jose,CA,USA",169
+Understanding of Tunable Selector Performance in Si-Ge-As-Se OTS Devices by Extended Percolation Cluster Model Considering Operation Scheme and Material Design,"Applied Materials Inc.,Santa Clara,CA,USA",170
+Redefinition of Write Margin for Next-Generation SRAM and Write-Margin Monitoring Circuit,"NEC,Sagamihara",171
+High on/off-ratio P-type oxide-based transistors integrated onto Cu-interconnects for on-chip high/low voltage-bridging BEOL-CMOS I/Os,"LSI Research Laboratory, Renesas Electronics Corporation, Sagamihara, Kanagawa, Japan",172
+29.5 A Single-Chip Optical Phased Array in a 3D-Integrated Silicon Photonics/65nm CMOS Technology,"Colleges of Nanoscale Science and Engineering,Albany,NY",173
+Scalable quantum computing with ion-implanted dopant atoms in silicon,"UNSW, School of Electrical Engineering & Telecommunications, Sydney, Australia",174
+Low-cost gate-oxide early-life failure detection in robust systems,"NEC Corporation,Japan",175
+Metal-Assisted Solid-Phase Crystallization Process for Vertical Monocrystalline Si Channel in 3D Flash Memory,"Institute of Memory Technology Research & Development, Kioxia Corporation, Yokkaichi, Japan",176
+"A 0.9V 66MHz access, 0.13um 8M(256K/spl times/32) local SONOS embedded flash EEPROM","Syst. LSI Div.,Samsung Electron. Co. Ltd,Yongin,South Korea",177
+A 160μW 8-channel active electrode system for EEG monitoring,"Imec - Holst Centre,Eindhoven,The Netherlands",178
+A mobility enhancement strategy for sub-14nm power-efficient FDSOI technologies,"CEA, MINATEC Campus, Grenoble, France",179
+CMOS device optimization for mixed-signal technologies,"Philips Research Laboratories, Eindhoven, Netherlands",180
+Modeling of cumulative thermo-mechanical stress (CTMS) produced by the shallow trench isolation process for 1 Gb DRAM and beyond,"CAE, Semiconductor R&D Center, Samsung Electronics Company Limited, Yongin si, Gyeonggi, South Korea",181
+A 14-bit 2.5GS/s and 5GS/s RF sampling ADC with background calibration and dither,"Analog Devices,Greensboro,NC,USA",182
+A highly manufacturable high density embedded SRAM technology for 90 nm CMOS,"Semiconductor Company, Toshiba Corporation, Yokohama, Japan",183
+A middle-1X nm NAND flash memory cell (M1X-NAND) with highly manufacturable integration technologies,"Research and Development Division, Hynix Semiconductor Inc., Ichon, Gyeonggi, South Korea",184
+Pionics: the Emerging Science and Technology of Graphene-based Nanoelectronics,"School of Physics, Georgia Institute of Technology, USA",185
+A novel sub-50 nm multi-bridge-channel MOSFET (MBCFET) with extremely high performance,"R&D Center,Samsung Electron. Co.,Kyunggi-Do,South Korea",186
+A 15-GHz integrated CMOS switch with 21.5-dBm IP/sub 1dB/ and 1.8-dB insertion loss,"Dept. of Electr. & Comput. Eng.,Florida Univ.,Gainesville,FL,USA",187
+16.1 A 12b 18GS/s RF Sampling ADC with an Integrated Wideband Track-and-Hold Amplifier and Background Calibration,"Analog Devices,Greensboro,NC",188
+A 24mW 1.25Gb/s 13k/spl Omega/ transimpedance amplifier using active compensation,"Nat. Chiao Tung Univ.,Hsinchu",189
+Single silicide comprising Nickel-Dysprosium alloy for integration in p- and n-FinFETs with independent control of contact resistance by Aluminum implant,"Institute of Microelectronics,Science Park Road,Singapore",190
+"A 5,sup>th-order CT/DT Multi-Mode ΔΣ Modulator","NXP Semiconductors,Zurich,Switzerland",191
+A robust array architecture for a capacitorless MISS tunnel-diode memory,"Central Res. Lab.,Hitachi Ltd.,Tokyo,Japan",192
+Electrical integrity of state-of-the-art 0.13 /spl mu/m SOI CMOS devices and circuits transferred for three-dimensional (3D) integrated circuit (IC) fabrication,"IBM T. J. Watson Research Center, Yorktown Heights, NY, USA",193
+Sub-60 nm deeply-scaled channel length extremely-thin body InxGa1−xAs-on-insulator MOSFETs on Si with Ni-InGaAs metal S/D and MOS interface buffer engineering,"Sumitomo Chemical Co. Ltd.,Kitah ara,Tsukuba,Ibaraki,Japan",194
+Implementing application specific memory,"MOSAID Technol. Inc.,Kanata,Ont.,Canada",195
+"SRAM critical yield evaluation based on comprehensive physical / statistical modeling, considering anomalous non-Gaussian intrinsic transistor fluctuations","System device research laboratories,NEC corporation,NEC corporation,simokuzawa,Sagamihara,Kanagawa Japan",196
+A novel nonvolatile memory with spin torque transfer magnetization switching: spin-ram,"Semiconductor Technology Development Group, Semiconductor Solution Network Company, Sony Corporation, Atsugi, Kanagawa, Japan",197
+Gait identification using stochastic OXRRAM-based time sequence machine learning,"IMEC,Kapeldreef,Leuven,,Belgium",198
+1.2 Gbps/pin simultaneous bidirectional transceiver logic with bit deskew technique,"Device Dev. Center,Htachi Ltd.,Tokyo,Japan",199
+Experimental results on reduced harmonic distortion in circuits with correlated double sampling,"Newport Microsyst. Inc.,Irvine,CA,USA",200
+110nm NROM technology for code and data flash products,"Infineon Technol. Flash,Dresden,Germany",201
+A Novel Via-fuse Technology Featuring Highly Stable Blow Operation with Large On-off Ratio for 32nm Node and Beyond,"Advanced Device Development Division, NEC Electronics Corporation Limited, Sagamihara, Kanagawa, Japan",202
+On-chip integrated CMOS optical microspectrometer with light-to-frequency converter and bus interface,"Delft Univ. of Technol.,Netherlands",203
+Device engineering for diamond quantum sensors,"Tokyo Institute of Technology, Meguro, Tokyo, Japan",204
+Dynamic-sleep transistor and body bias for active leakage power control of microprocessors,"Intel Corp.,Hillsboro,OR,USA",205
+Comparison between ultra-thin ZrO/sub 2/ and ZrO/sub x/N/sub y/ gate dielectrics in TaN or poly-gated NMOSCAP and NMOSFET devices,"Microelectron. Res. Center,Texas Univ.,Austin,TX,USA",206
+Development of High-Voltage Vertical GaN PN Diodes,"Naval Postgraduate School,Monterey,CA,USA",207
+Generic learning of TDDB applied to RRAM for improved understanding of conduction and switching mechanism through multiple filaments,"ESAT Department, K.U. Leuven, Belgium",208
+A five stage chopper stabilized instrumentation amplifier using feedforward compensation,"Crystal Semicond. Div.,Cirrus Logic Inc.,Austin,TX,USA",209
+Fully depleted extremely thin SOI for mainstream 20nm low-power technology and beyond,"IBM T. J. Watson,Yorktown Heights,NY,USA",210
+Fabrication and characterisation of strained Si heterojunction bipolar transistors on virtual substrates,"KTH, Sweden",211
+A configurable SRAM with constant-negative-level write buffer for low-voltage operation with 0.149µm2 cell in 32nm high-k metal-gate CMOS,"Toshiba Semiconductor,Kawasaki,Japan",212
+From Interconnect Materials and Processes to Chip Level Performance: Modeling and Design for Conventional and Exploratory Concepts,"Georgia Institute of Technology,Atlanta,GA,USA",213
+High-mobility 0.85nm-EOT Si0.45Ge0.55-pFETs: Delivering high performance at scaled VDD,"IMEC, Belgium",214
+In-depth Investigation of Hf-based High-k Dielectrics as Storage Layer of Charge-Trap NVMs,"IMEP CNRS, MINA TEC, Grenoble, France",215
+A 28nm 10Mb Embedded Flash Memory for IoT Product with Ultra-Low Power Near-1V Supply Voltage and High Temperature for Grade 1 Operation,"Samsung Electronics,,Samsungjeonja-ro,Hwaseong-si,Gyeonggi-do,Republic of Korea",216
+High-performance high-κ/metal gates for 45nm CMOS and beyond with gate-first processing,"Toshiba America Electronic Components Research Center,Yorktown Heights,NY,USA",217
+A 35mW8 b 8.8 GS/s SAR ADC with low-power capacitive reference buffers in 32nm Digital SOI CMOS,"IBM Research - Zurich,Rueschlikon,Switzerland",218
+"A novel NAND-type PHINES nitride trapping storage flash memory cell with physically 2-bits-per-cell storage, and a high programming throughput for mass storage applications","Technol. Dev. Center,Macronix Int. Co.,Lt,Hsin-Chu,Taiwan",219
+17.8 A 2.6μW Monolithic CMOS Photoplethysmographic Sensor Operating with 2μW LED Power,"EPFL,Neuchâtel,Switzerland",220
+A 5Gb/s NRZ transceiver with adaptive equalization for backplane transmission,"Vitesse Semicond.,Somerset,NJ,USA",221
+A 1.2V 1.33Gb/s/pin 8Tb NAND flash memory multi-chip package employing F-chip for low power and high performance storage applications,"Flash Memory Design Team,Samsung Electronics,Hwasung,Gyeonggi-do,Korea",222
+A hydrogen barrier interlayer dielectric with a SiO/sub 2//SiON/SiO/sub 2/ stacked film for logic-embedded FeRAMs,"System LSI Design Engineering Division, NEC Corporation Limited, Sagamihara, Kanagawa, Japan",223
+Scalable 3-D vertical chain-cell-type phase-change memory with 4F2 poly-Si diodes,"Yokohama Research Laboratory,Hitachi,Ltd.,Kanagawa,JAPAN",224
+Low temperature (<500/spl deg/C) SrTiO/sub 3/ capacitor process technology for embedded DRAM,"Technol. Dev. Div.,Fujitsu Ltd.,Japan",225
+New physical model for ultra-scaled 3D nitride-trapping non-volatile memories,"IMEP-LAHC, MINATEC-INPG, Grenoble, France",226
+90 nm generation Cu/CVD low-k (k < 2.5) interconnect technology,"Taiwan Semiconductor Manufacturing Company, Science-Based Industrial Park, Hsin-Chu, Taiwan R.O.C",227
+32-bit Processor core at 5-nm technology: Analysis of transistor and interconnect impact on VLSI system performance,"ARM Inc., Austin, TX, USA",228
+A low power 6-bit flash ADC with reference voltage and common-mode calibration,"Broadcom Corporation,Irvine,CA,USA",229
+Integration of silicon photonics in bulk CMOS,"Micron Technology,Inc. Process R&D,Boise,ID,USA",230
+A novel integration of STT-MRAM for on-chip hybrid memory by utilizing non-volatility modulation,"Semiconductor R&D Center, Samsung Electronics, Co. Ltd., Hwaseong, South Korea",231
+Enhanced time delay integration imaging using embedded CCD in CMOS technology,"imec, Leuven, Belgium",232
+"Strained Si1−xGex-on-insulator PMOS FinFETs with excellent sub-threshold leakage, extremely-high short-channel performance and source injection velocity for 10nm node and beyond","GLOBALFOUNDRIES,T.J. Watson Research Center,Yorktown Heights,NY,USA",233
+A 7nm Leakage-Current-Supply Circuit for LDO Dropout Voltage Reduction,"Georgia Institute of Technology,Atlanta",234
+Multi-layer cross-point binary oxide resistive memory (OxRRAM) for post-NAND storage application,"Process Development Team, Samsung Electronics Co., Ltd., Yongin si, South Korea",235
+9.1 A 45nm CMOS RF-to-Bits LTE/WCDMA FDD/TDD 2×2 MIMO base-station transceiver SoC with 200MHz RF bandwidth,"Texas Instruments,Bangalore,India",236
+A Fully-Integrated UHF Receiver with Multi-Resolution Spectrum-Sensing (MRSS) Functionality for IEEE 802.22 Cognitive-Radio Applications,"Samsung RFIC Design Center,Atlanta,GA",237
+A novel sense amplifier for flexible voltage operation NAND flash memories,"ULSI Res. Labs.,Toshiba Corp.,Kawasaki,Japan",238
+"A 160 mW, 80 nA standby, MPEG-4 audiovisual LSI with 16 Mb embedded DRAM and a 5 GOPS adaptive post filter","Toshiba Corp.,Kawasaki,Japan",239
+First demonstration of a back-side integrated heterogeneous hybrid III-V/Si DBR lasers for Si-photonics applications,"CEA-LETI, Grenoble Cedex 9, France",240
+21.3 A 200nA single-inductor dual-input-triple-output (DITO) converter with two-stage charging and process-limit cold-start voltage for photovoltaic and thermoelectric energy harvesting,"Analog Devices,San Jose,CA,United States",241
+Liner-supported cylinder (LSC) technology to realize Ru/Ta/sub 2/O/sub 5//Ru capacitor for future DRAMs,"Process & Manufacturing Engineering Center, Toshiba Corporation, Yokohama, Japan",242
+Epitaxial SrTiO3 on silicon with EOT of 5.4 /spl Aring/ for MOS gate dielectric applications,"Dept. of Materials Science & Engineering, Kwangiu Institute of Science & Technology, Gwangju, KOREA",243
+Reliability of thin gate oxide under plasma charging caused by antenna topography-dependent electron shading effect,"Logic Device Development Laboratory, ULSI Device Developmmt Laboratories, NEC Corporation Limited, Sagamihara, Kanagawa, Japan",244
+"A 78 dB dynamic range, 0.27 dB accuracy, single-stage RF-PGA using thermometer-weighted and binary-weighted transconductors for SAW-less WCDMA/LTE transmitters","Renesas Technology Corp.,Hyogo,Japan",245
+Comprehensive analysis of the impact of single and arrays of through silicon vias induced stress on high-k / metal gate CMOS performance,"Panasonic, Leuven, Belgium",246
+SRAM design on 65nm CMOS technology with integrated leakage reduction scheme,"Portland Technol. Dev.,Intel Corp.,Hillsboro,OR,USA",247
+A CMOS DVD 4/spl times/ speed read channel programmable over 5 octaves,"Samsung Electronics Company Limited,Suwon,South Korea",248
+Comprehensive understanding of conductive filament characteristics and retention properties for highly reliable ReRAM,"Automotive & Industrial Systems Company,Kotari-yakemachi,Nagaokakyo City,Kyoto,Japan",249
+A fully integrated multi-band MIMO WLAN transceiver RFIC,"Carleton Univ.,Ottawa,Ont.,Canada",250
+Statistical Characterization and On-Chip Measurement Methods for Local Random Variability of a Process Using Sense-Amplifier-Based Test Structure,"IBM T. J. Watson,Yorktown Heights,NY",251
+Program/erase dynamics and channel conduction in nanocrystal memories,"IFN-CNR, Milano, Italy",252
+Heterogeneously integrated sub-40nm low-power epi-like Ge/Si monolithic 3D-IC with stacked SiGeC ambient light harvester,"Research Center for Applied Sciences, Academia Sinica, Taipei, Taiwan",253
+More-than-Universal Mobility in Double-Gate SOI p-FETs with Sub-10-nm Body Thickness -Role of Light-Hole Band and Compatibility with Uniaxial Stress Engineering,"Advanced LSI Technology Laboratory, Toshiba Corporation, Yokohama, Japan",254
+1Gbit High Density Embedded STT-MRAM in 28nm FDSOI Technology,"Foundry Business, Samsung Electronics Co., Giheung, Korea",255
+A 390Mb/s 3.57mm2 3GPP-LTE turbo decoder ASIC in 0.13µm CMOS,"ETH Zürich,Switzerland",256
+Experimental characterization of stiction due to charging in RF MEMS,"K.U. Leuven, Belgium",257
+9.7 An LTE SAW-less transmitter using 33% duty-cycle LO signals for harmonic suppression,"MediaTek,Hsinchu,Taiwan",258
+CMOS Integrated DNA Microarray Based on GMR Sensors,"Stanford Genome Technology Center, Palo Alto, CA, USA",259
+A 40MHz-to-1GHz fully integrated multistandard silicon tuner in 80nm CMOS,"Marvell,Santa Clara,CA",260
+A 20 Mhz BiCMOS peak detect pulse qualifier and area detect servo demodulator for hard disk drive servo loop,"Silicon Syst. Inc.,San Jose,CA,USA",261
+512 Mb PROM with 8 layers of antifuse/diode cells,"Matrix Semicond.,Santa Clara,CA,USA",262
+Capacity optimization of emerging memory systems: A shannon-inspired approach to device characterization,"Macronix International Co., Ltd., Emerging Central Lab, Hsinchu Science Park, Taiwan",263
+Barriers to the Adoption of Wide-Bandgap Semiconductors for Power Electronics,"Advanced Research Projects Agency-Energy, U.S. Department of Energy, Washington, DC",264
+Analytical model of the programming characteristics of scaled MONOS memories with a variety of trap densities and a proposal of a trap-density-modulated MONS memory,"Semiconductor Network Company, Sony Corporation, Atsugi, Kanagawa, Japan",265
+2D molybdenum disulfide (MoS2) transistors driving RRAMs with 1T1R configuration,"Department of Electrical Engineering, Stanford, CA, USA",266
+Ultra-thin-body and BOX (UTBB) fully depleted (FD) device integration for 22nm node and beyond,"IBM,USA",267
+A high reliability metal insulator metal capacitor for 0.18 /spl mu/m copper technology,"IBM Semiconductor Research and Development Center, Hopewell Junction, NY, USA",268
+A process independent 800 MB/s DRAM bytewide interface featuring command interleaving and concurrent memory operation,"Rambus Inc.,Mountain View,CA,USA",269
+0.7 V SRAM Technology with Stress-Enhanced Dopant Segregated Schottky (DSS) Source/Drain Transistors for 32 nm Node,"Center for Semiconductor R&D,Semiconductor Company,Toshiba Corporation,,Shinsugita-cho,Isogo-ku,Yokohama,Japan",270
+A Fully Integrated SoC for GSM/GPRS in 0.13/spl mu/m CMOS,"Infineon,Munich,Germany",271
+A 10Gb/s compact low-power serial I/O with DFE-IIR equalization in 65nm CMOS,"Massachusetts Institute of Technology,Cambridge,USA",272
+NbO2-based low power and cost effective 1S1R switching for high density cross point ReRAM Application,"R&D Division,SK Hynix Inc.,Gyeongchung-daero Bubal-eub,Icheon-si,Gyeonggi-do,,Korea",273
+Dark current reduction in very-large area CCD imagers for professional DSC applications,"DALSA Semiconductor, Eindhoven, Netherlands",274
+An energy harvesting wireless sensor node for IoT systems featuring a near-threshold voltage IA-32 microcontroller in 14nm tri-gate CMOS,"Internet of Things Group,Intel Corporation,Hillsboro,OR,USA",275
+AES-based cryptographic and biometric security coprocessor IC in 0.18-/spl mu/m CMOS resistant to side-channel power analysis attacks,"Dept. of Electr. Eng.,California Univ.,Los Angeles,CA,USA",276
+Non-Gaussian distribution of SRAM read current and design impact to low power memory using Voltage Acceleration Method,"Qualcomm Inc,Morehouse Drive,San Diego,CA,USA",277
+Modeling of ultra-low energy boron implantation in silicon,"Eaton Corporation, Beverly, MA, USA",278
+A video signal processor for motion-compensated field-rate upconversion in consumer television,"Philips Consumer Electron.,Hamburg,Netherlands",279
+"Slurry engineering for self-stopping, dishing free SiO/sub 2/-CMP","Semiconductor Manufacturing Engineering Center, Toshiba Corporation, Kawasaki, Japan",280
+A manufacturable 25 nm planar MOSFET technology,"Philips Res.,Leuven,Belgium",281
+Z-PIM: An Energy-Efficient Sparsity Aware Processing-In-Memory Architecture with Fully-Variable Weight Precision,"KAIST,Daejeon,Republic of Korea",282
+5.6 A 0.13μm fully digital low-dropout regulator with adaptive control and reduced dynamic stability for ultra-wide dynamic range,"Georgia Institute of Technology,Atlanta,GA",283
+Copper drift in low-K polymer dielectrics for ULSI metallization,"Center for Integrated Syst.,Stanford Univ.,CA,USA",284
+100 MHz CMOS circuits using sequential laterally solidified silicon thin-film transistors on plastic,"Sarnoff Corporation, Princeton, NJ, USA",285
+"High performance 5nm radius Twin Silicon Nanowire MOSFET (TSNWFET) : fabrication on bulk si wafer, characteristics, and reliability","R&D Center, Samsung Electronics Company Limited, Yongin si, Gyeonggi, South Korea",286
+A configurable 5-D packet classification engine with 4Mpacket/s throughput for high-speed data networking,"Lucent Technol.,Bell Labs.,Holmdel,NJ,USA",287
+"19.6 A 0.2V trifilar-coil DCO with DC-DC converter in 16nm FinFET CMOS with 188dB FOM, 1.3kHz resolution, and frequency pushing of 38MHz/V for energy harvesting applications","TSMC,Hsinchu,Taiwan",288
+Sub-quarter micron CMOS process for TiN-gate MOSFETs with TiO/sub 2/ gate dielectric formed by titanium oxidation,"Adv. Products Res. & Dev. Lab.,Motorola Inc.,Austin,TX,USA",289
+Understanding stress enhanced performance in Intel 90nm CMOS technology,"Technol. CAD,Intel Corp.,Hillsboro,OR,USA",290
+A 0.24-/spl mu/m/sup 2/ cell process with 0.18-/spl mu/m width isolation and 3-D interpoly dielectric films for 1-Gb flash memories,"Hitachi ULSI Engineering Corporation, Kodaira, Tokyo, Japan",291
+A 2 GHz 60 dB dynamic-range Si logarithmic/limiting amplifier with low phase deviations,"NTT Syst. Electron. Labs.,Atsugi,Japan",292
+Pionics: the Emerging Science and Technology of Graphene-based Nanoelectronics,"ECE, Georgia Institute of Technology, USA",293
+A 1.8 V 2 Gb NAND flash memory for mass storage applications,"Samsung Electron.,Hwasung,South Korea",294
+Efficiency of mechanical stressors in Planar FDSOI n and p MOSFETs down to 14nm gate length,"IMEP-LAHC,MINATEC Campus,Grenoble,France",295
+23.9 An 8-channel 4.5Gb 180GB/s 18ns-row-latency RAM for the last level cache,"Piecemakers Technology,Hsinchu,Taiwan",296
+A sub-nanosecond 0.5 /spl mu/m 64 b adder design,"Hewlett-Packard Co.,Fort Collins,CO,USA",297
+Overcoming interconnect scaling challenges using novel process and design solutions to improve both high-speed and low-power computing modes,"Microarchitecture Research Laboratory, Intel Corporation, USA",298
+A 21-channel 8Gb/s transceiver macro with 3.6ns latency in 90nm CMOS for 80cm backplane communication,"Hitachi ULSI Systems,Co.,Ltd.,Tokyo,Japan",299
+Systematic optimization of 1 Gbit perpendicular magnetic tunnel junction arrays for 28 nm embedded STT-MRAM and beyond,"Applied Materials Inc, Santa Clara, CA, US",300
+A 0.004mm2 250μW ΔΣ TDC with time-difference accumulator and a 0.012mm2 2.5mW bang-bang digital PLL using PRNG for low-power SoC applications,"Samsung Electronics,Yongin,Korea",301
+"Varistor-type bidirectional switch (JMAX>107A/cm2, selectivity∼104) for 3D bipolar resistive memory arrays","Dept. Nanobio Mat. and Elec.,Gwangju Institute of Science and Technology,Korea",302
+Control of electro-chemical etching for uniform 0.1 /spl mu/m gate formation of HEMT,"Semiconductor Technology Laboratory, Oki Electric Industry Company Limited, Hachioji, Tokyo, Japan",303
+Temperature calibration of CMOS magnetic vector probe for contactless angle measurement system,"Physical Electronics Laboratory, Zurich, Switzerland",304
+FinFET-a quasi-planar double-gate MOSFET,"Dept. of Electr. Eng. & Comput. Sci.,California Univ.,Berkeley,CA,USA",305
+Designing High Performance Microprocessors,"Digital Equipment Corporation Hudson,Massachusetts USA",306
+A 247 and 272 GHz Two-Stage Regenerative Amplifiers in 65 nm CMOS with 18 and 15 dB Gain Based on Double-Gmax Gain Boosting Technique,"Department of Electrical Engineering,KAIST,South Korea; IMEC,Belgium",307
+Measurement of Nano-Displacement Based on In-Plane Suspended-Gate MOSFET Detection Compatible with a Front-End CMOS Process,"CEA-LETI,Grenoble,France",308
+Megapixel CMOS image sensor fabricated in three-dimensional integrated circuit technology,"Lincoln Lab.,MIT,Lexington,MA,USA",309
+A 5500FPS 85GOPS/W 3D Stacked BSI Vision Chip Based on Parallel in-Focal-Plane Acquisition and Processing,"LIST,CEA,Saclay,France",310
+Approaching fermi level unpinning in Oxide-In0.2Ga0.8As,"Intel Corporation, Santa Clara, CA, USA",311
+Highly manufacturable 90 nm DRAM technology,"Technology Development, Semiconductor Research and Development Division, Samsung Electronics Company Limited, Yongin si, Gyeonggi, South Korea",312
+A 0.25 mm x86 microprocessor with a 100 MHz socket 7 interface,"Adv. Micro Devices,Milpitas,CA,USA",313
+Cost-effective high-performance high-voltage SiGe:C HBTs with 100 GHz f/sub T/ and BV/sub CEO/ /spl times/ f/sub T/ products exceeding 220 VGHz,"IHP, Frankfurt, Germany",314
+An Approach to Embedding Traditional Non-Volatile Memories into a Deep Sub-Micron CMOS,"Taiwan Semiconductor Manufacturing Company,Ltd,Integrated Interconnect & Packaging,R&D,Hsinchu,Taiwan,R.O.C.",315
+6.2 A 460mW 112Gb/s DSP-Based Transceiver with 38dB Loss Compensation for Next-Generation Data Centers in 7nm FinFET Technology,"MediaTek,Irvine,CA",316
+Can InAlN/GaN be an alternative to high power / high temperature AlGaN/GaN devices?,"I.E.M.N, Villeneuve d'Ascq, France",317
+A Novel Cross-Spacer Phase Change Memory with Ultra-Small Lithography Independent Contact Area,"ITRI, Material and Chemical Research Laboratories, Hsinchu, Taiwan, R.O.C",318
+A 100dB SNR 2.5MS/s output data rate /spl Delta//spl Sigma/ ADC,"Analog Devices,Newbury,UK",319
+Industrially Applicable Read Disturb Model and Performance on Mega-Bit 28nm Embedded RRAM,"Quality and Reliability,Taiwan Semiconductor Manufacturing Company,,Park Ave.,Hsinchu Science Park Hsinchu,Taiwan,,R.O.C",320
+Competitive and cost effective high-k based 28nm CMOS technology for low power applications,"IBM Semiconductor Research and Development Center (SRDC), STMicroelectronics, Inc., Hopewell Junction, NY, USA",321
+Electrical characteristics and reliability of sub-3 nm gate oxides grown on nitrogen implanted silicon substrates,"SRDC, IBM Corp., Hopewell Junction, NY, USA",322
+Scaling of Ω-gate SOI nanowire N- and P-FET down to 10nm gate length: Size- and orientation-dependent strain effects,"STMicroelectronics,,rue J. Monnet,Crolles,France",323
+Understanding and prediction of EWF modulation induced by various dopants in the gate stack for a gate-first integration scheme,"TSMC,Belgium",324
+A VDSL2 CPE AFE in 0.15µm CMOS with integrated line driver,"Marvell,Santa Clara,CA,USA",325
+A 230–260GHz wideband amplifier in 65nm CMOS based on dual-peak Gmax-core,"Department of Electrical Engineering,CBNU,South Korea",326
+Scaling of 32nm low power SRAM with high-K metal gate,"Samsung Electronics, Hopewell Junction, USA",327
+Highly-scalable threshold switching select device based on chaclogenide glasses for 3D nanoscaled memory arrays,"Semiconductor Device Laboratory, Nano Fabrication Group, Samsung Advanced Institute of Technology, Gyeonggi-Do, Korea",328
+Selectively formed high mobility strained Ge PMOSFETs for high performance CMOS,"Systems and Technology Group, Hopewell Junction, NY, USA",329
+A digitally calibrated 5.15-5.825GHz transceiver for 802.11a wireless LANs in 0.18/spl mu/m CMOS,"Athena Semiconductors,Fremont,CA,USA",330
+A 43mW Bluetooth transceiver with -91dBm sensitivity,"Skyworks Solutions,Ottawa,Ont.,Canada",331
+OC-192 transmitter in standard 0.18 /spl mu/m CMOS,"Broadcom Corp.,Irvine,CA,USA",332
+High-performance InSb based quantum well field effect transistors for low-power dissipation applications,"QinetiQ, Malvern Technology Centre, Malvern, UK",333
+27.2 A 6mW 5K-Word real-time speech recognizer using WFST models,"Massachusetts Institute of Technology,Cambridge,MA",334
+A 20mW 85dB/spl Omega/ 1.25Gb/s CMOS transimpedance amplifier with photodiode capacitance cancellation,"SoC Technol. Center,Ind. Technol. Res. Inst.,Hsinchu,Taiwan",335
+A Silicon Photonics Technology for 400 Gbit/s Applications,"STMicroelectronics, Agrate, Italy",336
+"Design and process integration for high-density, high-speed, and low-power 6F/sup 2/ cross point MRAM cell","Corporate Research & Development Center, Toshiba Corporation, Kanagawa, Japan",337
+GaN-based Periodic High-Q RF Acoustic Resonator with Integrated HEMT,"the US Naval Research Laboratory, National Research Council Fellow residing, Washington DC, USA",338
+Advanced interconnect schemes towards 0.1 /spl mu/m,"LETI-CEA Technologies Avancees, Grenoble, France",339
+"Technology Breakthrough of Low Temperature, Low Defect, and Low Cost SiGe Selective Epitaxial Growth (L3 SiGe SEG) Process for 45nm Node and Beyond","Hitachi Kokusai Electric Inc.,Yasuuchi,Yatsuo-machi,Toyama,Japan.",340
+Applications and design styles for 3DIC,"Synopsys Inc., Santa Clara, CA, USA",341
+Application and Benefits of Target Programming Algorithms for Ferroelectric HfO2 Transistors,"Ferroelectric Memory GmbH,Dresden,Germany",342
+22.6 A 22V compliant 56µW active charge balancer enabling 100% charge compensation even in monophasic and 36% amplitude correction in biphasic neural stimulators,"Hahn-Schickard,Villingen-Schwenningen,Germany",343
+A Stacked Embedded DRAM Array for LPDDR4/4X using Hybrid Bonding 3D Integration with 34GB/s/1Gb 0.88pJ/b Logic-to-Memory Interface,"Wuhan Xinxin Semiconductor Manufacturing Co.,Ltd.,Wuhan,China",344
+A new vertically stacked poly-Si MOSFET for 533 MHz high speed 64Mbit SRAM,"Hitachi Cambridge Laboratory, Hitachi Europe Ltd., Cambridge, UK",345
+High electron and hole mobility enhancements in thin-body strained Si/strained SiGe/strained Si heterostructures on insulator,"Department of Materials Science and Engineering, MIT, Cambridge, MA, USA",346
+Low operation voltage high integrated field emitter arrays by transfer metal mold technique using ultra precision machining and super microelectroplating technology,"Corporate Research & Development Center, Toshiba Corporation, Kawasaki, Japan",347
+High performance CMOS fabricated on hybrid substrate with different crystal orientations,"Microelectronic Division, Hopewell Junction, NY, USA",348
+Advanced power devices for many-core processor power supplies,"ACOO Enterprises LLC, USA",349
+"A Low-Cost, High-Performance, High-Voltage Complementary BiCMOS Process","Im Technologiepark, IHP, Frankfurt, Germany",350
+High performance poly-Si TFTs on a glass by a stable scanning CW laser lateral crystallization,"Fujitsu Laboratories Limited, Atsugi, Japan",351
+Role of correlation in systematic variation modeling,"Compact Device Modeling Group, Advanced Design, Intel Corporation, Hillsboro, US",352
+Role of temperature in process-induced charging damage in sub-micron CMOS transistors,"Sematech, Austin, TX, USA",353
+A SiGe transmitter chipset for CATV video-on-demand systems,"Microtune,Plano,TX,USA",354
+Surface Wave and Lamb Wave Acoustic Devices on Heterogenous Substrate for 5G Front-Ends,"Harbin Institute of Technology,School of Science,Shenzhen,China",355
+Managing leakage in charge-based analog circuits with low-V/sub TH/ transistors by analog T-switch (AT-Switch) and super cut-off CMOS,"Center for Collaborative Res.,Tokyo Univ.,Japan",356
+On the dynamic resistance and reliability of phase change memory,"IBM Hopewell Junction,USA",357
+A novel W/WNx/dual-gate CMOS technology for future high-speed DRAM having enhanced retention time and reliability,"Technology & Development Office, Elpida Memory, Inc., Sagamihara, Kanagawa, Japan",358
+300mm Heterogeneous 3D Integration of Record Performance Layer Transfer Germanium PMOS with Silicon NMOS for Low Power High Performance Logic Applications,"Components Research, Intel Corporation, Hillsboro, OR, USA",359
+0.18 um modular triple self-aligned embedded split-gate flash memory,"Div. of Microelectron.,IBM,Hopewell Junction,NY,USA",360
+ESD Protection for Mixed-Voltage I/O in LowVoltage Thin-Oxide CMOS,"Nat. Chiao-Tung Univ.,Hsin-Chu",361
+A 256MB synchronous-burst DDR SRAM with hierarchical bit-line architecture for mobile applications,"Samsung,Hwasung,South Korea",362
+A low power and high speed data transfer scheme with asynchronous compressed pulse width modulation for AS-memory,"ULSI Lab.,Mitsubishi Electr. Corp.,Itami,Japan",363
+A CMOS Image Sensor Integrating Column-Parallel Cyclic ADCs with On-Chip Digital Error Correction Circuits,"Sanei Hytechs,Hamamatsu,Japan",364
+An orthogonal 6F/sup 2/ trench-sidewall vertical device cell for 4 Gb/16 Gb DRAM,"Infineon Technologies, Dresden, Germany",365
+A middle-1X nm NAND flash memory cell (M1X-NAND) with highly manufacturable integration technologies,"Research and Development Division, Flash Device development & Advanced Process Team, Ichon, Gyeonggi, South Korea",366
+A 400MHz random-cycle dual-port interleaved DRAM with striped-trench capacitor,"Matsushita,Nagaokakyo,Japan",367
+A 1mW Dual-Chopper Amplifier for a 50-/spl mu/g/spl radic/Hz Monolithic CMOS-MEMS Capacitive Accelerometer,"Dept. of Electr. & Comput. Eng.,Florida Univ.,Gainesville,FL",368
+A large-area curved pyroelectric fingerprint sensor,"TNO Holst Centre, The Netherlands",369
+A 4.5GHz LC-VCO with Self-Regulating Technique,"Renesas Technology,Takasaki,Japan",370
+Advanced MMIC for Passive Millimeter and Submillimeter Wave Imaging,"Northrop Grumman,Redondo Beach,CA",371
+Random Telegraph Signal Statistical Analysis using a Very Large-scale Array TEG with 1M MOSFETs,"Asahi Kasei Microsystems Co.,Ltd.,Aza-Aoba,Aramaki,Aoba-ku,Sendai,,Japan",372
+High frequency InAs-channel HEMTs for low power ICs,"HRL Laboratories LLC, CA, USA",373
+Ultra thinning 300-mm wafer down to 7-µm for 3D wafer Integration on 45-nm node CMOS using strained silicon and Cu/Low-k interconnects,"Fujitsu Laboratories Limited, Atsugi, Kanagawa, Japan",374
+A 7nm FinFET technology featuring EUV patterning and dual strained high mobility channels,"GLOBALFOUNDRIES, Albany Nanotechnology Center, Albany, NY",375
+PBTI/NBTI monitoring ring oscillator circuits with on-chip Vt characterization and high frequency AC stress capability,"IBM SRDC,Hopewell Junction,NY,USA",376
+SOI circuit technology for batteryless mobile system with green energy sources,"Commun. Device R&D Dept.,Seiko Epson Corp.,Nagano,Japan",377
+A 10Gb/s eye-opening monitor in 0.13 /spl mu/m CMOS,"California Inst. of Technol.,Pasadena,CA,USA",378
+"High performance low temperature activated devices and optimization guidelines for 3D VLSI integration of FD, TriGate, FinFET on insulator","STMicroelectronics,France",379
+Advances in 3D CMOS sequential integration,"CEA, MINATEC, Grenoble, France",380
+Hybrid 1T e-DRAM and e-NVM Realized in One 10 nm node Ferro FinFET device with Charge Trapping and Domain Switching Effects,"Key Laboratory of Microelectronics Devices and Integrated Technology, Chinese Academy of Sciences, Beijing, China",381
+Advanced power electronic devices based on Gallium Nitride (GaN),"Cambridge Electronics, Inc. (CEI), Cambridge, MA, USA",382
+0.1 /spl mu/m level contact hole pattern formation with KrF lithography by resolution enhancement lithography assisted by chemical shrink (RELACS),"Ryoden Semiconductor System Engineering Corporation, Itami, Hyogo, Japan",383
+Weak inversion MOS varactors for 0.5 V analog integrated filters,"Columbia Univ.,New York,NY,USA",384
+Analysis and control of hysteresis in PD/SOI CMOS,"IBM Research Division, Yorktown Heights, NY, USA",385
+"19.6 A 0.2V trifilar-coil DCO with DC-DC converter in 16nm FinFET CMOS with 188dB FOM, 1.3kHz resolution, and frequency pushing of 38MHz/V for energy harvesting applications","1TSMC,Hsinchu,Taiwan",386
+A 0.18 /spl mu/m CMOS front-end processor for a blu-ray disc recorder with an adaptive PRML,"Samsung Electron.,Suwon,South Korea",387
+"A 90-nm CMOS device technology with high-speed, general-purpose, and low-leakage transistors for system on chip applications","Taiwan Semiconductor Manufacturing Company, Science Based Industrial Park, Hsinchu, Taiwan",388
+18.3 A 120mA Non-Isolated Capacitor-Drop AC/DC Power Supply,"Texas Instruments,Tucson,AZ",389
+Novel SiC power MOSFET with integrated unipolar internal inverse MOS-channel diode,"Advanced Devices Development Center, Panasonic Corporation, Moriguchi, Osaka, Japan",390
+Wireless implantable microsystems: coming breakthroughs in health care,"Dept. of Electr. Eng. & Comput. Sci.,Michigan Univ.,Ann Arbor,MI,USA",391
+High temperature operation of AlInAs/InGaAs/AlInAs 3D-SMODFETs with record two-dimensional electron gas densities,"US Army Research Laboratory, Fort Monmouth, NJ, USA",392
+A highly manufacturable low-k ALD-SiBN process for 60nm NAND flash devices and beyond,"Process Engineering Section, Thermal Processing Systems BU, Tokyo Electron Limited, Nirasaki, Yamanashi, Japan",393
+A 28nm HKMG super low power embedded NVM technology based on ferroelectric FETs,"NaMLab gGmbH, Dresden, Germany",394
+Gate-all-around Twin Silicon nanowire SONOS Memory,"PD Team,San,Nongseo-Dong,Kiheung-Ku,Yongin-City,Kyoungi-Do,,KOREA",395
+Quantized conductive filament formed by limited Cu source in sub-5nm era,"School of Materials Science and Engineering, Department of Nanobio Materials and Electronics, Gwangju Institute of Science and Technology, Gwangju, South Korea",396
+Additive manufacturing for electronics “Beyond Moore”,"PARC, A Xerox company, Palo Alto, USA",397
+SRAM current-sense amplifier with fully-compensated bit line multiplexer,"Tech. Univ. of Munich,Germany",398
+Performance comparison of sub 1 nm sputtered TiN/HfO/sub 2/ nMOS and pMOSFETs,"Texas Instruments, USA",399
+2RW dual-port SRAM design challenges in advanced technology nodes,"Renesas System Design Corporation, Tokyo, Japan",400
+Experimental characterization of stiction due to charging in RF MEMS,"E.E. Department of K. U. Leuven, IMEC vzw, Leuven, Belgium",401
+A 4.75GHz fractional frequency divider with digital spur calibration in 45nm CMOS,"Intel,Hillsboro,OR,USA",402
+A wire-speed powerTM processor: 2.3GHz 45nm SOI with 16 cores and 64 threads,"IBM Research,Bedford,NH,USA",403
+"GaN Power Commercialization with Highest Quality-Highest Reliability 650V HEMTs-Requirements, Successes and Challenges","Transphorm Inc., Goleta, CA, USA",404
+A 0.5-to-480MHz Self-Referenced CMOS Clock Generator with 90ppm Total Frequency Error and Spread-Spectrum Capability,"Mobius Microsystems,Detroit,MI",405
+0.228 /spl mu/m/sup 2/ trench cell technologies with bottle-shaped capacitor for 1 Gbit DRAMs,"ULSI Research Laboratories, Toshiba Corporation, Kawasaki, Japan",406
+A 14nm FinFET transistor-level 3D partitioning design to enable high-performance and low-cost monolithic 3D IC,"Technology Development, GLOBALFOUNDRIES, Malta, Ny, USA",407
+Physics-based compact modeling framework for state-of-the-art and emerging STT-MRAM technology,"Device Lab, Samsung Semiconductor Inc., San Jose, CA, USA",408
+Anomalous diffusion in the extension region of nanoscale MOSFETs,"FUJITSU LABORATORIES Limited, Atsugi, Kanagawa, Japan",409
+Enabling UTBB Strained SOI Platform for Co-Integration of Logic and RF: Implant-Induced Strain Relaxation and Comb-Like Device Architecture,"CEA,LETI,Minatec Campus,Grenoble,France",410
+A 5-mW 6-Gb/s Quarter-Rate Sampling Receiver with a 2-Tap DFE Using Soft Decisions,"California Univ.,Los Angeles,CA",411
+A new direct low-k/Cu dual damascene (DD) contact lines for low-loss (LL) CMOS device platforms,"NEC Electronics Corporation,Shimokuzawa,Sagamihara,Kanagawa,JAPAN",412
+"First fully functionalized monolithic 3D+ IoT chip with 0.5 V light-electricity power management, 6.8 GHz wireless-communication VCO, and 4-layer vertical ReRAM","National Nano Device Laboratories, Hsinchu, Taiwan",413
+A −31dBc integrated-phase-noise 29GHz fractional-N frequency synthesizer supporting multiple frequency bands for backward-compatible 5G using a frequency doubler and injection-locked frequency multipliers,"FCI,Seongnam,Korea",414
+A Spur Suppression Technique for Phase-Locked Frequency Synthesizers,"National Taiwan Univ.,Taipei",415
+Experimental and comparative investigation of low and high field transport in substrate- and process-induced strained nanoscaled MOSFETs,"CEA-LETI/DRT,Grenoble,France",416
+III-V HEMTs for Cryogenic Low Noise Amplifiers,"Low Noise Factory AB,Gothenburg,Sweden",417
+A 14b 40MS/s Redundant SAR ADC with 480MHz Clock in 0.13pm CMOS,"Infineon Technologies,Munich,Germany",418
+A system-on-chip for bi-directional point-to-multipoint wireless digital audio applications,"Catena,Kista,Sweden",419
+High performance amorphous oxide thin film transistors with self-aligned top-gate structure,"Semiconductor Laboratory, Samsung Advanced Institute of Technology, Yongin si, Gyeonggi, South Korea",420
+Design and fabrication of a high dynamic range image sensor in TFA technology,"Inst. fur Halbleiterelektronik,Siegen Univ.,Germany",421
+Circuit yield of organic integrated electronics,"STMicroelectronics,Milan,Italy",422
+A 0.25 mW sigma-delta modulator for voice-band applications,"Integrated Syst. Labs.,Texas Instrum. Inc.,Dallas,TX,USA",423
+PRD-based global-mean-time signaling for high-speed chip-to-chip communications,"Fujitsu Labs. Ltd.,Atsugi,Japan",424
+Hybrid silicon/molecular memories: co-engineering for novel functionality,"ZettaCore, Inc., CO, USA",425
+A Formation of Si Native Oxide Membrane Using High-Selectivity Etching and Applications for Nano-Pipe Array and Micro-Diaphragm on Si Substrate,"Spansion, Inc., Sunnyvale, CA, USA",426
+A harmonic rejection mixer robust to RF device mismatches,"Silicon Laboratories,Austin,TX",427
+Monolithically integrated 600-V E/D-mode SiNx/AlGaN/GaN MIS-HEMTs and their applications in low-standby-power start-up circuit for switched-mode power supplies,"Department of Microwave Devices and IC's, Institute of Microelectronics, Beijing, China",428
+"A 0.016mm2, 2.4GHz RF signal quality measurement macro for RF test and diagnosis","System Devices Research Laboratories,NEC Corporation,Sagamihara,Kanagawa,,Japan",429
+The 300mm Technology Current Status And Future Prospect,"Semiconductor Leading Edge Technologies,Inc. Yoshida+ho,Totsuka-ku,Yokohama-shi,Japan",430
+3.6 A 6-to-600MS/s Fully Dynamic Ringamp Pipelined ADC with Asynchronous Event-Driven Clocking in 16nm,"imec,Leuven,Belgium",431
+10.5 A Fully Integrated 27dBm Dual-Band All-Digital Polar Transmitter Supporting 160MHz for WiFi 6 Applications,"Intel,Haifa,Israel",432
+Epitaxial strained germanium p-MOSFETs with HfO/sub 2/ gate dielectric and TaN gate electrode,"Intel Corporation, Hillsboro, OR, USA",433
+"Fully integrated 1.7GHz, 188dBc/Hz FoM, 0.8V, 320/spl mu/W LC-tank VCO and frequency divider","Center for Phys. Electron.,Denmark Tech. Univ.,Lyngby,Denmark",434
+An 8640 MIPS SoC with Independent Power-Off Control of 8 CPUs and 8 RAMs by An Automatic Parallelizing Compiler,"Hitachi,Tokyo,Japan",435
+A Wireless Transceiver with Integrated Data Converters for 802.11a/b/g Access Points,"Analog Devices,Raleigh,NC",436
+A low-power integrated tuner for cable-telephony applications,"Silicon Wave Inc.,San Diego,CA,USA",437
+"A 3MHz-BW 3.6GHz digital fractional-N PLL with sub-gate-delay TDC, phase-interpolation divider, and digital mismatch cancellation","Politecnico di Milano,Italy",438
+A thin amorphous silicon buffer process for suppression of W polymetal gate depletion in PMOS,"T Project Group,Fujitsu Labs. Ltd.,Japan",439
+A single-chip CMOS transceiver for DCS-1800 wireless communications,"Katholieke Univ.,Leuven,Belgium",440
+A novel solution for porous low-k dual damascene post etch stripping/clean with supercritical CO/sub 2/ technology for 65nm and beyond applications,"Taiwan Semiconductor Manufacturing Company Limited, Hsinchu, Taiwan",441
+Damage-free CMP towards 32nm-node porous low-k (k = 1.6)/Cu integration,"Semicond. Leading Edge Technol. Inc.,Ibaraki,Japan",442
+A new cell structure for sub-quarter micron high density flash memory,"VLSI. Research Laboratory, Sharp Corporation, Nara, Japan",443
+Coupled quantum dots on SOI as highly integrated Si qubits,"Department of Electrical Engineering, Tokyo Institute of Technology, Tokyo, Japan",444
+10.6 A 4G/5G Cellular Transmitter in 12nm FinFET with Harmonic Rejection,"MediaTek,Kent,United Kingdom",445
+Channel Stress Modulation and Pattern Loading Effect Minimization of Milli-Second Super Anneal for Sub-65nm High Performance SiGe CMOS,"Res. & Dev.,Taiwan Semicond. Manuf. Co. Ltd.,Hsinchu",446
+An Internally-matched GaN HEMT Amplifier with 550-watt Peak Power at 3.5 GHz,"Cree Research, Inc., Goleta, CA, USA",447
+A 14-bit 8.9GS/s RF DAC in 40nm CMOS achieving >71dBc LTE ACPR at 2.9GHz,"Texas Instruments Incorporated,Dallas,USA",448
+Intrinsic fluctuations in Vertical NAND flash memories,"Process Development Team,Semiconductor R&D Center,Samsung Electronics Co. Ltd.,,Banwol-Dong,Hwasung-City,Gyunggi-Do,Korea",449
+Highly scalable flash memory with novel deep trench isolation embedded into highperformance cmos for the 90nm node & beyond,"Infineon Technologies NA, NY, USA",450
+Effect of mechanical stress on reliability of gate-oxide film in MOS transistors,"Mechanical Engineering Research Laboratory, Hitachi and Limited, Tsuchiura, Ibaraki, Japan",451
+An 8Mb demonstrator for high-density 1.8V Phase-Change Memories,"MPG & Central R&D,STMicroelectronics,Agrate Brianza,Italy",452
+A 375 MHz 1 /spl mu/m CMOS 8-bit multiplier,"Integrated Syst. Lab.,Swiss Federal Inst. of Technol.,Zurich,Switzerland",453
+20 Gb/s self-timed vector processing with Josephson single-flux quantum technology,"IBM Austin Research Laboratory,Austin,TX,USA",454
+Fully-parallel 25 MHz 2.5 Mb CAM,"Nortel Semiconductors,Ottawa,Ont.,Canada",455
+On the microscopic origin of the frequency dependence of hole trapping in pMOSFETs,"Imec, Leuven, Belgium",456
+A 50-nm 1.2-V GexTe1−x/Sb2Te3 superlattice topological-switching random-access memory (TRAM),"Low-power Electronics Association & Project,Onogawa,Tsukuba,Ibaraki,JAPAN",457
+A Current Driver IC using a S/H for QVGA FullColor Active-Matrix Organic LED Mobile Displays,"Samsung Electronics,Yong-In City,Korea",458
+Poly pitch and standard cell co-optimization below 28nm,"ARM INC, Austin, TX, USA",459
+The effect of interconnect scaling and low-k dielectric on the thermal characteristics of the IC metal,"Semiconductor Process and Device Center, Texas Instruments, Inc., Dallas, TX, USA",460
+Comprehensive extensibility of 20nm low power/high performance technology platform featuring scalable high-k/metal gate planar transistors with reduced design corner,"Samsung Electronics Company Limited, Yongin, Gyeonggi, South Korea",461
+Precursor ISI Reduction in High-Speed I/O,"Rambus,Inc,Los Altos,CA; MIT,Cambridge,MA",462
+First Transistor Demonstration of Thermal Atomic Layer Etching: InGaAs FinFETs with sub-5 nm Fin-width Featuring in situ ALE-ALD,"MIT, Microsystems Technology Laboratories, Cambridge, MA, USA",463
+Correlation of low-frequency noise and emitter-base reverse-bias stress in epitaxial Si- and SiGe-base bipolar transistors,"IBM Microelectronics, Hopewell Junction, NY, USA",464
+Re-Examination of Vth Window and Reliability in HfO2 FeFET Based on the Direct Extraction of Spontaneous Polarization and Trap Charge during Memory Operation,"Kioxia Corporation,Institute of Memory Technology Research & Development,Yokkaichi,Japan",465
+Physical mechanisms of endurance degradation in TMO-RRAM,"A*STAR, Institute of Microelectronics, Singapore, Singapore",466
+Demonstration of recessed SiGe S/D and inserted metal gate on HfO/sub 2/ for high performance pFETs.,"TI assignee at IMEC, Heverlee, Belgium",467
+A 3.6GB/s 1.3mW 400mV 0.051mm2 near-threshold voltage resilient router in 22nm tri-gate CMOS,"SoC Design Lab,Intel Labs,Intel Corporation,Hillsboro,OR,USA",468
+Ultrathin (<10nm) Nb2O5/NbO2 hybrid memory with both memory and selector characteristics for high density 3D vertically stackable RRAM applications,"School of Materials Science and Engineering,Gwangju Institute of Science and Technology,Korea",469
+A novel semimetallic quantum well FET,"Naval Research Laboratory, Inc., Washington D.C., DC, USA",470
+"A 4.6μm, 512×512, Ultra-Low Power Stacked Digital Pixel Sensor with Triple Quantization and 127dB Dynamic Range","Brillnics Japan Inc.,Tokyo,Japan",471
+A 1 1/4 inch 8.3M pixel digital output CMOS APS for UDTV application,"Micron Technology,CA,USA",472
+An Approach to Embedding Traditional Non-Volatile Memories into a Deep Sub-Micron CMOS,"ATQRD,TSMC,Hsinchu,Taiwan",473
+Combined linear-logarithmic CMOS image sensor,"Edinburgh Univ.,UK",474
+Programmable and automatically-adjustable sense-amplifier activation scheme and multi-reset address-driven decoding scheme for high-speed reusable SRAM core,"Device Dev. Center,Hitachi Ltd.,Tokyo,Japan",475
+14nm FDSOI technology for high speed and energy efficient applications,"IBM,rue Jean Monnet,Crolles,France",476
+The impact of substrate surface potential on the performance of RF power LDMOSFETs on high-resistivity SOI,"AmberWave Systems Corporation, Salem, NH, USA",477
+Novel fabrication process and structure of a low-voltage-operation micromirror array for optical MEMS switches,"NTT Microsystem Integration Laboratories, Japan",478
+Flexible and robust capping-metal gate integration technology enabling multiple-VT CMOS in MuGFETs,"IMEC,Belgium",479
+A record GmSAT/SSSAT and PBTI reliability in Si-passivated Ge nFinFETs by improved gate stack surface preparation,"imec,Kapeldreef,Leuven,,Belgium",480
+High thermal tolerance of 25-nm c-axis aligned crystalline In-Ga-Zn oxide FET,"Semiconductor Energy Laboratory Co., Ltd., Atsugi, Kanagawa, Japan",481
+A quad band WCDMA transceiver with fractional local divider,"Hitachi Central Research Laboratory,Japan",482
+"A 2.0 V, 0.35 /spl mu/m partially depleted SOI-CMOS technology","Digital Equipment Corporation, Hudson, MA, USA",483
+A 200 MSample/s trellis-coded PRML read/write channel with digital servo,"SGS-Thomson Microelectronics,San Jose,CA,USA",484
+Technology Innovations In Mobile Computers,"IBM Japan,Shtmots-uruma,,Kanagawa-!ten,Japan",485
+A 4.25 GHz BiCMOS clock recovery circuit with an AV-DSPD architecture for NRZ data stream,"NEC Corp.,Kanagawa,Japan",486
+A novel poly-silicon-capped poly-silicon-germanium thin-film transistor,"Xerox Palo Alto Research Center, Palo Alto, CA",487
+"A 14.7Mb/mm2 28nm FDSOI STT-MRAM with Current Starved Read Path, 52Ω/Sigma Offset Voltage Sense Amplifier and Fully Trimmable CTAT Reference","ARM,San Jose,CA,USA",488
+A Self-Resonant MEMS-based Electrostatic Field Sensor with 4V/m/Hz Sensitivity,"Medtronic,Fridley,MN",489
+Record high mobility (428cm2/V-s) of CVD-grown Ge/strained Ge0.91Sn0.09/Ge quantum well p-MOSFETs,Graduate Institute of Electronics Engineering,490
+1st quantitative failure-rate calculation for the actual large-scale SRAM using ultra-thin gate-dielectric with measured probability of the gate-current fluctuation and simulated circuit failure-rate,"Fujitsu Ltd.,,Fuchigami,Akiruno,Tokyo,Japan",491
+A 10MHz 80μW 67 ppm/°C CMOS reference clock oscillator with a temperature compensated feedback loop in 0.18μm CMOS,"Department of EECS,KAIST,Guseong-dong,Yuseong-gu,Daejon,Republic of Korea",492
+Strain engineered extremely thin SOI (ETSOI) for high-performance CMOS,"GLOBALFOUNDRIES,Albany,NY,USA",493
+A fully integrated zero-IF transceiver for GSM-GPRS quad band application,"Texas Instruments,Villeneuve Loubet,France",494
+Comprehensive study on AC characteristics in SOI MOSFETs for analog applications,"Dept. of Electr. Eng.,California State Univ.,Los Angeles,CA,USA",495
+Micro-Engineered Devices for Motion Energy Harvesting,"Department of Electrical & Electronic Engineering, Imperial College London, London, UK",496
+Novel self-assembled ultra-low-k porous silica films with high mechanical strength for 45 nm BEOL technology,"MIRAI, Association of Super-Advanced Electronics Technologies (ASET), Japan",497
+An Analog Frontend Chip for a MEMS-Based Parallel Scanning-Probe Data-Storage System,"IBM Systems & Technology Group,Essex Junction,Vermont",498

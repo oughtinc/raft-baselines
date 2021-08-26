@@ -1,0 +1,51 @@
+Query,Label,ID
+Is it possible for me to change my PIN number?,change_pin,0
+I'm not sure why my card didn't work,declined_card_payment,1
+I don't think my top up worked,top_up_failed,2
+Can you explain why my payment was charged a fee?,card_payment_fee_charged,3
+"How long does a transfer from a UK account take? I just made one and it doesn't seem to be working, wondering if everything is okay",balance_not_updated_after_bank_transfer,4
+Why am I getting declines when trying to make a purchase online?,declined_transfer,5
+What is the $1 transaction on my account?,extra_charge_on_statement,6
+It looks like my card payment was sent back.,reverted_card_payment?,7
+Why am I unable to transfer money when I was able to before?,beneficiary_not_allowed,8
+What if there is an error on the exchange rate?,card_payment_wrong_exchange_rate,9
+After I transferred money the balance remained the same.,balance_not_updated_after_bank_transfer,10
+How much does top up fees cost?,top_up_by_card_charge,11
+limits on top ups,top_up_limits,12
+My card payment was not successful.,declined_card_payment,13
+I live in the EU - can I get a card?,country_support,14
+Why did my top-up not work?,top_up_failed,15
+"I have a strange transaction for £1 on my statement, what is that?",extra_charge_on_statement,16
+Why is my money not in my account. I have already sent it out.,balance_not_updated_after_cheque_or_cash_deposit,17
+Let me know what the steps for the identity checks are,verify_my_identity,18
+I need my card as quick as possible,card_delivery_estimate,19
+In what increments can I top-up my card?,automatic_top_up,20
+When do i activate auto top-up?,automatic_top_up,21
+Do you charge for sending out more cards?,getting_spare_card,22
+Why am I being asked to verify my identity?,why_verify_identity,23
+What currencies can I use?,supported_cards_and_currencies,24
+I withdrew cash and I think the exchange rate is wrong.,wrong_exchange_rate_for_cash_withdrawal,25
+"My top up hasn't gone through yet, why?",pending_top_up,26
+"Hello, I have a question concerning an unfamiliar fee that I notice on my account. I see that you guys charge for ATM withdrawal. Never notice this fee until now. Can you please explain?",cash_withdrawal_charge,27
+The exchange rate was wrong in the foreign country I got cash in.,wrong_exchange_rate_for_cash_withdrawal,28
+I am still waiting for a transfer to show,pending_transfer,29
+How is the exchange rate calculated?,exchange_rate,30
+"There was an extra fee when I paid with my card, why was i charged this extra fee?",card_payment_fee_charged,31
+My credit card seems to have been declined for top up. Why is it not going through? Can you tell me what's going on?,top_up_failed,32
+"My transfers keep on getting declined. My card was working fine up until now, however it has suddenly stopped working. Why is this?",declined_transfer,33
+How long does it take for my physical card to be delivered.,card_delivery_estimate,34
+I need to know why a money transfer is available.,pending_transfer,35
+I must make several disposable cards every day.,disposable_card_limits,36
+What do I do to link my new card?,card_linking,37
+Why is their a charge pending on my card still?,pending_card_payment,38
+Why is there extra cash in my account?,cash_withdrawal_not_recognised,39
+Can I get a refund on an item?,request_refund,40
+Can I get an update on my replacement card?,card_arrival,41
+How do I know what my PIN is?,get_physical_card,42
+In which countries can I get a card?,country_support,43
+Can I choose from either Visa or Mastercard?,visa_or_mastercard,44
+My card still hasn't been delivered,card_arrival,45
+I didn't make the direct debit payment on my account.,direct_debit_payment_not_recognised,46
+after i got married i need to change my name,edit_personal_details,47
+How can I tell the source for my available funds?,verify_source_of_funds,48
+I didn't get all the cash I asked for,wrong_amount_of_cash_received,49
