@@ -6,6 +6,14 @@ import datasets
 from sacred import Experiment, observers
 
 from random_classifier import RandomClassifier
+from gpt3_classifier import GPT3Classifier
+
+"""
+This class runs a classifier specified by `classifier_cls` on the unlabeled 
+    test sets for all configs given in `configs`. Any classifier can be used,
+    but must accept a hf.datasets.Dataset as an argument. Any other keyword
+    arguments must be specified via `classifier_kwargs`.
+"""
 
 raft_experiment = Experiment("raft_prediction")
 observer = observers.FileStorageObserver('results')
