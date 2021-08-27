@@ -5,7 +5,7 @@ import sklearn.metrics as skm
 from gpt3_classifier import GPT3Classifier
 
 
-raft_experiment = Experiment("raft_tuning")
+raft_experiment = Experiment("raft_tuning", save_git_info=False)
 observer = observers.FileStorageObserver("results")
 raft_experiment.observers.append(observer)
 
@@ -16,6 +16,7 @@ def base_config():
     classifier_kwargs = {"engine": "ada", "num_prompt_training_examples": 49}
     configs = datasets.get_dataset_config_names('ought/raft')
     # configs = ["neurips_impact_statement_risks"]
+    # configs = ["semiconductor_org_types"]
 
 
 @raft_experiment.capture
@@ -49,13 +50,12 @@ def loo_test(train_datasets, classifier_cls, classifier_kwargs):
                 predictions.append(dataset.features["Label"].str2int(output[0]))
 
             test.map(predict)
-            break
 
         # accuracy = sum([p == l for p, l in zip(predictions, dataset['Label'])]) / 50
-        # f1 = skm.f1_score(dataset['Label'], predictions,
-        #                   labels=labels, average="macro")
+        f1 = skm.f1_score(dataset['Label'], predictions,
+                           labels=labels, average="macro")
 
-        # print(f"{config}: {f1}")
+        print(f"{config}: {f1}")
 
 
 @raft_experiment.automain
