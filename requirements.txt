@@ -4,3 +4,4 @@ transformers
 openai
 sacred
 python-dotenv
+cachetools

@@ -237,12 +237,12 @@ class GPT3Classifier:
 
             return self.training_data.select(indices[:n_ex])
         else:
-            formatted_examples_without_labels = [
+            formatted_examples_without_labels = (
                 self.format_dict(
                     {col: row[col] for col in self.input_cols if col in row},
                 )
                 for row in self.training_data
-            ]
+            )
             search_results = search(
                 formatted_examples_without_labels,
                 self.format_dict(input),
