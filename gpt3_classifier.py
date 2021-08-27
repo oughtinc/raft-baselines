@@ -53,18 +53,17 @@ FORBIDDEN_FIELDS = [
 class GPT3Classifier:
     separator: str = "\n\n"
 
-    def __init__(self, training_data, engine="ada", num_prompt_training_examples=20,
-                 add_prefixes=False, config=None) -> None:
+    def __init__(self, training_data, engine="ada", num_prompt_training_examples=20, add_prefixes=False, config=None) -> None:
         self.training_data = training_data
         self.engine = engine
         self.num_prompt_training_examples = num_prompt_training_examples
         self.add_prefixes = add_prefixes
         if config:
             self.config = config
-            self.default_instructions = INSTRUCTIONS[config]
+            self.default_instructions = f"{INSTRUCTIONS[config]}\nPossible labels:"
         else:
             self.config = None
-            self.default_instructions = "Classify the following as one of:"
+            self.default_instructions = "Possible labels:"
 
         self.input_cols = [col for col in training_data.features
                            if col not in ('ID', 'Label')]
@@ -89,7 +88,7 @@ class GPT3Classifier:
         formatted_classes = "\n".join(
             [f"{idx + 1}. {clas}" for idx, clas in enumerate(self.classes)]
         )
-        return f"""{self.default_instructions} Possible Labels:{self.separator}{formatted_classes}"""
+        return f"""{self.default_instructions}\n{formatted_classes}"""
 
     def max_example_lengths(
         self, num_training_examples: int, input_to_classify: Mapping[str, str]
@@ -146,7 +145,7 @@ class GPT3Classifier:
         clas_str = (
             clas if not self.add_prefixes else f"{self.classes.index(clas) + 1}. {clas}"
         )
-        output_block = f"{self.class_col}: {clas}"
+        output_block = f"{self.class_col}: {clas_str}"
         output_block = (
             output_block
             if max_tokens is None

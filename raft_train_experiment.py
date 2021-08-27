@@ -5,7 +5,7 @@ import sklearn.metrics as skm
 from gpt3_classifier import GPT3Classifier
 
 experiment_name = "test_instructions"
-raft_experiment = Experiment()
+raft_experiment = Experiment(experiment_name, save_git_info=False)
 observer = observers.FileStorageObserver(f"results/{experiment_name}")
 raft_experiment.observers.append(observer)
 
@@ -16,6 +16,7 @@ def base_config():
     classifier_kwargs = {"engine": "ada", "num_prompt_training_examples": 20}
     configs = datasets.get_dataset_config_names('ought/raft')
     # configs = ["neurips_impact_statement_risks"]
+    # configs = ["semiconductor_org_types"]
 
 
 @raft_experiment.capture
