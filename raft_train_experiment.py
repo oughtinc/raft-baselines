@@ -35,7 +35,8 @@ def loo_test(train_datasets, classifier_cls, classifier_kwargs):
             dataset = train_datasets[config]
             labels = list(range(1, dataset.features['Label'].num_classes))
             predictions = []
-            extra_kwargs = {"config": config, "use_task_specific_instructions": True} if instructions else {"config": config, "use_task_specific_instructions": False}
+            extra_kwargs = {"config": config, "use_task_specific_instructions": True} if instructions \
+                else {"config": config, "use_task_specific_instructions": False}
             if config == "banking_77":
                 extra_kwargs["add_prefixes"] = True
 
@@ -43,10 +44,7 @@ def loo_test(train_datasets, classifier_cls, classifier_kwargs):
                 train = dataset.select([j for j in range(len(dataset)) if j != i])
                 test = dataset.select([i])
 
-                if instructions:
-                    classifier = classifier_cls(train, **classifier_kwargs, config=config)
-                else:
-                    classifier = classifier_cls(train, **classifier_kwargs)
+                classifier = classifier_cls(train, **classifier_kwargs, **extra_kwargs)
 
                 def predict(example):
                     del example["Label"]

@@ -83,7 +83,8 @@ class GPT3Classifier:
         self.num_prompt_training_examples = num_prompt_training_examples
         self.add_prefixes = add_prefixes
 
-        self.instructions_start = f"{INSTRUCTIONS[config]}\nPossible labels:" if config and use_task_specific_instructions else "Possible labels:"
+        self.instructions_start = f"{INSTRUCTIONS[config]}\nPossible labels:" if config \
+                                         and use_task_specific_instructions else "Possible labels:"
 
         if config:
             self.config = config
@@ -318,5 +319,4 @@ class GPT3Classifier:
     ) -> Dict[str, float]:
         example_dataset = self.select_training_examples(input, random_seed=random_seed)
         prompt = self.format_prompt(input, example_dataset)
-        print(prompt)
         return self._classify_prompt(prompt)
