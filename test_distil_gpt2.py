@@ -1,4 +1,4 @@
-from gpt_neo_classifier import DistilGPT2Classifier
+from distil_gpt2_classifier import DistilGPT2Classifier
 import datasets
 
 
