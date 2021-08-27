@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
 
-class GPTNeoClassifier(GPT3Classifier):
+class DistilGPT2Classifier(GPT3Classifier):
     def __init__(self, *args, **kwargs):
         # self.model = GPTNeoForCausalLM.from_pretrained("EleutherAI/gpt-neo-1.3B")
         # self.tokenizer = GPT2Tokenizer.from_pretrained("EleutherAI/gpt-neo-1.3B")
@@ -30,3 +30,5 @@ class GPTNeoClassifier(GPT3Classifier):
             return next_token_probs[self.tokenizer.encode(clas_str)[0]]
 
         raw_class_probs = [get_prob_for_class(clas) for clas in self.classes]
+
+        return raw_class_probs
