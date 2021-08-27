@@ -2,5 +2,6 @@ predictions
 results
 .idea
 .env
+gpt3-baselines
 __pycache__
 gpt3-baselines

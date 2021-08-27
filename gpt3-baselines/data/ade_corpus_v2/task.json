@@ -1,1 +1,0 @@
-{"name": "ade_corpus_v2", "description": "", "data_columns": ["Sentence", "ID"], "label_columns": {"Label": ["ADE-related", "not ADE-related"]}}

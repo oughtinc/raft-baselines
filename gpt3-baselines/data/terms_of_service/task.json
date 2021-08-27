@@ -1,1 +1,0 @@
-{"name": "terms_of_service", "description": "", "data_columns": ["Sentence", "ID"], "label_columns": {"Label": ["not potentially unfair", "potentially unfair"]}}
