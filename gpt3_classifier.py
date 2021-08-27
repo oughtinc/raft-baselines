@@ -57,7 +57,7 @@ class GPT3Classifier:
                  add_prefixes=False, config=None) -> None:
         self.training_data = training_data
         self.engine = engine
-        self.num_prompt_training_examples=num_prompt_training_examples
+        self.num_prompt_training_examples = num_prompt_training_examples
         self.add_prefixes = add_prefixes
         if config:
             self.config = config
@@ -121,7 +121,8 @@ class GPT3Classifier:
     @classmethod
     def format_dict(cls, input: Mapping[str, str]) -> str:
         return "\n".join([f"{k}: {v}" for k, v in input.items()
-                          if k not in FORBIDDEN_FIELDS])
+                          if k not in FORBIDDEN_FIELDS and
+                          v.strip() != ""])
 
     def format_prompt_end(
         self, input: Mapping[str, str], max_tokens: Optional[int] = None
@@ -280,5 +281,4 @@ class GPT3Classifier:
     ) -> Dict[str, float]:
         example_dataset = self.select_training_examples(input, random_seed=random_seed)
         prompt = self.format_prompt(input, example_dataset)
-        print(prompt)
         return self._classify_prompt(prompt)
