@@ -1,0 +1,1 @@
+{"name": "neurips_impact_statement_risks", "description": "", "data_columns": ["Paper title", "Paper link", "Impact statement", "ID"], "label_columns": {"Label": ["doesn't mention a harmful application", "mentions a harmful application"]}}

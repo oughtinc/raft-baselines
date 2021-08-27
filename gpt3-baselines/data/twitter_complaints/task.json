@@ -1,0 +1,1 @@
+{"name": "twitter_complaints", "description": "", "data_columns": ["Tweet text", "ID"], "label_columns": {"Label": ["complaint", "no complaint"]}}
