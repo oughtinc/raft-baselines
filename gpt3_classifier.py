@@ -37,63 +37,45 @@ They should not report new data, be non-systematic reviews, consider cause-relat
     "one_stop_english": """The following is an article sourced from The Guardian newspaper, and rewritten by teachers to suit three levels of adult English as Second Language (ESL) learners: elementary, intermediate, and advanced. Predict the level of the article.""",
     "tweet_eval_hate": """Label whether the following tweet contains hate speech against either immigrants or women. Hate Speech (HS) is commonly defined as any communication that disparages a person or a group on the basis of some characteristic such as race, color, ethnicity, gender, sexual orientation, nationality, religion, or other characteristics.""",
     "twitter_complaints": """A complaint presents a state of affairs which breaches the writer’s favorable expectation. Label the tweet text based on whether it contains a complaint.""",
-    "semiconductor_org_types": """The dataset is a list of institutions that have contributed papers to semiconductor conferences in the last 25 years, as catalogued by IEEE and sampled randomly. The goal is to classify the institutions into one of three categories: "university", "company" or "research institute"."""
+    "semiconductor_org_types": """The dataset is a list of institutions that have contributed papers to semiconductor conferences in the last 25 years, as catalogued by IEEE and sampled randomly. The goal is to classify the institutions into one of three categories: "university", "company" or "research institute".""",
 }
 
 FIELD_ORDERING = {
-    "ade_corpus_v2": [
-        "Sentence"
-    ],
-    "banking_77": [
-        "Query"
-    ],
-    "terms_of_service": [
-        "Sentence"
-    ],
+    "ade_corpus_v2": ["Sentence"],
+    "banking_77": ["Query"],
+    "terms_of_service": ["Sentence"],
     "tai_safety_research": [
         "Title",
         "Abstract Note",
         "Publication Title",
         "Item Type",
-        "Publication Year"
+        "Publication Year",
     ],
-    "neurips_impact_statement_risks": [
-        "Impact statement",
-        "Paper title"
-    ],
-    "medical_subdomain_of_clinical_notes": [
-        "Note"
-    ],
-    "overruling": [
-        "Sentence"
-    ],
-    "systematic_review_inclusion": [
-        "Title",
-        "Abstract",
-        "Journal"
-    ],
-    "one_stop_english": [
-        "Article"
-    ],
-    "tweet_eval_hate": [
-        "Tweet"
-    ],
-    "twitter_complaints": [
-        "Tweet text"
-    ],
-    "semiconductor_org_types": [
-        "Organization name",
-        "Paper title"
-    ]
+    "neurips_impact_statement_risks": ["Impact statement", "Paper title"],
+    "medical_subdomain_of_clinical_notes": ["Note"],
+    "overruling": ["Sentence"],
+    "systematic_review_inclusion": ["Title", "Abstract", "Journal"],
+    "one_stop_english": ["Article"],
+    "tweet_eval_hate": ["Tweet"],
+    "twitter_complaints": ["Tweet text"],
+    "semiconductor_org_types": ["Organization name", "Paper title"],
 }
+
 
 class GPT3Classifier:
     separator: str = "\n\n"
 
-    def __init__(self, training_data, engine="ada", num_prompt_training_examples=20, add_prefixes=False, config=None) -> None:
+    def __init__(
+        self,
+        training_data,
+        engine="ada",
+        num_prompt_training_examples=20,
+        add_prefixes=False,
+        config=None,
+    ) -> None:
         self.training_data = training_data
         self.engine = engine
-        self.num_prompt_training_examples=num_prompt_training_examples
+        self.num_prompt_training_examples = num_prompt_training_examples
         self.add_prefixes = add_prefixes
         if config:
             self.config = config
@@ -102,9 +84,11 @@ class GPT3Classifier:
         else:
             self.config = None
             self.default_instructions = "Possible labels:"
-            self.input_cols = [col for col in training_data.features if col not in ('ID', 'Label')]
+            self.input_cols = [
+                col for col in training_data.features if col not in ("ID", "Label")
+            ]
 
-        self.class_col = 'Label'
+        self.class_col = "Label"
         # Function
         self.class_label_to_string = training_data.features["Label"].int2str
         self.classes = list(training_data.features["Label"].names[1:])
@@ -156,7 +140,7 @@ class GPT3Classifier:
 
     @classmethod
     def format_dict(cls, input: Mapping[str, str]) -> str:
-        return "\n".join([f"{k}: {v}" for k, v in input.items()if len(v.split())])
+        return "\n".join([f"{k}: {v}" for k, v in input.items() if len(v.split())])
 
     def format_prompt_end(
         self, input: Mapping[str, str], max_tokens: Optional[int] = None
@@ -184,9 +168,7 @@ class GPT3Classifier:
         output_block = (
             output_block
             if max_tokens is None
-            else truncate_by_tokens(
-                output_block, max_tokens - 2
-            )
+            else truncate_by_tokens(output_block, max_tokens - 2)
         )
         output_block_tokens = num_tokens(output_block)
         untruncated_text = self.format_dict(input)
