@@ -1,4 +1,6 @@
+import random
 from typing import Dict, Optional, List, Tuple, Mapping
+from collections import defaultdict
 
 import numpy as np
 import datasets
@@ -183,14 +185,25 @@ class GPT3Classifier:
     def select_training_examples(
         self, input: Mapping[str, str], random_seed: Optional[int] = None
     ) -> datasets.Dataset:
-        if self.num_prompt_training_examples is None or (
-            self.num_prompt_training_examples is not None
-            and len(self.training_data) <= self.num_prompt_training_examples
-        ):
+        random.seed(random_seed)
+
+        n_ex = self.num_prompt_training_examples
+        if n_ex is None or len(self.training_data) <= n_ex:
             return self.training_data
-        return self.training_data.train_test_split(
-            train_size=self.num_prompt_training_examples, seed=random_seed
-        )["train"]
+
+        uniques = defaultdict(lambda: [])
+        for i, row in enumerate(self.training_data):
+            uniques[row['Label']].append(i)
+
+        indices = []
+        for key in uniques:
+            indices.append(random.choice(uniques[key]))
+        random.shuffle(indices)
+
+        remaining_indices = [i for i in range(len(self.training_data)) if i not in indices]
+        indices += random.sample(remaining_indices, n_ex)
+
+        return self.training_data.select(indices[:n_ex])
 
     def format_prompt(
         self,
