@@ -3,6 +3,8 @@ from transformers import GPT2TokenizerFast
 import math
 from dotenv import load_dotenv
 import os
+import time
+from cachetools import cached, LRUCache
 
 
 from typing import List, Dict, Tuple, Any, cast
@@ -38,6 +40,7 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
+@cached(cache=LRUCache(maxsize=1e9))
 def complete(
     prompt: str,
     engine: str = "ada",
@@ -64,34 +67,55 @@ def complete(
         presence_penalty=presence_penalty,
         frequency_penalty=frequency_penalty,
     )
-    try:
-        response = openai.Completion.create(**openai_completion_args)
-    except Exception as e:
-        print("Exception in OpenAI completion:", e)
-        raise e
+
+    success = False
+    retries = 0
+    while not success:
+        try:
+            response = openai.Completion.create(**openai_completion_args)
+            success = True
+        except Exception as e:
+            print(f"Exception in OpenAI completion: {e}")
+            retries += 1
+            if retries > 3:
+                raise Exception("Max retries reached")
+                break
+            else:
+                print("retrying")
+                time.sleep(retries * 15)
 
     return cast(Dict[str, Any], response)
 
 
+@cached(cache=LRUCache(maxsize=1e9))
 def search(
     documents: Tuple[str, ...], query: str, engine: str = "ada"
 ) -> List[Dict[str, Any]]:
-    print("Running search")
     response = None
     error = None
     query = truncate_by_tokens(query, 1000)
     short_enough_documents = [
-        truncate_by_tokens(document, 2034 - num_tokens(query))
-        for document in documents
+        truncate_by_tokens(document, 2034 - num_tokens(query)) for document in documents
     ]
 
-    try:
-        response = openai.Engine(engine, api_key=OPENAI_API_KEY).search(
-            documents=short_enough_documents, query=query
-        )
-    except Exception as e:
-        print("Exception in OpenAI search:", e)
-        raise e
+    success = False
+    retries = 0
+    while not success:
+        try:
+            response = openai.Engine(engine, api_key=OPENAI_API_KEY).search(
+                documents=short_enough_documents, query=query
+            )
+            success = True
+        except Exception as e:
+            print(f"Exception in OpenAI search: {e}")
+            retries += 1
+            if retries > 3:
+                raise Exception("Max retries reached")
+                break
+            else:
+                print("retrying")
+                time.sleep(retries * 15)
+
     assert response is not None
     results = response["data"]
 
