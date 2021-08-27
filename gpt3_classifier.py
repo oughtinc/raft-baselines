@@ -222,7 +222,7 @@ class GPT3Classifier:
         random.shuffle(indices)
 
         remaining_indices = [i for i in range(len(self.training_data)) if i not in indices]
-        indices += random.sample(remaining_indices, n_ex)
+        indices += random.sample(remaining_indices, min(n_ex, len(remaining_indices)))
 
         return self.training_data.select(indices[:n_ex])
 
@@ -316,4 +316,5 @@ class GPT3Classifier:
     ) -> Dict[str, float]:
         example_dataset = self.select_training_examples(input, random_seed=random_seed)
         prompt = self.format_prompt(input, example_dataset)
+        print(prompt)
         return self._classify_prompt(prompt)
