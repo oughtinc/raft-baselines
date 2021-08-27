@@ -72,6 +72,8 @@ class GPT3Classifier:
         num_prompt_training_examples=20,
         add_prefixes=False,
         config=None,
+        do_semantic_selection=False,
+        search_engine="ada"
     ) -> None:
         self.training_data = training_data
         self.engine = engine
@@ -87,6 +89,8 @@ class GPT3Classifier:
             self.input_cols = [
                 col for col in training_data.features if col not in ("ID", "Label")
             ]
+        self.do_semantic_selection = do_semantic_selection
+        self.search_engine = search_engine
 
         self.class_col = "Label"
         # Function
@@ -140,7 +144,7 @@ class GPT3Classifier:
 
     @classmethod
     def format_dict(cls, input: Mapping[str, str]) -> str:
-        return "\n".join([f"{k}: {v}" for k, v in input.items() if len(v.split())])
+        return "\n".join([f"{k}: {v}" for k, v in input.items() if len(v.strip())])
 
     def format_prompt_end(
         self, input: Mapping[str, str], max_tokens: Optional[int] = None
