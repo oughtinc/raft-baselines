@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 
-from typing import Dict, Tuple, Any, cast
+from typing import List, Dict, Tuple, Any, cast
 
 
 def make_gpt2_tokenizer(*, local_files_only: bool = False) -> GPT2TokenizerFast:
@@ -72,3 +72,28 @@ def complete(
         raise e
 
     return cast(Dict[str, Any], response)
+
+
+def search(
+    documents: Tuple[str, ...], query: str, engine: str = "ada"
+) -> List[Dict[str, Any]]:
+    print("Running search")
+    response = None
+    error = None
+    query = truncate_by_tokens(query, 1000)
+    short_enough_documents = [
+        truncate_by_tokens(document, 2034 - num_tokens(query))
+        for document in documents
+    ]
+
+    try:
+        response = openai.Engine(engine, api_key=OPENAI_API_KEY).search(
+            documents=short_enough_documents, query=query
+        )
+    except Exception as e:
+        print("Exception in OpenAI search:", e)
+        raise e
+    assert response is not None
+    results = response["data"]
+
+    return results

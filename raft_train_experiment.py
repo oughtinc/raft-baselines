@@ -10,10 +10,10 @@ raft_experiment.observers.append(observer)
 
 
 @raft_experiment.config
-def base_config(): 
+def base_config():
     classifier_cls = GPT3Classifier
     classifier_kwargs = {"engine": "ada", "num_prompt_training_examples": 20}
-    configs = datasets.get_dataset_config_names('ought/raft')
+    configs = datasets.get_dataset_config_names("ought/raft")
     # configs = ["neurips_impact_statement_risks"]
     # configs = ["semiconductor_org_types"]
 
@@ -33,10 +33,13 @@ def loo_test(train_datasets, classifier_cls, classifier_kwargs):
     for config in train_datasets:
         for instructions in (True, False):
             dataset = train_datasets[config]
-            labels = list(range(1, dataset.features['Label'].num_classes))
+            labels = list(range(1, dataset.features["Label"].num_classes))
             predictions = []
-            extra_kwargs = {"config": config, "use_task_specific_instructions": True} if instructions \
+            extra_kwargs = (
+                {"config": config, "use_task_specific_instructions": True}
+                if instructions
                 else {"config": config, "use_task_specific_instructions": False}
+            )
             if config == "banking_77":
                 extra_kwargs["add_prefixes"] = True
 
@@ -57,12 +60,15 @@ def loo_test(train_datasets, classifier_cls, classifier_kwargs):
                 test.map(predict)
 
             # accuracy = sum([p == l for p, l in zip(predictions, dataset['Label'])]) / 50
-            f1 = skm.f1_score(dataset["Label"], predictions,
-                              labels=labels, average="macro")
+            f1 = skm.f1_score(
+                dataset["Label"], predictions, labels=labels, average="macro"
+            )
 
             print(f"Dataset - {config}; Instructions - {instructions}: {f1}")
 
-            raft_experiment.log_scalar(f"{config}.{'instructions' if instructions else 'generic'}", f1)
+            raft_experiment.log_scalar(
+                f"{config}.{'instructions' if instructions else 'generic'}", f1
+            )
 
 
 @raft_experiment.automain

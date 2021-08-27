@@ -5,7 +5,7 @@ from collections import defaultdict
 import numpy as np
 import datasets
 
-from utils import num_tokens, truncate_by_tokens, complete, gpt2_tokenizer
+from utils import num_tokens, truncate_by_tokens, complete, gpt2_tokenizer, search
 
 
 INSTRUCTIONS = {
@@ -76,15 +76,18 @@ class GPT3Classifier:
         config=None,
         use_task_specific_instructions=False,
         do_semantic_selection=False,
-        search_engine="ada"
+        search_engine="ada",
     ) -> None:
         self.training_data = training_data
         self.engine = engine
         self.num_prompt_training_examples = num_prompt_training_examples
         self.add_prefixes = add_prefixes
 
-        self.instructions_start = f"{INSTRUCTIONS[config]}\nPossible labels:" if config \
-                                         and use_task_specific_instructions else "Possible labels:"
+        self.instructions_start = (
+            f"{INSTRUCTIONS[config]}\nPossible labels:"
+            if config and use_task_specific_instructions
+            else "Possible labels:"
+        )
 
         if config:
             self.config = config
@@ -218,39 +221,67 @@ class GPT3Classifier:
 
             uniques = defaultdict(lambda: [])
             for i, row in enumerate(self.training_data):
-                uniques[row['Label']].append(i)
+                uniques[row["Label"]].append(i)
 
             indices = []
             for key in uniques:
                 indices.append(random.choice(uniques[key]))
             random.shuffle(indices)
 
-            remaining_indices = [i for i in range(len(self.training_data)) if i not in indices]
-            indices += random.sample(remaining_indices, min(n_ex, len(remaining_indices)))
+            remaining_indices = [
+                i for i in range(len(self.training_data)) if i not in indices
+            ]
+            indices += random.sample(
+                remaining_indices, min(n_ex, len(remaining_indices))
+            )
 
             return self.training_data.select(indices[:n_ex])
         else:
+            formatted_examples_without_labels = [
+                self.format_dict(
+                    {col: row[col] for col in self.input_cols if col in row},
+                )
+                for row in self.training_data
+            ]
+            search_results = search(
+                formatted_examples_without_labels,
+                self.format_dict(input),
+                self.search_engine,
+            )
 
+            sorted_indices = list(
+                map(
+                    lambda result: result["document"],  # type: ignore
+                    sorted(
+                        search_results,
+                        key=lambda result: -result["score"],  # type: ignore
+                    ),
+                )
+            )
+
+            return self.training_data.select(
+                list(reversed(sorted_indices[: self.num_prompt_training_examples]))
+            )
 
     def format_prompt(
         self,
         input: Mapping[str, str],
         example_dataset: Optional[datasets.Dataset] = None,
     ) -> str:
+        ordered_input = {col: input[col] for col in self.input_cols if col in input}
+
         if example_dataset is None:
-            example_dataset = self.select_training_examples(input)
+            example_dataset = self.select_training_examples(ordered_input)
 
         if self.truncation_params is None:
             raise ValueError("No truncation strategy provided.")
         max_end_example_tokens, max_train_example_tokens = self.max_example_lengths(
-            len(example_dataset), input
+            len(example_dataset), ordered_input
         )
         example_str = self.render_examples(
             example_dataset, max_tokens_per_example=max_train_example_tokens
         )
         example_str_and_sep = "" if example_str == "" else example_str + self.separator
-
-        ordered_input = {col: input[col] for col in self.input_cols if col in input}
 
         prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(ordered_input, max_tokens=max_end_example_tokens)}"""  # noqa: E501
         return prompt
