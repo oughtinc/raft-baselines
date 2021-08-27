@@ -1,8 +1,9 @@
 import random
 
-class RandomClassifier():
+
+class RandomClassifier:
     def __init__(self, training_data, seed=4):
-        self.classes = list(training_data.features['Label'].names[1:])
+        self.classes = list(training_data.features["Label"].names[1:])
         random.seed(seed)
 
     def classify(self, input):
@@ -10,5 +11,3 @@ class RandomClassifier():
         result[random.choice(self.classes)] = 1.0
 
         return result
-
-
