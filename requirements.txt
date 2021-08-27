@@ -4,3 +4,6 @@ transformers
 openai
 sacred
 python-dotenv
+torch
+protobuf
+sentencepiece

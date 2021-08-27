@@ -24,9 +24,11 @@ raft_experiment.observers.append(observer)
 @raft_experiment.config
 def base_config():
     classifier_cls = GPT3Classifier
-    classifier_kwargs = {"engine": "ada",
-                         "num_prompt_training_examples": 20,
-                         "use_task_specific_instructions": True}
+    classifier_kwargs = {
+        "engine": "ada",
+        "num_prompt_training_examples": 20,
+        "use_task_specific_instructions": True,
+    }
     configs = datasets.get_dataset_config_names("ought/raft")
     # configs = ["systematic_review_inclusion"]
 
@@ -62,7 +64,7 @@ def make_predictions(train_datasets, test_datasets, classifier_cls, classifier_k
         train_examples = classifier.select_training_examples(dummy_input, random_seed=4)
         example_prompt = classifier.format_prompt(dummy_input, train_examples)
 
-        log_text(example_prompt, "prompts", config+".txt")
+        log_text(example_prompt, "prompts", config + ".txt")
 
         def predict(example):
             output_probs = classifier.classify(example)
@@ -81,7 +83,7 @@ def log_text(text, dirname, filename):
     if not os.path.isdir(targetdir):
         os.mkdir(targetdir)
 
-    with open(os.path.join(targetdir, filename), 'w') as f:
+    with open(os.path.join(targetdir, filename), "w") as f:
         f.write(text)
 
 
@@ -105,8 +107,7 @@ def write_predictions(labeled):
             )
             writer.writerow(["ID", "Label"])
             for row in dataset:
-                writer.writerow([row["ID"],
-                                 int2str(row["Label"])])
+                writer.writerow([row["ID"], int2str(row["Label"])])
 
     sacred_pred_dir = os.path.join(observer.dir, "predictions")
     if os.path.isdir(sacred_pred_dir):

@@ -77,6 +77,7 @@ class GPT3Classifier:
         use_task_specific_instructions=False,
         do_semantic_selection=False,
         search_engine="ada",
+        max_prompt_tokens=2048,
     ) -> None:
         self.training_data = training_data
         self.engine = engine
@@ -106,7 +107,7 @@ class GPT3Classifier:
         self.classes = list(training_data.features["Label"].names[1:])
         self.truncation_params = {
             # max - completion tokens
-            "max_tokens": 2048 - 1,
+            "max_tokens": max_prompt_tokens - 1,
             "end_example_token_proportion": max(
                 0.25,
                 1
@@ -308,12 +309,11 @@ class GPT3Classifier:
     def _get_raw_probabilities(
         self,
         prompt: str,
-        engine: Optional[str] = None,
     ) -> List[float]:
         response = complete(
             prompt,
             temperature=0.0,
-            engine=engine or self.engine,
+            engine=self.engine,
             max_tokens=1,
         )
         logprobs: Dict[str, float] = response["choices"][0]["logprobs"]["top_logprobs"][
@@ -333,9 +333,8 @@ class GPT3Classifier:
     def _classify_prompt(
         self,
         prompt: str,
-        engine: Optional[str] = None,
     ) -> Dict[str, float]:
-        raw_p = self._get_raw_probabilities(prompt, engine)
+        raw_p = self._get_raw_probabilities(prompt)
         sum_p = np.sum(raw_p)
         if sum_p > 0:
             normalized_p = np.array(raw_p) / np.sum(raw_p)

@@ -81,8 +81,7 @@ def search(
     error = None
     query = truncate_by_tokens(query, 1000)
     short_enough_documents = [
-        truncate_by_tokens(document, 2034 - num_tokens(query))
-        for document in documents
+        truncate_by_tokens(document, 2034 - num_tokens(query)) for document in documents
     ]
 
     try:
