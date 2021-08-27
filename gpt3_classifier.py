@@ -48,15 +48,24 @@ class GPT3Classifier:
             f"""Classify the following as one of:{self.separator}{formatted_classes}"""
         )
 
-    def max_example_lengths(self, num_training_examples: int) -> Tuple[int, int]:
+    def max_example_lengths(
+        self, num_training_examples: int, input_to_classify: Mapping[str, str]
+    ) -> Tuple[int, int]:
         instruction_tokens = num_tokens(self.instructions)
         separator_tokens = (num_training_examples + 1) * len(self.separator)
         max_example_tokens = (
             self.truncation_params["max_tokens"] - instruction_tokens - separator_tokens
         )
 
-        max_end_example_tokens = int(
-            max_example_tokens * self.truncation_params["end_example_token_proportion"]
+        untruncated_end_example_tokens = num_tokens(
+            self.format_prompt_end(input_to_classify)
+        )
+        max_end_example_tokens = min(
+            untruncated_end_example_tokens,
+            int(
+                max_example_tokens
+                * self.truncation_params["end_example_token_proportion"]
+            ),
         )
         max_train_example_tokens = (
             int((max_example_tokens - max_end_example_tokens) / num_training_examples)
@@ -143,7 +152,7 @@ class GPT3Classifier:
         if self.truncation_params is None:
             raise ValueError("No truncation strategy provided.")
         max_end_example_tokens, max_train_example_tokens = self.max_example_lengths(
-            len(example_dataset)
+            len(example_dataset), input
         )
         example_str = self.render_examples(
             example_dataset, max_tokens_per_example=max_train_example_tokens
