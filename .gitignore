@@ -1,5 +1,5 @@
-openai-api-key.txt
 predictions
 results
 .idea
+.env
 __pycache__

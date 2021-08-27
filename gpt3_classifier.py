@@ -21,8 +21,8 @@ class GPT3Classifier:
         self.class_label_to_string = training_data.features['Label'].int2str
         self.classes = list(training_data.features['Label'].names[1:])
         self.truncation_params = {
-            # max - buffer - completion tokens
-            "max_tokens": 2048 - 10 - 5,
+            # max - completion tokens
+            "max_tokens": 2048 - 1,
             "end_example_token_proportion": max(
                 0.25,
                 1
@@ -30,7 +30,6 @@ class GPT3Classifier:
             )
             if self.num_prompt_training_examples is not None
             else 0.25,
-            "strategy": "truncate",
         }
 
     @property
@@ -105,7 +104,6 @@ class GPT3Classifier:
             )
             for row in example_dataset
         ]
-        # TODO
         return self.separator.join(formatted_examples)
 
     def select_training_examples(
@@ -116,7 +114,6 @@ class GPT3Classifier:
             and len(self.training_data) <= self.num_prompt_training_examples
         ):
             return self.training_data
-        # TODO
         return self.training_data.train_test_split(
             train_size=self.num_prompt_training_examples, seed=random_seed
         )['train']
@@ -129,37 +126,18 @@ class GPT3Classifier:
 
         if self.truncation_params is None:
             raise ValueError("No truncation strategy provided.")
-        elif self.truncation_params["strategy"] == "truncate":
-            max_end_example_tokens, max_train_example_tokens = self.max_example_lengths(
-                len(example_dataset)
-            )
-            example_str = self.render_examples(
-                example_dataset, max_tokens_per_example=max_train_example_tokens
-            )
-            example_str_and_sep = (
-                "" if example_str == "" else example_str + self.separator
-            )
+        max_end_example_tokens, max_train_example_tokens = self.max_example_lengths(
+            len(example_dataset)
+        )
+        example_str = self.render_examples(
+            example_dataset, max_tokens_per_example=max_train_example_tokens
+        )
+        example_str_and_sep = (
+            "" if example_str == "" else example_str + self.separator
+        )
 
-            prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(input, max_tokens=max_end_example_tokens)}"""  # noqa: E501
-
-            return prompt
-        elif self.truncation_params["strategy"] == "error":
-            example_str = self.render_examples(
-                example_dataset, max_tokens_per_example=int(1e9)
-            )
-            example_str_and_sep = (
-                "" if example_str == "" else example_str + self.separator
-            )
-            prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(input, max_tokens=int(1e9))}"""  # noqa: E501
-
-            if num_tokens(prompt) <= self.truncation_params["max_tokens"]:
-                return prompt
-            else:
-                raise Exception("Prompt is too long to send for classification")
-        else:
-            raise ValueError(
-                f"Unexpected truncation strategy {self.truncation_params['strategy']}"
-            )
+        prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(input, max_tokens=max_end_example_tokens)}"""  # noqa: E501
+        return prompt
 
     @staticmethod
     def does_token_match_class(token: str, clas: str) -> bool:
@@ -180,24 +158,17 @@ class GPT3Classifier:
     def _get_raw_probabilities(
         self,
         prompt: str,
-        verbose: Optional[bool] = False,
         engine: Optional[str] = None,
     ) -> List[float]:
-        # TODO
         response = complete(
             prompt,
             temperature=0.0,
             engine=engine or self.engine,
+            max_tokens=1,
         )
         logprobs: Dict[str, float] = response["choices"][0]["logprobs"]["top_logprobs"][
             0
         ]
-
-        if verbose:
-            sorted_logprobs = dict(
-                sorted(logprobs.items(), key=lambda item: item[1], reverse=True)
-            )
-            print(sorted_logprobs)
 
         raw_p = []
         for clas in self.classes:
@@ -212,10 +183,9 @@ class GPT3Classifier:
     def _classify_prompt(
         self,
         prompt: str,
-        verbose: Optional[bool] = False,
         engine: Optional[str] = None,
     ) -> Dict[str, float]:
-        raw_p = self._get_raw_probabilities(prompt, verbose, engine)
+        raw_p = self._get_raw_probabilities(prompt, engine)
         sum_p = np.sum(raw_p)
         if sum_p > 0:
             normalized_p = np.array(raw_p) / np.sum(raw_p)
@@ -229,11 +199,10 @@ class GPT3Classifier:
     def classify(
         self,
         input: Mapping[str, str],
-        verbose: Optional[bool] = False,
         random_seed: Optional[int] = None,
     ) -> Dict[str, float]:
         example_dataset = self.select_training_examples(input, random_seed=random_seed)
         prompt = self.format_prompt(input, example_dataset)
         print(prompt)
-        return self._classify_prompt(prompt, verbose=verbose)
+        return self._classify_prompt(prompt)
 
