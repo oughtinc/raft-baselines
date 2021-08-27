@@ -59,35 +59,35 @@ def load_datasets_train(configs):
 
 
 @raft_experiment.capture
-def make_predictions(train_datasets, test_datasets, classifier_cls, classifier_kwargs):
-    for config in train_datasets:
-        extra_kwargs = {"config": config,
-                        "num_prompt_training_examples": NUM_EXAMPLES[config]}
-        if config == "banking_77":
-            extra_kwargs["add_prefixes"] = True
+def make_predictions(train_dataset, test_dataset, config, extra_kwargs,
+                     classifier_cls, classifier_kwargs):
+    classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
-        train_dataset = train_datasets[config]
-        classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
+    test_dataset = test_dataset.select(range(1))
 
-        test_dataset = test_datasets[config]
+    dummy_input = test_dataset[0]
+    del dummy_input["Label"]
+    example_prompt = classifier.format_prompt(dummy_input)
 
-        dummy_input = test_dataset[0]
-        del dummy_input["Label"]
-        example_prompt = classifier.format_prompt(dummy_input)
+    log_text(example_prompt, "prompts", config+".txt")
 
-        log_text(example_prompt, "prompts", config+".txt")
+    def predict(example):
+        del example["Label"]
+        output_probs = classifier.classify(example)
+        output = max(output_probs.items(), key=lambda kv_pair: kv_pair[1])
 
-        def predict(example):
-            del example["Label"]
-            output_probs = classifier.classify(example)
-            output = max(output_probs.items(), key=lambda kv_pair: kv_pair[1])
+        example["Label"] = train_dataset.features["Label"].str2int(output[0])
+        return example
 
-            example["Label"] = train_dataset.features["Label"].str2int(output[0])
-            return example
+    return test_dataset.map(predict)
 
-        test_datasets[config] = test_dataset.map(predict)
 
-    return test_datasets
+def make_extra_kwargs(config):
+    extra_kwargs = {"config": config,
+                    "num_prompt_training_examples": NUM_EXAMPLES[config]}
+    if config == "banking_77":
+        extra_kwargs["add_prefixes"] = True
+    return extra_kwargs
 
 
 def log_text(text, dirname, filename):
@@ -99,40 +99,49 @@ def log_text(text, dirname, filename):
         f.write(text)
 
 
-def write_predictions(labeled):
+def prepare_predictions_folder():
     if os.path.isdir("predictions"):
         shutil.rmtree("predictions")
     os.mkdir("predictions")
 
-    for config in labeled:
-        int2str = labeled[config].features["Label"].int2str
+    sacred_dir = os.path.join(observer.dir, "predictions")
+    if os.path.isdir(sacred_dir):
+        shutil.rmtree(sacred_dir)
+    os.mkdir(sacred_dir)
 
-        dataset = labeled[config]
-        os.path.join("predictions", f"{config}.csv")
-        with open(os.path.join("predictions", f"{config}.csv"), "w", newline="") as f:
-            writer = csv.writer(
-                f,
-                quotechar='"',
-                delimiter=",",
-                quoting=csv.QUOTE_MINIMAL,
-                skipinitialspace=True,
-            )
-            writer.writerow(["ID", "Label"])
-            for row in dataset:
-                writer.writerow([row["ID"],
-                                 int2str(row["Label"])])
 
-    sacred_pred_dir = os.path.join(observer.dir, "predictions")
-    if os.path.isdir(sacred_pred_dir):
-        shutil.rmtree(sacred_pred_dir)
-    shutil.copytree("predictions", sacred_pred_dir)
+def write_predictions(labeled, config):
+    int2str = labeled.features["Label"].int2str
+
+    sacred_pred_file = os.path.join(observer.dir, "predictions", f"{config}.csv")
+    main_pred_file = os.path.join("predictions", f"{config}.csv")
+
+    with open(sacred_pred_file, "w", newline="") as f:
+        writer = csv.writer(
+            f,
+            quotechar='"',
+            delimiter=",",
+            quoting=csv.QUOTE_MINIMAL,
+            skipinitialspace=True,
+        )
+        writer.writerow(["ID", "Label"])
+        for row in labeled:
+            writer.writerow([row["ID"],
+                             int2str(row["Label"])])
+
+    shutil.copy(sacred_pred_file,
+                main_pred_file)
 
 
 @raft_experiment.automain
 def main():
     train, unlabeled = load_datasets_train()
-    labeled = make_predictions(train, unlabeled)
-    write_predictions(labeled)
+    prepare_predictions_folder()
+    for config in unlabeled:
+        extra_kwargs = make_extra_kwargs(config)
+        labeled = make_predictions(train[config], unlabeled[config],
+                                   config, extra_kwargs)
+        write_predictions(labeled, config)
 
 
 if __name__ == "__main__":
