@@ -9,11 +9,11 @@ from utils import num_tokens, truncate_by_tokens, complete, gpt2_tokenizer
 class GPT3Classifier:
     separator: str = "\n\n"
 
-    def __init__(self, training_data, engine="ada", num_prompt_training_examples=20) -> None:
+    def __init__(self, training_data, engine="ada", num_prompt_training_examples=20, add_prefixes=False) -> None:
         self.training_data = training_data
         self.engine = engine
         self.num_prompt_training_examples=num_prompt_training_examples
-
+        self.add_prefixes = add_prefixes
         self.input_cols = [col for col in training_data.features
                            if col not in ('ID', 'Label')]
         self.class_col = 'Label'
@@ -80,7 +80,8 @@ class GPT3Classifier:
     def format_example(
         self, input: Mapping[str, str], clas: str, max_tokens: Optional[int] = None
     ) -> str:
-        output_block = f"{self.class_col}: {clas}"
+        clas_str = clas if not self.add_prefixes else f"{self.classes.index(clas) + 1}. {clas}"
+        output_block = f"{self.class_col}: {clas_str}"
         output_block_tokens = num_tokens(output_block)
         untruncated_text = self.format_dict(input)
         input_block = (
@@ -139,12 +140,13 @@ class GPT3Classifier:
         prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(input, max_tokens=max_end_example_tokens)}"""  # noqa: E501
         return prompt
 
-    @staticmethod
-    def does_token_match_class(token: str, clas: str) -> bool:
+    def does_token_match_class(self, token: str, clas: str) -> bool:
         # prepend a space to the class label
         # because we always expect a leading space in the first token
         # returned from the OpenAI API, given our prompt format
-        clas_first_token_id: int = gpt2_tokenizer(f" {clas}")["input_ids"][0]
+        clas_str = f" {clas}" if not self.add_prefixes else f" {self.classes.index(clas) + 1}"
+
+        clas_first_token_id: int = gpt2_tokenizer(clas_str)["input_ids"][0]
         token_id: int = gpt2_tokenizer(token)["input_ids"][0]
 
         # Compare token ids rather than the raw tokens
