@@ -74,6 +74,7 @@ class GPT3Classifier:
         num_prompt_training_examples=20,
         add_prefixes=False,
         config=None,
+        use_task_specific_instructions=False,
         do_semantic_selection=False,
         search_engine="ada"
     ) -> None:
@@ -81,13 +82,14 @@ class GPT3Classifier:
         self.engine = engine
         self.num_prompt_training_examples = num_prompt_training_examples
         self.add_prefixes = add_prefixes
+
+        self.instructions_start = f"{INSTRUCTIONS[config]}\nPossible labels:" if config and use_task_specific_instructions else "Possible labels:"
+
         if config:
             self.config = config
-            self.default_instructions = f"{INSTRUCTIONS[config]}\nPossible labels:"
             self.input_cols = FIELD_ORDERING[config]
         else:
             self.config = None
-            self.default_instructions = "Possible labels:"
             self.input_cols = [
                 col for col in training_data.features if col not in ("ID", "Label")
             ]
@@ -115,7 +117,7 @@ class GPT3Classifier:
         formatted_classes = "\n".join(
             [f"{idx + 1}. {clas}" for idx, clas in enumerate(self.classes)]
         )
-        return f"""{self.default_instructions}\n{formatted_classes}"""
+        return f"""{self.instructions_start}\n{formatted_classes}"""
 
     def max_example_lengths(
         self, num_training_examples: int, input_to_classify: Mapping[str, str]
