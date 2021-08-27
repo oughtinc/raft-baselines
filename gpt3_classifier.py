@@ -208,25 +208,28 @@ class GPT3Classifier:
     def select_training_examples(
         self, input: Mapping[str, str], random_seed: Optional[int] = None
     ) -> datasets.Dataset:
-        random.seed(random_seed)
+        if not self.do_semantic_selection:
+            random.seed(random_seed)
 
-        n_ex = self.num_prompt_training_examples
-        if n_ex is None or len(self.training_data) <= n_ex:
-            return self.training_data
+            n_ex = self.num_prompt_training_examples
+            if n_ex is None or len(self.training_data) <= n_ex:
+                return self.training_data
 
-        uniques = defaultdict(lambda: [])
-        for i, row in enumerate(self.training_data):
-            uniques[row['Label']].append(i)
+            uniques = defaultdict(lambda: [])
+            for i, row in enumerate(self.training_data):
+                uniques[row['Label']].append(i)
 
-        indices = []
-        for key in uniques:
-            indices.append(random.choice(uniques[key]))
-        random.shuffle(indices)
+            indices = []
+            for key in uniques:
+                indices.append(random.choice(uniques[key]))
+            random.shuffle(indices)
 
-        remaining_indices = [i for i in range(len(self.training_data)) if i not in indices]
-        indices += random.sample(remaining_indices, min(n_ex, len(remaining_indices)))
+            remaining_indices = [i for i in range(len(self.training_data)) if i not in indices]
+            indices += random.sample(remaining_indices, min(n_ex, len(remaining_indices)))
 
-        return self.training_data.select(indices[:n_ex])
+            return self.training_data.select(indices[:n_ex])
+        else:
+
 
     def format_prompt(
         self,
