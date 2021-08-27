@@ -105,8 +105,8 @@ class GPT3Classifier:
         self.class_label_to_string = training_data.features["Label"].int2str
         self.classes = list(training_data.features["Label"].names[1:])
         self.truncation_params = {
-            # max - completion tokens
-            "max_tokens": 2048 - 1,
+            # max - buffer - completion tokens
+            "max_tokens": 2048 - 10 - 1,
             "end_example_token_proportion": max(
                 0.25,
                 1

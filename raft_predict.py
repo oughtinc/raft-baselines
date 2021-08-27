@@ -20,13 +20,26 @@ raft_experiment = Experiment(experiment_name, save_git_info=False)
 observer = observers.FileStorageObserver(f"results/{experiment_name}")
 raft_experiment.observers.append(observer)
 
+NUM_EXAMPLES = {"ade_corpus_v2": 25,
+                "banking_77": 10,
+                "terms_of_service": 5,
+                "tai_safety_research": 5,
+                "neurips_impact_statement_risks": 5,
+                "medical_subdomain_of_clinical_notes": 10,
+                "overruling": 25,
+                "systematic_review_inclusion": 5,
+                "one_stop_english": 5,
+                "tweet_eval_hate": 50,
+                "twitter_complaints": 25,
+                "semiconductor_org_types": 50}
+
 
 @raft_experiment.config
 def base_config():
     classifier_cls = GPT3Classifier
-    classifier_kwargs = {"engine": "ada",
-                         "num_prompt_training_examples": 20,
-                         "use_task_specific_instructions": True}
+    classifier_kwargs = {"engine": "davinci",
+                         "use_task_specific_instructions": True,
+                         "do_semantic_selection": True}
     configs = datasets.get_dataset_config_names("ought/raft")
     # configs = ["systematic_review_inclusion"]
 
@@ -48,7 +61,8 @@ def load_datasets_train(configs):
 @raft_experiment.capture
 def make_predictions(train_datasets, test_datasets, classifier_cls, classifier_kwargs):
     for config in train_datasets:
-        extra_kwargs = {"config": config}
+        extra_kwargs = {"config": config,
+                        "num_prompt_training_examples": NUM_EXAMPLES[config]}
         if config == "banking_77":
             extra_kwargs["add_prefixes"] = True
 
@@ -56,15 +70,15 @@ def make_predictions(train_datasets, test_datasets, classifier_cls, classifier_k
         classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
         test_dataset = test_datasets[config]
-        test_dataset = test_dataset.select(range(20))
 
         dummy_input = test_dataset[0]
-        train_examples = classifier.select_training_examples(dummy_input, random_seed=4)
-        example_prompt = classifier.format_prompt(dummy_input, train_examples)
+        del dummy_input["Label"]
+        example_prompt = classifier.format_prompt(dummy_input)
 
         log_text(example_prompt, "prompts", config+".txt")
 
         def predict(example):
+            del example["Label"]
             output_probs = classifier.classify(example)
             output = max(output_probs.items(), key=lambda kv_pair: kv_pair[1])
 
