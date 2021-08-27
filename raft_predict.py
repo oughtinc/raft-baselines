@@ -62,7 +62,7 @@ def make_predictions(train_datasets, test_datasets, classifier_cls, classifier_k
         train_examples = classifier.select_training_examples(dummy_input, random_seed=4)
         example_prompt = classifier.format_prompt(dummy_input, train_examples)
 
-        log_text(example_prompt)
+        log_text(example_prompt, "prompts", config+".txt")
 
         def predict(example):
             output_probs = classifier.classify(example)
@@ -76,8 +76,12 @@ def make_predictions(train_datasets, test_datasets, classifier_cls, classifier_k
     return test_datasets
 
 
-def log_text(text):
-    with open(os.path.join(observer.dir, "prompt.txt"), 'w') as f:
+def log_text(text, dirname, filename):
+    targetdir = os.path.join(observer.dir, dirname)
+    if not os.path.isdir(targetdir):
+        os.mkdir(targetdir)
+
+    with open(os.path.join(targetdir, filename), 'w') as f:
         f.write(text)
 
 
