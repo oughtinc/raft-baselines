@@ -100,10 +100,6 @@ def log_text(text, dirname, filename):
 
 
 def prepare_predictions_folder():
-    if os.path.isdir("predictions"):
-        shutil.rmtree("predictions")
-    os.mkdir("predictions")
-
     sacred_dir = os.path.join(observer.dir, "predictions")
     if os.path.isdir(sacred_dir):
         shutil.rmtree(sacred_dir)
@@ -114,7 +110,6 @@ def write_predictions(labeled, config):
     int2str = labeled.features["Label"].int2str
 
     sacred_pred_file = os.path.join(observer.dir, "predictions", f"{config}.csv")
-    main_pred_file = os.path.join("predictions", f"{config}.csv")
 
     with open(sacred_pred_file, "w", newline="") as f:
         writer = csv.writer(
@@ -128,9 +123,6 @@ def write_predictions(labeled, config):
         for row in labeled:
             writer.writerow([row["ID"],
                              int2str(row["Label"])])
-
-    shutil.copy(sacred_pred_file,
-                main_pred_file)
 
 
 @raft_experiment.automain
