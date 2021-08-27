@@ -40,15 +40,52 @@ They should not report new data, be non-systematic reviews, consider cause-relat
     "semiconductor_org_types": """The dataset is a list of institutions that have contributed papers to semiconductor conferences in the last 25 years, as catalogued by IEEE and sampled randomly. The goal is to classify the institutions into one of three categories: "university", "company" or "research institute"."""
 }
 
-
-FORBIDDEN_FIELDS = [
-    "ID",
-    "Url",
-    "Paper link",
-    "Author",
-    "Authors"
-]
-
+FIELD_ORDERING = {
+    "ade_corpus_v2": [
+        "Sentence"
+    ],
+    "banking_77": [
+        "Query"
+    ],
+    "terms_of_service": [
+        "Sentence"
+    ],
+    "tai_safety_research": [
+        "Title",
+        "Abstract Note",
+        "Publication Title",
+        "Item Type",
+        "Publication Year"
+    ],
+    "neurips_impact_statement_risks": [
+        "Impact statement",
+        "Paper title"
+    ],
+    "medical_subdomain_of_clinical_notes": [
+        "Note"
+    ],
+    "overruling": [
+        "Sentence"
+    ],
+    "systematic_review_inclusion": [
+        "Title",
+        "Abstract",
+        "Journal"
+    ],
+    "one_stop_english": [
+        "Article"
+    ],
+    "tweet_eval_hate": [
+        "Tweet"
+    ],
+    "twitter_complaints": [
+        "Tweet text"
+    ],
+    "semiconductor_org_types": [
+        "Organization name",
+        "Paper title"
+    ]
+}
 
 class GPT3Classifier:
     separator: str = "\n\n"
@@ -61,12 +98,12 @@ class GPT3Classifier:
         if config:
             self.config = config
             self.default_instructions = f"{INSTRUCTIONS[config]}\nPossible labels:"
+            self.input_cols = FIELD_ORDERING[config]
         else:
             self.config = None
             self.default_instructions = "Possible labels:"
+            self.input_cols = [col for col in training_data.features if col not in ('ID', 'Label')]
 
-        self.input_cols = [col for col in training_data.features
-                           if col not in ('ID', 'Label')]
         self.class_col = 'Label'
         # Function
         self.class_label_to_string = training_data.features["Label"].int2str
@@ -119,8 +156,7 @@ class GPT3Classifier:
 
     @classmethod
     def format_dict(cls, input: Mapping[str, str]) -> str:
-        return "\n".join([f"{k}: {v}" for k, v in input.items()
-                          if k not in FORBIDDEN_FIELDS])
+        return "\n".join([f"{k}: {v}" for k, v in input.items()if len(v.split())])
 
     def format_prompt_end(
         self, input: Mapping[str, str], max_tokens: Optional[int] = None
@@ -171,7 +207,7 @@ class GPT3Classifier:
     ) -> str:
         formatted_examples = [
             self.format_example(
-                {col: row[col] for col in self.input_cols},
+                {col: row[col] for col in self.input_cols if col in row},
                 self.class_label_to_string(row[self.class_col]),
                 max_tokens=max_tokens_per_example,
             )
@@ -209,7 +245,9 @@ class GPT3Classifier:
         )
         example_str_and_sep = "" if example_str == "" else example_str + self.separator
 
-        prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(input, max_tokens=max_end_example_tokens)}"""  # noqa: E501
+        ordered_input = {col: input[col] for col in self.input_cols if col in input}
+
+        prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(ordered_input, max_tokens=max_end_example_tokens)}"""  # noqa: E501
         return prompt
 
     def does_token_match_class(self, token: str, clas: str) -> bool:
