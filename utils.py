@@ -25,9 +25,8 @@ def num_tokens(text: str, use_tokenizer: bool = True) -> int:
 
 
 def truncate_by_tokens(text: str, max_tokens: int) -> str:
-    if max_tokens is None:
+    if max_tokens is None or not text:
         return text
-
     encoding = gpt2_tokenizer(
         text, truncation=True, max_length=max_tokens, return_offsets_mapping=True
     )

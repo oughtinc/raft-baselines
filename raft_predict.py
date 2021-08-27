@@ -15,16 +15,20 @@ This class runs a classifier specified by `classifier_cls` on the unlabeled
     arguments must be specified via `classifier_kwargs`.
 """
 
-raft_experiment = Experiment("raft_prediction")
-observer = observers.FileStorageObserver("results")
+experiment_name = "make_predictions"
+raft_experiment = Experiment(experiment_name, save_git_info=False)
+observer = observers.FileStorageObserver(f"results/{experiment_name}")
 raft_experiment.observers.append(observer)
 
 
 @raft_experiment.config
 def base_config():
-    classifier_cls = RandomClassifier
-    classifier_kwargs = {}
+    classifier_cls = GPT3Classifier
+    classifier_kwargs = {"engine": "ada",
+                         "num_prompt_training_examples": 20,
+                         "use_task_specific_instructions": True}
     configs = datasets.get_dataset_config_names("ought/raft")
+    # configs = ["systematic_review_inclusion"]
 
 
 @raft_experiment.capture
@@ -44,10 +48,21 @@ def load_datasets_train(configs):
 @raft_experiment.capture
 def make_predictions(train_datasets, test_datasets, classifier_cls, classifier_kwargs):
     for config in train_datasets:
+        extra_kwargs = {"config": config}
+        if config == "banking_77":
+            extra_kwargs["add_prefixes"] = True
+
         train_dataset = train_datasets[config]
-        classifier = classifier_cls(train_dataset, **classifier_kwargs)
+        classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
         test_dataset = test_datasets[config]
+        test_dataset = test_dataset.select(range(20))
+
+        dummy_input = test_dataset[0]
+        train_examples = classifier.select_training_examples(dummy_input, random_seed=4)
+        example_prompt = classifier.format_prompt(dummy_input, train_examples)
+
+        log_text(example_prompt)
 
         def predict(example):
             output_probs = classifier.classify(example)
@@ -61,12 +76,19 @@ def make_predictions(train_datasets, test_datasets, classifier_cls, classifier_k
     return test_datasets
 
 
+def log_text(text):
+    with open(os.path.join(observer.dir, "prompt.txt"), 'w') as f:
+        f.write(text)
+
+
 def write_predictions(labeled):
     if os.path.isdir("predictions"):
         shutil.rmtree("predictions")
     os.mkdir("predictions")
 
     for config in labeled:
+        int2str = labeled[config].features["Label"].int2str
+
         dataset = labeled[config]
         os.path.join("predictions", f"{config}.csv")
         with open(os.path.join("predictions", f"{config}.csv"), "w", newline="") as f:
@@ -79,7 +101,8 @@ def write_predictions(labeled):
             )
             writer.writerow(["ID", "Label"])
             for row in dataset:
-                writer.writerow([row["ID"], row["Label"]])
+                writer.writerow([row["ID"],
+                                 int2str(row["Label"])])
 
     sacred_pred_dir = os.path.join(observer.dir, "predictions")
     if os.path.isdir(sacred_pred_dir):
@@ -92,8 +115,6 @@ def main():
     train, unlabeled = load_datasets_train()
     labeled = make_predictions(train, unlabeled)
     write_predictions(labeled)
-    # for example in labeled_data:
-    #     print(example['title'], example['answer'])
 
 
 if __name__ == "__main__":
