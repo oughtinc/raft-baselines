@@ -9,17 +9,24 @@ from utils import num_tokens, truncate_by_tokens, complete, gpt2_tokenizer
 class GPT3Classifier:
     separator: str = "\n\n"
 
-    def __init__(self, training_data, engine="ada", num_prompt_training_examples=20, add_prefixes=False) -> None:
+    def __init__(
+        self,
+        training_data,
+        engine="ada",
+        num_prompt_training_examples=20,
+        add_prefixes=False,
+    ) -> None:
         self.training_data = training_data
         self.engine = engine
-        self.num_prompt_training_examples=num_prompt_training_examples
+        self.num_prompt_training_examples = num_prompt_training_examples
         self.add_prefixes = add_prefixes
-        self.input_cols = [col for col in training_data.features
-                           if col not in ('ID', 'Label')]
-        self.class_col = 'Label'
+        self.input_cols = [
+            col for col in training_data.features if col not in ("ID", "Label")
+        ]
+        self.class_col = "Label"
         # Function
-        self.class_label_to_string = training_data.features['Label'].int2str
-        self.classes = list(training_data.features['Label'].names[1:])
+        self.class_label_to_string = training_data.features["Label"].int2str
+        self.classes = list(training_data.features["Label"].names[1:])
         self.truncation_params = {
             # max - completion tokens
             "max_tokens": 2048 - 1,
@@ -37,7 +44,9 @@ class GPT3Classifier:
         formatted_classes = "\n".join(
             [f"{idx + 1}. {clas}" for idx, clas in enumerate(self.classes)]
         )
-        return f"""Classify the following as one of:{self.separator}{formatted_classes}"""
+        return (
+            f"""Classify the following as one of:{self.separator}{formatted_classes}"""
+        )
 
     def max_example_lengths(self, num_training_examples: int) -> Tuple[int, int]:
         instruction_tokens = num_tokens(self.instructions)
@@ -80,7 +89,9 @@ class GPT3Classifier:
     def format_example(
         self, input: Mapping[str, str], clas: str, max_tokens: Optional[int] = None
     ) -> str:
-        clas_str = clas if not self.add_prefixes else f"{self.classes.index(clas) + 1}. {clas}"
+        clas_str = (
+            clas if not self.add_prefixes else f"{self.classes.index(clas) + 1}. {clas}"
+        )
         output_block = f"{self.class_col}: {clas_str}"
         output_block_tokens = num_tokens(output_block)
         untruncated_text = self.format_dict(input)
@@ -95,7 +106,9 @@ class GPT3Classifier:
 {output_block}"""
 
     def render_examples(
-        self, example_dataset: datasets.Dataset, max_tokens_per_example: Optional[int] = None
+        self,
+        example_dataset: datasets.Dataset,
+        max_tokens_per_example: Optional[int] = None,
     ) -> str:
         formatted_examples = [
             self.format_example(
@@ -117,10 +130,12 @@ class GPT3Classifier:
             return self.training_data
         return self.training_data.train_test_split(
             train_size=self.num_prompt_training_examples, seed=random_seed
-        )['train']
+        )["train"]
 
     def format_prompt(
-        self, input: Mapping[str, str], example_dataset: Optional[datasets.Dataset] = None
+        self,
+        input: Mapping[str, str],
+        example_dataset: Optional[datasets.Dataset] = None,
     ) -> str:
         if example_dataset is None:
             example_dataset = self.select_training_examples(input)
@@ -133,9 +148,7 @@ class GPT3Classifier:
         example_str = self.render_examples(
             example_dataset, max_tokens_per_example=max_train_example_tokens
         )
-        example_str_and_sep = (
-            "" if example_str == "" else example_str + self.separator
-        )
+        example_str_and_sep = "" if example_str == "" else example_str + self.separator
 
         prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(input, max_tokens=max_end_example_tokens)}"""  # noqa: E501
         return prompt
@@ -144,7 +157,9 @@ class GPT3Classifier:
         # prepend a space to the class label
         # because we always expect a leading space in the first token
         # returned from the OpenAI API, given our prompt format
-        clas_str = f" {clas}" if not self.add_prefixes else f" {self.classes.index(clas) + 1}"
+        clas_str = (
+            f" {clas}" if not self.add_prefixes else f" {self.classes.index(clas) + 1}"
+        )
 
         clas_first_token_id: int = gpt2_tokenizer(clas_str)["input_ids"][0]
         token_id: int = gpt2_tokenizer(token)["input_ids"][0]
@@ -207,4 +222,3 @@ class GPT3Classifier:
         prompt = self.format_prompt(input, example_dataset)
         print(prompt)
         return self._classify_prompt(prompt)
-

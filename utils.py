@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 
-from typing import (Dict, Tuple, Any, cast)
+from typing import Dict, Tuple, Any, cast
 
 
 def make_gpt2_tokenizer(*, local_files_only: bool = False) -> GPT2TokenizerFast:
@@ -34,19 +34,23 @@ def truncate_by_tokens(text: str, max_tokens: int) -> str:
 
     return text[: encoding.offset_mapping[-1][1]]
 
+
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-def complete(prompt: str,
-             engine: str = "ada",
-             max_tokens: int = 5,
-             temperature: float = 1.0,
-             top_p: float = 1.0,
-             n: int = 1,
-             echo: bool = False,
-             stop: Tuple[str, ...] = ("\n",),
-             presence_penalty: float = 0.0,
-             frequency_penalty: float = 0.0):
+
+def complete(
+    prompt: str,
+    engine: str = "ada",
+    max_tokens: int = 5,
+    temperature: float = 1.0,
+    top_p: float = 1.0,
+    n: int = 1,
+    echo: bool = False,
+    stop: Tuple[str, ...] = ("\n",),
+    presence_penalty: float = 0.0,
+    frequency_penalty: float = 0.0,
+):
     openai_completion_args = dict(
         api_key=OPENAI_API_KEY,
         engine=engine,
