@@ -31,7 +31,6 @@ The arbitration clause requires or allows the parties to resolve their disputes 
 4. It meets a subjective threshold of seriousness/quality, 
 5. Peer review is not required.""",
     "neurips_impact_statement_risks": """Label the impact statement based on whether it mentions a harmful application of the research done in the paper. Make sure the statement is sufficient to conclude there are harmful applications of the research being done, not a past risk that this research is solving.""",
-    "medical_subdomain_of_clinical_notes": """Classify the clinical note based on which subdomain it belongs to.""",
     "overruling": """In law, an overruling sentence is a statement that nullifies a previous case decision as a precedent, by a constitutionally valid statute or a decision by the same or higher ranking court which establishes a different rule on the point of law involved. Label the sentence based on whether it is overruling or not.""",
     "systematic_review_inclusion": """Identify whether this paper should be included in a meta-review which includes the findings of systematic reviews on interventions designed to promote charitable donations. 
 Included reviews should describe monetary charitable donations, assess any population of participants in any context, and be peer reviewed and written in English. 
@@ -54,7 +53,6 @@ FIELD_ORDERING = {
         "Publication Year",
     ],
     "neurips_impact_statement_risks": ["Impact statement", "Paper title"],
-    "medical_subdomain_of_clinical_notes": ["Note"],
     "overruling": ["Sentence"],
     "systematic_review_inclusion": ["Title", "Abstract", "Journal"],
     "one_stop_english": ["Article"],
