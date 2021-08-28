@@ -63,6 +63,7 @@ def make_predictions(train_dataset, test_dataset, config, extra_kwargs,
                      classifier_cls, classifier_kwargs):
     classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
+    # Comment out this line to run on the whole test set rather than the first data point
     test_dataset = test_dataset.select(range(1))
 
     dummy_input = test_dataset[0]
