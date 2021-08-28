@@ -1,0 +1,82 @@
+A complaint presents a state of affairs which breaches the writer’s favorable expectation. Label the tweet text based on whether it contains a complaint.
+Possible labels:
+1. complaint
+2. no complaint
+
+Tweet text: @NCIS_CBS https://t.co/eeVL9Eu3bE
+Label: no complaint
+
+Tweet text: Never shopping at @MACcosmetics again. Every time I go in there, their employees are super rude/condescending. I'll take my $$ to @Sephora
+Label: complaint
+
+Tweet text: @Lin_Manuel @jmessinaphoto @VAMNit Omg a little squish!!!!! Enjoy and congrats!!!! I miss mine being so young! ������
+Label: no complaint
+
+Tweet text: @mckelldogs This might just be me, but-- eyedrops? Artificial tears are so useful when you're sleep-deprived and sp… https://t.co/WRtNsokblG
+Label: no complaint
+
+Tweet text: @DIRECTV can I get a monthly charge double refund when it sprinkles outside and we lose reception? #IamEmbarrasedForYou
+Label: complaint
+
+Tweet text: I'm earning points with #CricketRewards https://t.co/GfpGhqqnhE
+Label: no complaint
+
+Tweet text: @JetBlue Completely understand but would prefer being on time to filling out forms....
+Label: no complaint
+
+Tweet text: Looks tasty! Going to share with everyone I know #FebrezeONE #sponsored https://t.co/4AQI53npei
+Label: no complaint
+
+Tweet text: @Schrapnel @comcast RIP me
+Label: no complaint
+
+Tweet text: @greateranglia Could I ask why the Area in front of BIC Station was not gritted withh all the snow.
+Label: complaint
+
+Tweet text: @VerizonSupport all of a sudden I can't connect to my primary wireless network but guest one works
+Label: no complaint
+
+Tweet text: Just posted a photo https://t.co/RShFwCjPHu
+Label: no complaint
+
+Tweet text: @IanJamesPoulter What's your secret to poaching eggs? Mine NEVER look that good.
+Label: no complaint
+
+Tweet text: Aaaahhhhh!!!! My @Razer @PlayOverwatch d.va meka headset came in!!! I didn't even know it had shipped!!! So excited… https://t.co/4gXy9xED8d
+Label: no complaint
+
+Tweet text: @asblough Yep! It should send you a notification with your driver’s name and what time they’ll be showing up!
+Label: no complaint
+
+Tweet text: @NortonSupport Thanks much.
+Label: no complaint
+
+Tweet text: If I can't get my 3rd pair of @beatsbydre powerbeats to work today I'm doneski man. This is a slap in my balls. Your next @Bose @BoseService
+Label: complaint
+
+Tweet text: I just gave 5 stars to Tracee at @neimanmarcus for the great service I received!
+Label: no complaint
+
+Tweet text: @AlfaRomeoCares Hi thanks for replying, could be my internet but link doesn't seem to be working
+Label: complaint
+
+Tweet text: @HMRCcustomers No this is my first job
+Label: no complaint
+
+Tweet text: @JenniferTilly Merry Christmas to as well. You get more stunning every year ��
+Label: no complaint
+
+Tweet text: @SouthwestAir I love you but when sending me flight changes please don't use military time #ignoranceisbliss
+Label: complaint
+
+Tweet text: @NortonSupport @NortonOnline What the hell is a dm 5-10 days to get money back bank account now overdrawn thanks guys
+Label: complaint
+
+Tweet text: @ZARA_Care I've been waiting on a reply to my tweets and DMs for days now?
+Label: complaint
+
+Tweet text: @TopmanAskUs please just give me my money back.
+Label: complaint
+
+Tweet text: @BurberryService Thanks for sending my Christmas present with the security protection still on it! pic.twitter.com/iI0DUxOUU2
+Label:

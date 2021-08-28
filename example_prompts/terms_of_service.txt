@@ -1,0 +1,32 @@
+Label the sentence from a Terms of Service based on whether it is potentially unfair. If it seems clearly unfair, mark it as potentially unfair.
+According to art. 3 of the Directive 93/13 on Unfair Terms in Consumer Contracts, a contractual term is unfair if: 1) it has not been individually negotiated; and 2) contrary to the requirement of good faith, it causes a significant imbalance in the parties rights and obligations, to the detriment of the consumer. 
+Details on types of potentially unfair clauses are found below:
+The jurisdiction clause stipulates what courts will have the competence to adjudicate disputes under the contract. Jurisdiction clauses giving consumers a right to bring disputes in their place of residence were marked as clearly fair, whereas clauses stating that any judicial proceeding takes a residence away were marked as clearly unfair.
+The choice of law clause specifies what law will govern the contract, meaning also what law will be applied in potential adjudication of a dispute arising under the contract. Clauses defining the applicable law as the law of the consumer's country of residence were marked as clearly fair. In every other case, the choice of law clause was considered as potentially unfair.
+The limitation of liability clause stipulates that the duty to pay damages is limited or excluded, for certain kind of losses, under certain conditions. Clauses that explicitly affirm non-excludable providers' liabilities were marked as clearly fair. Clauses that reduce, limit, or exclude the liability of the service provider were marked as potentially unfair when concerning broad categories of losses or causes of them.
+The unilateral change clause specifies the conditions under which the service provider could amend and modify the terms of service and/or the service itself. Such clause was always considered as potentially unfair.
+The unilateral termination clause gives provider the right to suspend and/or terminate the service and/or the contract, and sometimes details the circumstances under which the provider claims to have a right to do so.
+The contract by using clause stipulates that the consumer is bound by the terms of use of a specific service, simply by using the service, without even being required to mark that he or she has read and accepted them. We always marked such clauses as potentially unfair.
+The content removal gives the provider a right to modify/delete user's content, including in-app purchases, and sometimes specifies the conditions under which the service provider may do so.
+The arbitration clause requires or allows the parties to resolve their disputes through an arbitration process, before the case could go to court. Clauses stipulating that the arbitration should take place in a state other then the state of consumer's residence or be based on arbiter's discretion were marked as clearly unfair. Clauses defining arbitration as fully optional were marked as clearly fair.
+Possible labels:
+1. not potentially unfair
+2. potentially unfair
+
+Sentence: You acknowledge and agree that posting any such user content may result in immediate termination or suspension of your spotify account.
+Label: potentially unfair
+
+Sentence: You may be able to access certain third-party links, applications or content (``third-party applications'') via accounts related to our services.
+Label: not potentially unfair
+
+Sentence: These terms, and any other policies or rules we reference in these terms, make up the entire agreement between you and us relating to the subject matter of these terms, and supersede all prior understandings of the parties relating to the subject matter of these terms, whether those prior understandings were electronic, oral or written, or whether established by custom, practice, policy or precedent, between you and us.
+Label: not potentially unfair
+
+Sentence: Supercell may reject, refuse to post or delete any user content for any or no reason, including, but not limited to, user content that in the sole judgment of supercell violates these terms of service.
+Label: potentially unfair
+
+Sentence: Tinder does not represent or warrant that (a) the service will be uninterrupted, secure or error free, (b) any defects or errors in the service will be corrected, or (c) that any content or information you obtain on or through the services will be accurate.
+Label: potentially unfair
+
+Sentence: There are no refunds for termination or cancellation of your premium service.
+Label:

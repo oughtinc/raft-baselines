@@ -1,0 +1,112 @@
+The following is a banking customer service query. Classify the query into one of the 77 categories available.
+Possible labels:
+1. Refund_not_showing_up
+2. activate_my_card
+3. age_limit
+4. apple_pay_or_google_pay
+5. atm_support
+6. automatic_top_up
+7. balance_not_updated_after_bank_transfer
+8. balance_not_updated_after_cheque_or_cash_deposit
+9. beneficiary_not_allowed
+10. cancel_transfer
+11. card_about_to_expire
+12. card_acceptance
+13. card_arrival
+14. card_delivery_estimate
+15. card_linking
+16. card_not_working
+17. card_payment_fee_charged
+18. card_payment_not_recognised
+19. card_payment_wrong_exchange_rate
+20. card_swallowed
+21. cash_withdrawal_charge
+22. cash_withdrawal_not_recognised
+23. change_pin
+24. compromised_card
+25. contactless_not_working
+26. country_support
+27. declined_card_payment
+28. declined_cash_withdrawal
+29. declined_transfer
+30. direct_debit_payment_not_recognised
+31. disposable_card_limits
+32. edit_personal_details
+33. exchange_charge
+34. exchange_rate
+35. exchange_via_app
+36. extra_charge_on_statement
+37. failed_transfer
+38. fiat_currency_support
+39. get_disposable_virtual_card
+40. get_physical_card
+41. getting_spare_card
+42. getting_virtual_card
+43. lost_or_stolen_card
+44. lost_or_stolen_phone
+45. order_physical_card
+46. passcode_forgotten
+47. pending_card_payment
+48. pending_cash_withdrawal
+49. pending_top_up
+50. pending_transfer
+51. pin_blocked
+52. receiving_money
+53. request_refund
+54. reverted_card_payment?
+55. supported_cards_and_currencies
+56. terminate_account
+57. top_up_by_bank_transfer_charge
+58. top_up_by_card_charge
+59. top_up_by_cash_or_cheque
+60. top_up_failed
+61. top_up_limits
+62. top_up_reverted
+63. topping_up_by_card
+64. transaction_charged_twice
+65. transfer_fee_charged
+66. transfer_into_account
+67. transfer_not_received_by_recipient
+68. transfer_timing
+69. unable_to_verify_identity
+70. verify_my_identity
+71. verify_source_of_funds
+72. verify_top_up
+73. virtual_card_not_working
+74. visa_or_mastercard
+75. why_verify_identity
+76. wrong_amount_of_cash_received
+77. wrong_exchange_rate_for_cash_withdrawal
+
+Query: I withdrew cash and I think the exchange rate is wrong.
+Label: 77. wrong_exchange_rate_for_cash_withdrawal
+
+Query: After I transferred money the balance remained the same.
+Label: 7. balance_not_updated_after_bank_transfer
+
+Query: Why is my money not in my account. I have already sent it out.
+Label: 8. balance_not_updated_after_cheque_or_cash_deposit
+
+Query: I didn't get all the cash I asked for
+Label: 76. wrong_amount_of_cash_received
+
+Query: Why am I unable to transfer money when I was able to before?
+Label: 9. beneficiary_not_allowed
+
+Query: Why is there extra cash in my account?
+Label: 22. cash_withdrawal_not_recognised
+
+Query: I have a strange transaction for £1 on my statement, what is that?
+Label: 36. extra_charge_on_statement
+
+Query: I didn't make the direct debit payment on my account.
+Label: 30. direct_debit_payment_not_recognised
+
+Query: What is the $1 transaction on my account?
+Label: 36. extra_charge_on_statement
+
+Query: How can I tell the source for my available funds?
+Label: 71. verify_source_of_funds
+
+Query: where did my funds come from?
+Label:
