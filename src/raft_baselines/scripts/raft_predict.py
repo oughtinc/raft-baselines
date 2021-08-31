@@ -5,9 +5,7 @@ import csv
 import datasets
 from sacred import Experiment, observers
 
-from random_classifier import RandomClassifier
-from gpt3_classifier import GPT3Classifier
-
+from raft_baselines import classifiers
 """
 This class runs a classifier specified by `classifier_cls` on the unlabeled 
     test sets for all configs given in `configs`. Any classifier can be used,
@@ -35,12 +33,12 @@ NUM_EXAMPLES = {"ade_corpus_v2": 25,
 
 @raft_experiment.config
 def base_config():
-    classifier_cls = GPT3Classifier
-    classifier_kwargs = {"engine": "davinci",
+    classifier_name = "GPT3Classifier"
+    classifier_kwargs = {"engine": "ada",
                          "use_task_specific_instructions": True,
                          "do_semantic_selection": True}
     configs = datasets.get_dataset_config_names("ought/raft")
-    # configs = ["systematic_review_inclusion"]
+    n_test = 5
 
 
 @raft_experiment.capture
@@ -66,18 +64,12 @@ def make_extra_kwargs(config):
 
 
 @raft_experiment.capture
-def make_predictions(train_dataset, test_dataset, config, extra_kwargs,
-                     classifier_cls, classifier_kwargs):
+def make_predictions(train_dataset, test_dataset, config, classifier_cls,
+                     extra_kwargs, n_test, classifier_kwargs):
     classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
-    # Use this line to control how many examples to run on, remove to use the entire test set.
-    # test_dataset = test_dataset.select(range(10))
-
-    dummy_input = test_dataset[0]
-    del dummy_input["Label"]
-    example_prompt = classifier.format_prompt(dummy_input)
-
-    log_text(example_prompt, "prompts", config+".txt")
+    if n_test > 0:
+        test_dataset = test_dataset.select(range(n_test))
 
     def predict(example):
         del example["Label"]
@@ -126,13 +118,16 @@ def write_predictions(labeled, config):
 
 
 @raft_experiment.automain
-def main():
+def main(classifier_name):
     train, unlabeled = load_datasets_train()
     prepare_predictions_folder()
+
+    classifier_cls = getattr(classifiers, classifier_name)
+
     for config in unlabeled:
         extra_kwargs = make_extra_kwargs(config)
         labeled = make_predictions(train[config], unlabeled[config],
-                                   config, extra_kwargs)
+                                   config, classifier_cls, extra_kwargs)
         write_predictions(labeled, config)
 
 

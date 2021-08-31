@@ -3,11 +3,11 @@ from typing import Mapping
 
 import datasets
 
-from classifier import Classifier
+from raft_baselines.classifiers.classifier import Classifier
 
 
 class RandomClassifier(Classifier):
-    def __init__(self, training_data: datasets.Dataset, seed: int = 4) -> None:
+    def __init__(self, training_data: datasets.Dataset, seed: int = 4, **kwargs) -> None:
         super().__init__(training_data)
         random.seed(seed)
 

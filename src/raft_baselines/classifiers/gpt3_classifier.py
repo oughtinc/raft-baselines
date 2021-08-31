@@ -2,17 +2,18 @@ import random
 from typing import Dict, Optional, List, Tuple, Mapping, Any
 from collections import defaultdict
 import json
+import importlib.resources
 
 import numpy as np
 import datasets
 
-from classifier import Classifier
-from utils import num_tokens, truncate_by_tokens, complete, gpt2_tokenizer, search
+from raft_baselines.classifiers.classifier import Classifier
+from raft_baselines.utils.gpt3_utils import num_tokens, truncate_by_tokens, gpt2_tokenizer, complete, search
+from raft_baselines import data
 
-
-with open("task_data.json") as f:
-    FIELD_ORDERING = json.loads(f.readline())
-    INSTRUCTIONS = json.loads(f.readline())
+text_data = importlib.resources.read_text(data, "gpt3_task_data.jsonl").split("\n")
+FIELD_ORDERING = json.loads(text_data[0])
+INSTRUCTIONS = json.loads(text_data[1])
 
 
 class GPT3Classifier(Classifier):

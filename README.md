@@ -14,7 +14,18 @@ Install necessary requirements from the requirements file.
 pip install -r requirements.txt
 ```
 
+Install raft_baselines.
+
+```buildoutcfg
+python setup.py develop
+```
+
 If you do not have access to GPT-3, you may use `random_classifier.py`, or create your own classifier that implements the `classify(input)` method.
+
+Test random classifier:
+```buildoutcfg
+python -m raft_baselines.scripts.raft_predict with n_test=10 configs=['tai_safety_research'] classifier_cls=RandomClassifier
+```
 
 ## Sacred Experiment Scripts
 
