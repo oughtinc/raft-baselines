@@ -1,6 +1,7 @@
 import datasets
 from sacred import Experiment, observers
 import sklearn.metrics as skm
+
 from gpt3_classifier import GPT3Classifier
 
 experiment_name = "num_examples"
@@ -18,8 +19,6 @@ def base_config():
         "do_semantic_selection": True,
     }
     configs = datasets.get_dataset_config_names("ought/raft")
-    # configs = ["neurips_impact_statement_risks"]
-    # configs = ["semiconductor_org_types"]
 
 
 @raft_experiment.capture
@@ -59,15 +58,13 @@ def loo_test(train_datasets, classifier_cls, classifier_kwargs):
 
                     predictions.append(dataset.features["Label"].str2int(output[0]))
 
-                    test.map(predict)
+                test.map(predict)
 
             # accuracy = sum([p == l for p, l in zip(predictions, dataset['Label'])]) / 50
             f1 = skm.f1_score(
                 dataset["Label"], predictions, labels=labels, average="macro"
             )
-
             print(f"Dataset - {config}; Num examples - {n}: {f1}")
-
             raft_experiment.log_scalar(f"{config}.{n}_examples", f1)
 
 

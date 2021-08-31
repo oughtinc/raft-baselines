@@ -57,13 +57,21 @@ def load_datasets_train(configs):
     return train_datasets, test_datasets
 
 
+def make_extra_kwargs(config):
+    extra_kwargs = {"config": config,
+                    "num_prompt_training_examples": NUM_EXAMPLES[config]}
+    if config == "banking_77":
+        extra_kwargs["add_prefixes"] = True
+    return extra_kwargs
+
+
 @raft_experiment.capture
 def make_predictions(train_dataset, test_dataset, config, extra_kwargs,
                      classifier_cls, classifier_kwargs):
     classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
-    # Comment out this line to run on the whole test set rather than the first data point
-    test_dataset = test_dataset.select(range(1))
+    # Use this line to control how many examples to run on, remove to use the entire test set.
+    # test_dataset = test_dataset.select(range(10))
 
     dummy_input = test_dataset[0]
     del dummy_input["Label"]
@@ -80,14 +88,6 @@ def make_predictions(train_dataset, test_dataset, config, extra_kwargs,
         return example
 
     return test_dataset.map(predict)
-
-
-def make_extra_kwargs(config):
-    extra_kwargs = {"config": config,
-                    "num_prompt_training_examples": NUM_EXAMPLES[config]}
-    if config == "banking_77":
-        extra_kwargs["add_prefixes"] = True
-    return extra_kwargs
 
 
 def log_text(text, dirname, filename):
