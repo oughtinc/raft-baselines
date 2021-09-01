@@ -1,6 +1,6 @@
-from gpt3_classifier import GPT3Classifier
 import datasets
 
+from raft_baselines.classifiers import GPT3Classifier
 
 train = datasets.load_dataset(
     "ought/raft", "neurips_impact_statement_risks", split="train"

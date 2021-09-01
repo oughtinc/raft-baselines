@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: raft-baselines
+Version: 0.0.1
+Summary: RAFT Benchmarks baselines, classifiers, and testing scripts.
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7.0

@@ -5,9 +5,7 @@ import csv
 import datasets
 from sacred import Experiment, observers
 
-from random_classifier import RandomClassifier
-from gpt3_classifier import GPT3Classifier
-
+from raft_baselines import classifiers
 """
 This class runs a classifier specified by `classifier_cls` on the unlabeled 
     test sets for all configs given in `configs`. Any classifier can be used,
@@ -25,7 +23,6 @@ NUM_EXAMPLES = {"ade_corpus_v2": 25,
                 "terms_of_service": 5,
                 "tai_safety_research": 5,
                 "neurips_impact_statement_risks": 5,
-                "medical_subdomain_of_clinical_notes": 10,
                 "overruling": 25,
                 "systematic_review_inclusion": 5,
                 "one_stop_english": 5,
@@ -36,12 +33,12 @@ NUM_EXAMPLES = {"ade_corpus_v2": 25,
 
 @raft_experiment.config
 def base_config():
-    classifier_cls = GPT3Classifier
-    classifier_kwargs = {"engine": "davinci",
+    classifier_name = "GPT3Classifier"
+    classifier_kwargs = {"engine": "ada",
                          "use_task_specific_instructions": True,
                          "do_semantic_selection": True}
     configs = datasets.get_dataset_config_names("ought/raft")
-    # configs = ["systematic_review_inclusion"]
+    n_test = 5
 
 
 @raft_experiment.capture
@@ -58,19 +55,21 @@ def load_datasets_train(configs):
     return train_datasets, test_datasets
 
 
+def make_extra_kwargs(config):
+    extra_kwargs = {"config": config,
+                    "num_prompt_training_examples": NUM_EXAMPLES[config]}
+    if config == "banking_77":
+        extra_kwargs["add_prefixes"] = True
+    return extra_kwargs
+
+
 @raft_experiment.capture
-def make_predictions(train_dataset, test_dataset, config, extra_kwargs,
-                     classifier_cls, classifier_kwargs):
+def make_predictions(train_dataset, test_dataset, config, classifier_cls,
+                     extra_kwargs, n_test, classifier_kwargs):
     classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
-    # Comment out this line to run on the whole test set rather than the first data point
-    test_dataset = test_dataset.select(range(1))
-
-    dummy_input = test_dataset[0]
-    del dummy_input["Label"]
-    example_prompt = classifier.format_prompt(dummy_input)
-
-    log_text(example_prompt, "prompts", config+".txt")
+    if n_test > 0:
+        test_dataset = test_dataset.select(range(n_test))
 
     def predict(example):
         del example["Label"]
@@ -81,14 +80,6 @@ def make_predictions(train_dataset, test_dataset, config, extra_kwargs,
         return example
 
     return test_dataset.map(predict)
-
-
-def make_extra_kwargs(config):
-    extra_kwargs = {"config": config,
-                    "num_prompt_training_examples": NUM_EXAMPLES[config]}
-    if config == "banking_77":
-        extra_kwargs["add_prefixes"] = True
-    return extra_kwargs
 
 
 def log_text(text, dirname, filename):
@@ -127,13 +118,16 @@ def write_predictions(labeled, config):
 
 
 @raft_experiment.automain
-def main():
+def main(classifier_name):
     train, unlabeled = load_datasets_train()
     prepare_predictions_folder()
+
+    classifier_cls = getattr(classifiers, classifier_name)
+
     for config in unlabeled:
         extra_kwargs = make_extra_kwargs(config)
         labeled = make_predictions(train[config], unlabeled[config],
-                                   config, extra_kwargs)
+                                   config, classifier_cls, extra_kwargs)
         write_predictions(labeled, config)
 
 

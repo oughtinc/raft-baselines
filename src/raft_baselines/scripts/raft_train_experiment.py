@@ -1,7 +1,8 @@
 import datasets
 from sacred import Experiment, observers
 import sklearn.metrics as skm
-from gpt3_classifier import GPT3Classifier
+
+from raft_baselines import classifiers
 
 experiment_name = "num_examples"
 raft_experiment = Experiment(experiment_name, save_git_info=False)
@@ -11,15 +12,13 @@ raft_experiment.observers.append(observer)
 
 @raft_experiment.config
 def base_config():
-    classifier_cls = GPT3Classifier
+    classifier_name = "GPT3Classifier"
     classifier_kwargs = {
-        "engine": "davinci",
+        "engine": "ada",
         "use_task_specific_instructions": True,
         "do_semantic_selection": True,
     }
     configs = datasets.get_dataset_config_names("ought/raft")
-    # configs = ["neurips_impact_statement_risks"]
-    # configs = ["semiconductor_org_types"]
 
 
 @raft_experiment.capture
@@ -32,8 +31,12 @@ def load_datasets_train(configs):
 
 
 @raft_experiment.capture
-def loo_test(train_datasets, classifier_cls, classifier_kwargs):
+def loo_test(train_datasets, classifier_name, classifier_kwargs):
+    # Change what to iterate over, filling in extra_kwargs to test different
+    #   configurations of the classifier.
     n_examples = [5, 10, 25, 49]
+
+    classifier_cls = getattr(classifiers, classifier_name)
 
     for config in train_datasets:
         for n in n_examples:
@@ -59,15 +62,13 @@ def loo_test(train_datasets, classifier_cls, classifier_kwargs):
 
                     predictions.append(dataset.features["Label"].str2int(output[0]))
 
-                    test.map(predict)
+                test.map(predict)
 
             # accuracy = sum([p == l for p, l in zip(predictions, dataset['Label'])]) / 50
             f1 = skm.f1_score(
                 dataset["Label"], predictions, labels=labels, average="macro"
             )
-
             print(f"Dataset - {config}; Num examples - {n}: {f1}")
-
             raft_experiment.log_scalar(f"{config}.{n}_examples", f1)
 
 
