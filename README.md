@@ -20,6 +20,8 @@ Install raft_baselines.
 python setup.py develop
 ```
 
+You may have to run the above command with `sudo` prepended for permissions.
+
 If you do not have access to GPT-3, you may use `random_classifier.py`, or create your own classifier that implements the `classify(input)` method.
 
 Test random classifier:
