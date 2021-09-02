@@ -8,7 +8,13 @@ import numpy as np
 import datasets
 
 from raft_baselines.classifiers.classifier import Classifier
-from raft_baselines.utils.gpt3_utils import num_tokens, truncate_by_tokens, gpt2_tokenizer, complete, search
+from raft_baselines.utils.gpt3_utils import (
+    num_tokens,
+    truncate_by_tokens,
+    gpt2_tokenizer,
+    complete,
+    search,
+)
 from raft_baselines import data
 
 text_data = importlib.resources.read_text(data, "gpt3_task_data.jsonl").split("\n")
@@ -39,7 +45,9 @@ class GPT3Classifier(Classifier):
             self.input_cols: List[str] = FIELD_ORDERING[config]
             self.instructions_start: str = "Possible labels:"
             if use_task_specific_instructions:
-                self.instructions_start = INSTRUCTIONS[config] + "\n" + self.instructions_start
+                self.instructions_start = (
+                    INSTRUCTIONS[config] + "\n" + self.instructions_start
+                )
 
         self.do_semantic_selection: bool = do_semantic_selection
         self.search_engine: str = search_engine
@@ -66,9 +74,7 @@ class GPT3Classifier(Classifier):
         return f"""{self.instructions_start}\n{formatted_classes}"""
 
     def max_example_lengths(
-        self,
-        num_training_examples: int,
-        input_to_classify: Mapping[str, str]
+        self, num_training_examples: int, input_to_classify: Mapping[str, str]
     ) -> Tuple[int, int]:
         instruction_tokens = num_tokens(self.instructions)
         separator_tokens = (num_training_examples + 1) * len(self.separator)
@@ -99,9 +105,7 @@ class GPT3Classifier(Classifier):
         return "\n".join([f"{k}: {v}" for k, v in example.items() if len(v.strip())])
 
     def format_prompt_end(
-        self,
-        target: Mapping[str, str],
-        max_tokens: Optional[int] = None
+        self, target: Mapping[str, str], max_tokens: Optional[int] = None
     ) -> str:
         output_block = f"{self.class_col}:"
         output_block_tokens = num_tokens(output_block)
@@ -117,9 +121,7 @@ class GPT3Classifier(Classifier):
 {output_block}"""
 
     def format_example(
-        self,
-        example: Mapping[str, str],
-        clas: str, max_tokens: Optional[int] = None
+        self, example: Mapping[str, str], clas: str, max_tokens: Optional[int] = None
     ) -> str:
         clas_str = (
             clas if not self.add_prefixes else f"{self.classes.index(clas) + 1}. {clas}"
@@ -158,9 +160,7 @@ class GPT3Classifier(Classifier):
         return self.separator.join(formatted_examples)
 
     def select_training_examples(
-        self,
-        target: Mapping[str, str],
-        random_seed: Optional[int] = None
+        self, target: Mapping[str, str], random_seed: Optional[int] = None
     ) -> datasets.Dataset:
         if not self.do_semantic_selection:
             random.seed(random_seed)
@@ -298,6 +298,8 @@ class GPT3Classifier(Classifier):
         random_seed: Optional[int] = None,
     ) -> Dict[str, float]:
         ordered_target = {col: target[col] for col in self.input_cols if col in target}
-        example_dataset = self.select_training_examples(ordered_target, random_seed=random_seed)
+        example_dataset = self.select_training_examples(
+            ordered_target, random_seed=random_seed
+        )
         prompt = self.format_prompt(ordered_target, example_dataset)
         return self._classify_prompt(prompt)

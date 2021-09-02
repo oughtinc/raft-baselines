@@ -6,6 +6,7 @@ import datasets
 from sacred import Experiment, observers
 
 from raft_baselines import classifiers
+
 """
 This class runs a classifier specified by `classifier_name` on the unlabeled
     test sets for all configs given in `configs`. Any classifier can be used,
@@ -19,17 +20,19 @@ observer = observers.FileStorageObserver(f"results/{experiment_name}")
 raft_experiment.observers.append(observer)
 
 # Best performing on a per-dataset basis using raft_train_experiment.py
-NUM_EXAMPLES = {"ade_corpus_v2": 25,
-                "banking_77": 10,
-                "terms_of_service": 5,
-                "tai_safety_research": 5,
-                "neurips_impact_statement_risks": 5,
-                "overruling": 25,
-                "systematic_review_inclusion": 5,
-                "one_stop_english": 5,
-                "tweet_eval_hate": 50,
-                "twitter_complaints": 25,
-                "semiconductor_org_types": 50}
+NUM_EXAMPLES = {
+    "ade_corpus_v2": 25,
+    "banking_77": 10,
+    "terms_of_service": 5,
+    "tai_safety_research": 5,
+    "neurips_impact_statement_risks": 5,
+    "overruling": 25,
+    "systematic_review_inclusion": 5,
+    "one_stop_english": 5,
+    "tweet_eval_hate": 50,
+    "twitter_complaints": 25,
+    "semiconductor_org_types": 50,
+}
 
 
 @raft_experiment.config
@@ -39,7 +42,7 @@ def base_config():
         # change to davinci to replicate results from the paper
         "engine": "ada",
         "use_task_specific_instructions": True,
-        "do_semantic_selection": True
+        "do_semantic_selection": True,
     }
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples
@@ -61,16 +64,25 @@ def load_datasets_train(configs):
 
 
 def make_extra_kwargs(config):
-    extra_kwargs = {"config": config,
-                    "num_prompt_training_examples": NUM_EXAMPLES[config]}
+    extra_kwargs = {
+        "config": config,
+        "num_prompt_training_examples": NUM_EXAMPLES[config],
+    }
     if config == "banking_77":
         extra_kwargs["add_prefixes"] = True
     return extra_kwargs
 
 
 @raft_experiment.capture
-def make_predictions(train_dataset, test_dataset, config, classifier_cls,
-                     extra_kwargs, n_test, classifier_kwargs):
+def make_predictions(
+    train_dataset,
+    test_dataset,
+    config,
+    classifier_cls,
+    extra_kwargs,
+    n_test,
+    classifier_kwargs,
+):
     classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
     if n_test > -1:
@@ -92,7 +104,7 @@ def log_text(text, dirname, filename):
     if not os.path.isdir(targetdir):
         os.mkdir(targetdir)
 
-    with open(os.path.join(targetdir, filename), 'w') as f:
+    with open(os.path.join(targetdir, filename), "w") as f:
         f.write(text)
 
 
@@ -118,8 +130,7 @@ def write_predictions(labeled, config):
         )
         writer.writerow(["ID", "Label"])
         for row in labeled:
-            writer.writerow([row["ID"],
-                             int2str(row["Label"])])
+            writer.writerow([row["ID"], int2str(row["Label"])])
 
 
 @raft_experiment.automain
@@ -131,8 +142,9 @@ def main(classifier_name):
 
     for config in unlabeled:
         extra_kwargs = make_extra_kwargs(config)
-        labeled = make_predictions(train[config], unlabeled[config],
-                                   config, classifier_cls, extra_kwargs)
+        labeled = make_predictions(
+            train[config], unlabeled[config], config, classifier_cls, extra_kwargs
+        )
         write_predictions(labeled, config)
 
 
