@@ -1,6 +1,0 @@
-README.md
-setup.py
-src/raft_baselines.egg-info/PKG-INFO
-src/raft_baselines.egg-info/SOURCES.txt
-src/raft_baselines.egg-info/dependency_links.txt
-src/raft_baselines.egg-info/top_level.txt
