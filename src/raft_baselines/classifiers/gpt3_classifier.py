@@ -218,22 +218,18 @@ class GPT3Classifier(Classifier):
         target: Mapping[str, str],
         example_dataset: Optional[datasets.Dataset] = None,
     ) -> str:
-        ordered_input = {col: target[col] for col in self.input_cols if col in target}
-
-        if example_dataset is None:
-            example_dataset = self.select_training_examples(ordered_input)
-
         if self.truncation_params is None:
             raise ValueError("No truncation strategy provided.")
+
         max_end_example_tokens, max_train_example_tokens = self.max_example_lengths(
-            len(example_dataset), ordered_input
+            len(example_dataset), target
         )
         example_str = self.render_examples(
             example_dataset, max_tokens_per_example=max_train_example_tokens
         )
         example_str_and_sep = "" if example_str == "" else example_str + self.separator
 
-        prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(ordered_input, max_tokens=max_end_example_tokens)}"""  # noqa: E501
+        prompt = f"""{self.instructions + self.separator if self.instructions != "" else ""}{example_str_and_sep}{self.format_prompt_end(target, max_tokens=max_end_example_tokens)}"""  # noqa: E501
         return prompt
 
     def does_token_match_class(self, token: str, clas: str) -> bool:
@@ -301,6 +297,7 @@ class GPT3Classifier(Classifier):
         target: Mapping[str, str],
         random_seed: Optional[int] = None,
     ) -> Dict[str, float]:
-        example_dataset = self.select_training_examples(target, random_seed=random_seed)
-        prompt = self.format_prompt(target, example_dataset)
+        ordered_target = {col: target[col] for col in self.input_cols if col in target}
+        example_dataset = self.select_training_examples(ordered_target, random_seed=random_seed)
+        prompt = self.format_prompt(ordered_target, example_dataset)
         return self._classify_prompt(prompt)

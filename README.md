@@ -8,10 +8,11 @@ In order to run experiments with GPT-3, you will need to have an OpenAI API key.
 echo OPENAI_API_KEY=$OPENAI_API_KEY > .env
 ```
 
-Install necessary requirements from the requirements file.
+Set up a virtual environament and install necessary requirements from the requirements file.
 
 ```buildoutcfg
-pip install -r requirements.txt
+conda create -n raft-baselines python=3.8 && conda activate raft-baselines
+python -m pip install -r requirements.txt
 ```
 
 Install raft_baselines.
@@ -26,7 +27,7 @@ If you do not have access to GPT-3, you may use `random_classifier.py`, or creat
 
 Test random classifier:
 ```buildoutcfg
-python -m raft_baselines.scripts.raft_predict with n_test=10 configs=['tai_safety_research'] classifier_cls=RandomClassifier
+python -m raft_baselines.scripts.raft_predict with n_test=10 'configs=["tai_safety_research"]' classifier_name=RandomClassifier
 ```
 
 ## Sacred Experiment Scripts
@@ -35,16 +36,16 @@ We use [Sacred](https://github.com/IDSIA/sacred) to track our experiments and ou
 
 ```buildoutcfg
 # For labeling the test set
-python raft_predict.py
+python -m raft_baselines.scripts.raft_predict
 # For tuning on the train set with LOO validation
-python raft_train_experiment.py
+python -m raft_baselines.scripts.raft_train_experiment
 ```
 
 Alternately, you can modify the input variables to an experiment from the command line, as is done in random classifier example above. Regardless, some modification will be necessary if you want to run different experiments. See [this tutorial](https://sacred.readthedocs.io/en/stable/configuration.html) for more information. 
 
 Similarly, you can save metrics with `raft_experiment.log_scalar()`, or by using the sacred observer directly. See [this tutorial](https://sacred.readthedocs.io/en/stable/collected_information.html) for more information.
 
-To save out predictions and upload to the HuggingFace Hub (and the leaderboard), see [the RAFT submission template](https://github.com/oughtinc/raft-submission).
+To save out predictions and upload to the HuggingFace Hub (and the leaderboard), see [the RAFT submission template](https://huggingface.co/datasets/ought/raft-submission).
 
 ## License
 

@@ -7,7 +7,7 @@ from sacred import Experiment, observers
 
 from raft_baselines import classifiers
 """
-This class runs a classifier specified by `classifier_cls` on the unlabeled 
+This class runs a classifier specified by `classifier_name` on the unlabeled
     test sets for all configs given in `configs`. Any classifier can be used,
     but must accept a hf.datasets.Dataset as an argument. Any other keyword
     arguments must be specified via `classifier_kwargs`.
@@ -18,6 +18,7 @@ raft_experiment = Experiment(experiment_name, save_git_info=False)
 observer = observers.FileStorageObserver(f"results/{experiment_name}")
 raft_experiment.observers.append(observer)
 
+# Best performing on a per-dataset basis using raft_train_experiment.py
 NUM_EXAMPLES = {"ade_corpus_v2": 25,
                 "banking_77": 10,
                 "terms_of_service": 5,
@@ -34,10 +35,14 @@ NUM_EXAMPLES = {"ade_corpus_v2": 25,
 @raft_experiment.config
 def base_config():
     classifier_name = "GPT3Classifier"
-    classifier_kwargs = {"engine": "ada",
-                         "use_task_specific_instructions": True,
-                         "do_semantic_selection": True}
+    classifier_kwargs = {
+        # change to davinci to replicate results from the paper
+        "engine": "ada",
+        "use_task_specific_instructions": True,
+        "do_semantic_selection": True
+    }
     configs = datasets.get_dataset_config_names("ought/raft")
+    # set n_test to -1 to run on all test examples
     n_test = 5
 
 
@@ -68,7 +73,7 @@ def make_predictions(train_dataset, test_dataset, config, classifier_cls,
                      extra_kwargs, n_test, classifier_kwargs):
     classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
-    if n_test > 0:
+    if n_test > -1:
         test_dataset = test_dataset.select(range(n_test))
 
     def predict(example):

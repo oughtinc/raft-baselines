@@ -14,6 +14,7 @@ raft_experiment.observers.append(observer)
 def base_config():
     classifier_name = "GPT3Classifier"
     classifier_kwargs = {
+        # change to davinci to replicate results from the paper
         "engine": "ada",
         "use_task_specific_instructions": True,
         "do_semantic_selection": True,
