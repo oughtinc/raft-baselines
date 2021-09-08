@@ -5,22 +5,19 @@ Possible labels:
 1. ADE-related
 2. not ADE-related
 
-Sentence: With serious cases, however, conventional treatment may not allow sufficient time at depth for the complete resolution of manifestations because of the need to avoid pulmonary oxygen toxicity which is associated with a prolonged period of breathing compressed air.
+Sentence: Of the 16 patients, including the 1 reported here, only 3 displayed significant shortening of the agranulocytic period after treatment.
 Label: not ADE-related
 
 Sentence: Several hypersensitivity reactions to cloxacillin have been reported, although IgE-mediated allergic reactions to the drug are rare and there is little information about possible tolerance to other semisynthetic penicillins or cephalosporins in patients with cloxacillin allergy.
 Label: ADE-related
 
-Sentence: A 69-year-old male was diagnosed in February 2004 with stage IV extranodal marginal zone B cell lymphoma involving the mediastinal nodes, lung parenchyma and bone marrow with high LDH.
+Sentence: Early detection of these cases has practical importance since the identification and elimination of the causative drug is essential for therapy success.
 Label: not ADE-related
 
 Sentence: A patient with psoriasis is described who had an abnormal response to the glucose tolerance test without other evidence of diabetes and then developed postprandial hyperglycemia and glycosuria during a period of topical administration of a corticosteroid cream, halcinonide cream 0.1
 Label: ADE-related
 
-Sentence: The gold standard for diagnosis is renal biopsy, but it is only rarely performed during the acute phase of the reaction and is not without risk.
-Label: not ADE-related
-
-Sentence: Of the 16 patients, including the 1 reported here, only 3 displayed significant shortening of the agranulocytic period after treatment.
+Sentence: With serious cases, however, conventional treatment may not allow sufficient time at depth for the complete resolution of manifestations because of the need to avoid pulmonary oxygen toxicity which is associated with a prolonged period of breathing compressed air.
 Label: not ADE-related
 
 Sentence: These cases were considered unusual in light of the short delay of their onset after initiation of immunosuppressive therapy and their fulminant course: 3 of these patients died of PCP occurring during the first month of treatment with prednisone.
@@ -29,20 +26,20 @@ Label: ADE-related
 Sentence: In 1991 the patient were found to be seropositive for HCV antibodies as detected by the ELISA method and confirmed by the RIBA method.
 Label: not ADE-related
 
-Sentence: Considerable improvement of myasthenic symptoms was seen in all patients within 3-6 months after the initiation of this therapy.
+Sentence: The gold standard for diagnosis is renal biopsy, but it is only rarely performed during the acute phase of the reaction and is not without risk.
 Label: not ADE-related
 
 Sentence: We present three patients with paradoxical seizures; their serum phenytoin levels were 43.5 mcg/mL, 46.5 mcg/mL and 38.3 mcg/mL.
 Label: ADE-related
 
-Sentence: NEH must be considered in lupus patients receiving cytotoxic agents to avoid inappropriate use of corticosteroids or antibiotics in this self-limited condition.
-Label: not ADE-related
-
-Sentence: A challenge with clozapine was feasible and showed no clinical symptoms of eosinophilia.
-Label: not ADE-related
-
 Sentence: We describe a patient who developed HUS after treatment with mitomycin C (total dose 144 mg/m2) due to a carcinoma of the ascending colon.
 Label: ADE-related
+
+Sentence: Considerable improvement of myasthenic symptoms was seen in all patients within 3-6 months after the initiation of this therapy.
+Label: not ADE-related
+
+Sentence: NEH must be considered in lupus patients receiving cytotoxic agents to avoid inappropriate use of corticosteroids or antibiotics in this self-limited condition.
+Label: not ADE-related
 
 Sentence: The INR should be monitored more frequently when bosentan is initiated, adjusted, or discontinued in patients taking warfarin.
 Label: not ADE-related
@@ -50,16 +47,19 @@ Label: not ADE-related
 Sentence: An encephalopathy and cardiomyopathy developed in a seventeen-year-old girl with chemotherapy-induced renal failure while receiving an intravesical aluminum infusion for hemorrhagic cystitis.
 Label: ADE-related
 
-Sentence: CT-scan disclosed right ethmoid sinusitis that spread to the orbit after surgery.
-Label: not ADE-related
-
-Sentence: MRI has a high sensitivity and specificity in the diagnosis of osteonecrosis and should be used when this condition is suspected.
+Sentence: A challenge with clozapine was feasible and showed no clinical symptoms of eosinophilia.
 Label: not ADE-related
 
 Sentence: CONCLUSION: Pancreatic enzyme intolerance, although rare, would be a major problem in the management of patients with CF.
 Label: not ADE-related
 
+Sentence: CT-scan disclosed right ethmoid sinusitis that spread to the orbit after surgery.
+Label: not ADE-related
+
 Sentence: These results indicate that the hyponatremia in this case was due to SIADH and that SIADH was caused by an increased release of vasopressin probably because of the antiviral drug (acyclovir) or infection of varicella zoster virus (V
+Label: not ADE-related
+
+Sentence: MRI has a high sensitivity and specificity in the diagnosis of osteonecrosis and should be used when this condition is suspected.
 Label: not ADE-related
 
 Sentence: METHODS: This study is a case report description.
