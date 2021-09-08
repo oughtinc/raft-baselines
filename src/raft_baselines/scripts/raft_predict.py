@@ -96,7 +96,7 @@ def make_predictions(
         example["Label"] = train_dataset.features["Label"].str2int(output[0])
         return example
 
-    return test_dataset.map(predict)
+    return test_dataset.map(predict, load_from_cache_file=False)
 
 
 def log_text(text, dirname, filename):
