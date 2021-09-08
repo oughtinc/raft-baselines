@@ -146,7 +146,3 @@ def main(classifier_name):
             train[config], unlabeled[config], config, classifier_cls, extra_kwargs
         )
         write_predictions(labeled, config)
-
-
-if __name__ == "__main__":
-    main()
