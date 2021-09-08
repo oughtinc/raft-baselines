@@ -102,7 +102,9 @@ class GPT3Classifier(Classifier):
 
     @classmethod
     def format_dict(cls, example: Mapping[str, str]) -> str:
-        return "\n".join([f"{k}: {v}" for k, v in example.items() if len(str(v).strip())])
+        return "\n".join(
+            [f"{k}: {v}" for k, v in example.items() if len(str(v).strip())]
+        )
 
     def format_prompt_end(
         self, target: Mapping[str, str], max_tokens: Optional[int] = None
@@ -300,9 +302,7 @@ class GPT3Classifier(Classifier):
     ) -> Dict[str, float]:
         ordered_target = {col: target[col] for col in self.input_cols if col in target}
 
-        example_dataset = self.select_training_examples(
-            target, random_seed=random_seed
-        )
+        example_dataset = self.select_training_examples(target, random_seed=random_seed)
         # Uncomment the below call and comment out the above call to
         # run without the minor formatting bug included in the baseline run.
         # example_dataset = self.select_training_examples(
