@@ -6,6 +6,15 @@ Possible labels:
 Sentence: the following facts are taken from the administrative record.
 Label: not overruling
 
+Sentence: to the extent that paprskar v. state, supra, applied the general test of waiver of constitutional rights set forth in johnson v. zerbst, supra, it is no longer viable.
+Label: overruling
+
+Sentence: we therefore overrule mcgore; and we hold, like every other circuit to have reached the issue, that under rule 15(a) a district court can allow a plaintiff to amend his complaint even when the complaint is subject to dismissal under the plra.
+Label: overruling
+
+Sentence: in this case, the trial court did not clearly err by finding clear and convincing evidence to support termination under mcl 712a.19b(3)(g) and (j).
+Label: not overruling
+
 Sentence: see scott, supra at 352; commonwealth v. ruffin, 475 mass. 1003, 1004 (2016).
 Label: not overruling
 
@@ -15,29 +24,17 @@ Label: overruling
 Sentence: we reverse and remand, and in doing so, we overrule commonwealth v. constant
 Label: overruling
 
-Sentence: see  boles, 554 so.2d at 961 ([i]f the county and other persons are not bound, then the status of the road as public or private is subject to being litigated again, and the results of later litigation may be inconsistent with the results of the initial litigation.).
-Label: not overruling
-
-Sentence: to the extent that paprskar v. state, supra, applied the general test of waiver of constitutional rights set forth in johnson v. zerbst, supra, it is no longer viable.
-Label: overruling
-
 Sentence: we flatly rejected this logic a century ago in state ex rel. state capitol commission v. lister, 91 wash. 9, 156 p. 858 (1916), and we reject it again now.
 Label: overruling
-
-Sentence: in this case, the trial court did not clearly err by finding clear and convincing evidence to support termination under mcl 712a.19b(3)(g) and (j).
-Label: not overruling
 
 Sentence: app. 1981), or voninski v. voninski, 661 s.w.2d 872, 878-79 (tenn.
 Label: overruling
 
-Sentence: see tex. r. app. p. 48.4; see also in re schulman, 252 s.w.3d at 412 n.35; ex parte owens, 206 s.w.3d 670, 673 (tex. crim. app. 2006).
+Sentence: see  boles, 554 so.2d at 961 ([i]f the county and other persons are not bound, then the status of the road as public or private is subject to being litigated again, and the results of later litigation may be inconsistent with the results of the initial litigation.).
 Label: not overruling
 
-Sentence: we therefore overrule mcgore; and we hold, like every other circuit to have reached the issue, that under rule 15(a) a district court can allow a plaintiff to amend his complaint even when the complaint is subject to dismissal under the plra.
-Label: overruling
-
-Sentence: we recognize that this reading of fager disapproves prior cases.
-Label: overruling
+Sentence: see tex. r. app. p. 48.4; see also in re schulman, 252 s.w.3d at 412 n.35; ex parte owens, 206 s.w.3d 670, 673 (tex. crim. app. 2006).
+Label: not overruling
 
 Sentence: to the extent that this opinion causes conflict with earlier decisions such as holmes, those cases are overruled.
 Label: overruling
@@ -45,22 +42,22 @@ Label: overruling
 Sentence: we disapprove abdelaziz as well as henderson v. north, 545 so.2d 486 (fla. 1st dca 1989), which adopted the principle of abdelaziz, to the extent that they disapproved a cause of action for negligent stillbirth.
 Label: overruling
 
+Sentence: we recognize that this reading of fager disapproves prior cases.
+Label: overruling
+
 Sentence: the decision of the fourth district court of appeal holding section 550.081 unconstitutional is disapproved.
+Label: overruling
+
+Sentence: however, to the extent that cervantes, and ex parte mcatee, 599 s.w.2d 335 (tex.crim.app. 1980), indicate that a failure to admonish pursuant to art. 26.13(a)(4) automatically entitles one to post-conviction collateral relief without
 Label: overruling
 
 Sentence: furthermore, the trial court indicated in its order that it had ""consider[ed] . . . [appellant's] special appearance, the pleadings, the affidavits, and arguments of counsel.""
 Label: not overruling
 
-Sentence: however, to the extent that cervantes, and ex parte mcatee, 599 s.w.2d 335 (tex.crim.app. 1980), indicate that a failure to admonish pursuant to art. 26.13(a)(4) automatically entitles one to post-conviction collateral relief without
-Label: overruling
-
-Sentence: to the extent that the holding in wilson v. bureau of state police, supra, conflicts with this opinion, it is overruled.
-Label: overruling
-
 Sentence: in light of both our holding today and previous rulings in johnson, dueser, and gronroos, we now explicitly overrule dupree.
 Label: overruling
 
-Sentence: for the reasons stated below, we approve the fifth district court of appeal's decision in winter park, and disapprove the decision in belleair to the extent described herein.
+Sentence: to the extent that the holding in wilson v. bureau of state police, supra, conflicts with this opinion, it is overruled.
 Label: overruling
 
 Sentence: having reviewed the question en banc, we now answer that question in the affirmative and overrule laffey.
@@ -69,13 +66,16 @@ Label: overruling
 Sentence: accordingly, to the extent of any conflict nemecek v. state, 621 s.w.2d 404 (tex.cr.app. 1980) is overruled.
 Label: overruling
 
-Sentence: we therefore overrule mata and hartman to the extent of the conflict and reverse the trial court's judgment and remand the cause for a new trial.
+Sentence: for the reasons stated below, we approve the fifth district court of appeal's decision in winter park, and disapprove the decision in belleair to the extent described herein.
 Label: overruling
 
 Sentence: in reaching that conclusion, we recede from the previous holding of this court in hall v. state, 505 so.2d 657, 658 (fla. 2d dca), cause dismissed, 509 so.2d 1117 (fla. 1987), in which we stated that an essential element of
 Label: overruling
 
 Sentence: we are fully in accord with the relaxation of the federal requirements as expressed in illinois v. gates, supra, and to the extent that berkshire v. commonwealth, supra; thompson v. commonwealth, supra; and buchenburger v. commonwealth, supra, express a contrary view, they
+Label: overruling
+
+Sentence: we therefore overrule mata and hartman to the extent of the conflict and reverse the trial court's judgment and remand the cause for a new trial.
 Label: overruling
 
 Sentence: we overrule this holding based upon our conclusion that review by the court of appeals under section 22-63-117(11) is predicated upon a final order of the school board resulting from proceedings conducted under section 22-63-117.

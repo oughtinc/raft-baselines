@@ -4,23 +4,24 @@ Possible labels:
 2. elementary
 3. intermediate
 
-Article: Cities don’t often move. But that’s exactly what Kiruna, an Arctic town in northern Sweden, has to do. It has to move or the earth will swallow it up.
-“It’s a terrible choice,” says Krister Lindstedt, who works for the Swedish architect company that is moving the city. They will move this city of 23,000 people away from a gigantic iron-ore mine that is swallowing up the ground beneath its streets. “Either the mine must stop digging, and then there will be no jobs, or the city has to move.”
-Kiruna was founded in 1900 by the state-owned Luossavaara-Kiirunavaara mining company (LK). The city became rich thanks to the very large amount of iron ore that is below the town. But the mine that made it rich is now going to destroy it. “The town is here because of the mine,” says Deputy Mayor Niklas Siren.
-Located 145km inside the Arctic Circle, Kiruna has a very difficult climate. It has winters with no sunlight and average temperatures of -15C. But the iron ore has kept people here. Kiruna is the world’s largest underground iron-ore mine. It produces 90% of all the iron in Europe. That is enough to build more than six Eiffel
+Article: At Addis Ababa airport, visitors see pictures of golden grains, tiny red seeds and a group of men around a giant pancake. The words say: “Teff: the best gluten-free crop!” 
+Ethiopia is one of the world’s poorest countries, well known for its difficult food situation. But it is also the home of teff, a highly nutritious grain that you can now buy in health-food shops and supermarkets in Europe and America. 
+Teff’s tiny seeds – the size of poppy seeds – are high in calcium, iron and protein, and also amino acids. You can use the gluten-free grain instead of wheat flour in anything from bread and pasta to waffles and pizza bases. 
+In Ethiopia, teff is a national obsession. It is grown by about 6.3 million farmers – fields of the crop cover more than 20% of all farmland. They make it into flour and use it to make injera, the flatbread that is basic to Ethiopian cooking. The grain is also important in many religious and cultural ceremonies. Across the country, people meet around large pieces of injera. They use it to scoop up stews and to feed one another as a sign of loyalty or friendship – a tradition known as gursha. 
+Teff is now called Ethiopia’s “second gift to the world”
 Label: elementary
-
-Article: Illegal downloading is a kind of “moral squalor” and theft, as much as putting your hand in someone’s pocket and stealing their wallet is theft, says author Philip Pullman. In an article for Index on Censorship, Pullman, who is president of the Society of Authors, strongly defends copyright laws. He criticizes internet users who think it is OK to download music or books without paying for them.
-“The technical brilliance is so dazzling that people can’t see the moral squalor of what they’re doing,” he writes. “It is outrageous that anyone can steal an artist’s work and get away with it. It is theft, just as putting your hand in someone’s pocket and taking their wallet is theft.”
-His article comes after music industry leaders met British Prime Minister David Cameron in Downing Street to discuss the issue of web piracy.
-Pullman, writer of the His Dark Materials trilogy, says authors and musicians work in poverty and obscurity for years to bring their work to the level “that gives delight to their audiences and, as soon as they achieve that, the possibility of earning a living from it is taken away from them”. He concludes: “The principle is simple, and unaltered by technology, science or magic: if we want to enjoy the work that someone does,
-Label: intermediate
 
 Article: As soon as the children at one primary school in Stirling hear the words “daily mile”, they down their pencils and head out of the classroom to start running laps around the school field. For three-and-a-half years, all pupils at St Ninian’s Primary have walked or run a mile each day. They do so at random times during the day, apparently happily, and, despite the rise in childhood obesity across the UK, none of the children at the school are overweight. 
 The daily mile has done so much to improve these children’s fitness, behaviour and concentration in lessons that scores of nursery and primary schools across Britain are following suit and getting pupils to get up from their desks and take 15 minutes to walk or run round the school or local park. 
 Elaine Wyllie, headteacher of St Ninian’s, said: “I get at least two emails a day from other schools and local authorities asking how we do it. The thought of children across the country running every day because of something we’ve done is phenomenal.” 
 One in ten children are obese when they start school at the age of four or five, according to figures from the Health & Social Care Information Centre, and, in the summer of 2015, a study found that schoolchildren in England are the least fit they have ever been.
 Label: advanced
+
+Article: Illegal downloading is a kind of “moral squalor” and theft, as much as putting your hand in someone’s pocket and stealing their wallet is theft, says author Philip Pullman. In an article for Index on Censorship, Pullman, who is president of the Society of Authors, strongly defends copyright laws. He criticizes internet users who think it is OK to download music or books without paying for them.
+“The technical brilliance is so dazzling that people can’t see the moral squalor of what they’re doing,” he writes. “It is outrageous that anyone can steal an artist’s work and get away with it. It is theft, just as putting your hand in someone’s pocket and taking their wallet is theft.”
+His article comes after music industry leaders met British Prime Minister David Cameron in Downing Street to discuss the issue of web piracy.
+Pullman, writer of the His Dark Materials trilogy, says authors and musicians work in poverty and obscurity for years to bring their work to the level “that gives delight to their audiences and, as soon as they achieve that, the possibility of earning a living from it is taken away from them”. He concludes: “The principle is simple, and unaltered by technology, science or magic: if we want to enjoy the work that someone does,
+Label: intermediate
 
 Article: Back in 2005, when BlackBerry brought instant messaging to the mobile phone, the company was just entering its boom times. While the iPhone was still just an idea, BlackBerry’s innovations ensured its smartphone was one of Canada’s biggest exports.
 Six years later, in the summer of 2011, when there were riots in London and other UK cities, BlackBerry Messenger (BBM) was so effective at mobilizing the rioters that politicians wanted the service to be temporarily shut down. But, two years later, it is the users themselves who are pulling the plug.
