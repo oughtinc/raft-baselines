@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 from transformers import AutoTokenizer
+from transformers.tokenization_utils_base import BatchEncoding
 
 
 class Tokenizer(ABC):
@@ -17,12 +18,12 @@ class Tokenizer(ABC):
         ...
 
 
-class HuggingFaceTokenizer(Tokenizer):
+class TransformersTokenizer(Tokenizer):
     def __init__(self, model_name):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
-    def __call__(self, text: str) -> List[int]:
-        return self.tokenizer(text)["input_ids"]
+    def __call__(self, *args, **kwargs) -> BatchEncoding:
+        return self.tokenizer(*args, **kwargs)
 
     def num_tokens(self, text: str) -> int:
         return len(self.tokenizer.tokenize(text))

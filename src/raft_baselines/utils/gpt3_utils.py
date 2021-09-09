@@ -1,12 +1,11 @@
 import openai
-import math
 from dotenv import load_dotenv
 import os
 import time
 from cachetools import cached, LRUCache
 from typing import List, Dict, Tuple, Any, cast
 
-from raft_baselines.utils.tokenizers import HuggingFaceTokenizer
+from raft_baselines.utils.tokenizers import TransformersTokenizer
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -65,7 +64,7 @@ def search(
 ) -> List[Dict[str, Any]]:
     response = None
     error = None
-    tokenizer = HuggingFaceTokenizer("gpt2")
+    tokenizer = TransformersTokenizer("gpt2")
     query = tokenizer.truncate_by_tokens(query, 1000)
     short_enough_documents = [
         tokenizer.truncate_by_tokens(document, 2034 - tokenizer.num_tokens(query))

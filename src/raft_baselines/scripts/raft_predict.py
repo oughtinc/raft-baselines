@@ -39,10 +39,8 @@ NUM_EXAMPLES = {
 def base_config():
     classifier_name = "GPT3Classifier"
     classifier_kwargs = {
-        # change to davinci to replicate results from the paper
-        "engine": "ada",
-        "use_task_specific_instructions": True,
-        "do_semantic_selection": True,
+        # uncomment to replicate results from the paper
+        # "engine": "davinci",
     }
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples

@@ -1,8 +1,4 @@
-import random
-from typing import Dict, Optional, List, Tuple, Mapping, Any
-from collections import defaultdict
-import json
-import importlib.resources
+from typing import Dict, Optional, List, Mapping
 
 import numpy as np
 import datasets
@@ -12,9 +8,9 @@ from raft_baselines.utils.gpt3_utils import (
     complete,
     search,
 )
-from raft_baselines.utils.tokenizers import HuggingFaceTokenizer
+from raft_baselines.utils.tokenizers import TransformersTokenizer
 
-MAX_GPT3_PROMPT_TOKENS = 2048
+GPT3_MAX_TOKENS = 2048
 
 
 class GPT3Classifier(InContextClassifier):
@@ -25,12 +21,12 @@ class GPT3Classifier(InContextClassifier):
         search_engine: str = "ada",
         **kwargs,
     ) -> None:
-        tokenizer = HuggingFaceTokenizer("gpt2")
+        tokenizer = TransformersTokenizer("gpt2")
 
         super().__init__(
             *args,
             tokenizer=tokenizer,
-            max_prompt_tokens=MAX_GPT3_PROMPT_TOKENS,
+            max_tokens=GPT3_MAX_TOKENS,
             **kwargs,
         )
 
@@ -67,7 +63,7 @@ class GPT3Classifier(InContextClassifier):
             list(reversed(sorted_indices[: self.num_prompt_training_examples]))
         )
 
-    def does_token_match_class(self, prompt: str, token: str, clas: str) -> bool:
+    def does_token_match_class(self, token: str, clas: str) -> bool:
         # prepend a space to the class label
         # because we always expect a leading space in the first token
         # returned from the OpenAI API, given our prompt format
@@ -75,8 +71,8 @@ class GPT3Classifier(InContextClassifier):
             f" {clas}" if not self.add_prefixes else f" {self.classes.index(clas) + 1}"
         )
 
-        clas_first_token_id: int = self.tokenizer(clas_str)[0]
-        token_id: int = self.tokenizer(token)[0]
+        clas_first_token_id: int = self.tokenizer(clas_str)["input_ids"][0]
+        token_id: int = self.tokenizer(token)["input_ids"][0]
 
         # Compare token ids rather than the raw tokens
         # because GPT2TokenizerFast represents some special characters
@@ -105,7 +101,7 @@ class GPT3Classifier(InContextClassifier):
         for clas in self.classes:
             p = 0.0
             for token in logprobs.keys():
-                if self.does_token_match_class(prompt, token, clas):
+                if self.does_token_match_class(token, clas):
                     p += np.exp(logprobs[token])
             raw_p.append(p)
 

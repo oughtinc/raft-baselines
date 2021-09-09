@@ -28,10 +28,10 @@ class InContextClassifier(Classifier):
         num_prompt_training_examples: int = 20,
         add_prefixes: bool = False,
         config: str = None,
-        use_task_specific_instructions: bool = False,
-        do_semantic_selection: bool = False,
+        use_task_specific_instructions: bool = True,
+        do_semantic_selection: bool = True,
         tokenizer: Tokenizer = None,
-        max_prompt_tokens: int = 2048,
+        max_tokens: int = 2048,
     ) -> None:
         super().__init__(training_data)
 
@@ -52,7 +52,7 @@ class InContextClassifier(Classifier):
         self.tokenizer = tokenizer
         self.truncation_params: Mapping[str, Any] = {
             # max - buffer - completion tokens
-            "max_tokens": max_prompt_tokens - 10 - 1,
+            "max_tokens": max_tokens - 10 - 1,
             "end_example_token_proportion": max(
                 0.25,
                 1
