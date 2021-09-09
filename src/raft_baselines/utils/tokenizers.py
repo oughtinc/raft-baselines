@@ -6,10 +6,6 @@ from transformers.tokenization_utils_base import BatchEncoding
 
 class Tokenizer(ABC):
     @abstractmethod
-    def __call__(self, text: str) -> List[int]:
-        ...
-
-    @abstractmethod
     def num_tokens(text: str) -> int:
         ...
 

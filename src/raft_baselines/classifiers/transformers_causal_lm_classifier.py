@@ -1,17 +1,15 @@
+from logging import Formatter
 from typing import Dict, Optional, List, Mapping
 
 import numpy as np
 import datasets
 import torch
 from transformers import AutoModelForCausalLM
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers import util
 
 from raft_baselines.classifiers.in_context_classifier import InContextClassifier
-from raft_baselines.utils.gpt3_utils import (
-    complete,
-    search,
-)
 from raft_baselines.utils.tokenizers import TransformersTokenizer
+from raft_baselines.utils.embedders import SentenceTransformersEmbedder
 
 
 class TransformersCausalLMClassifier(InContextClassifier):
@@ -23,9 +21,7 @@ class TransformersCausalLMClassifier(InContextClassifier):
     ) -> None:
         tokenizer = TransformersTokenizer(model_type)
         self.model = AutoModelForCausalLM.from_pretrained(model_type)
-        self.similarity_model = SentenceTransformer(
-            "sentence-transformers/all-MiniLM-L6-v2"
-        )
+        self.similarity_embedder = SentenceTransformersEmbedder()
 
         super().__init__(
             *args,
@@ -46,11 +42,12 @@ class TransformersCausalLMClassifier(InContextClassifier):
         formatted_target = self.format_dict(target)
 
         # adapted from https://towardsdatascience.com/semantic-similarity-using-transformers-8f3cb5bf66d6
-        embeddings = self.similarity_model.encode(
-            tuple(formatted_target) + formatted_examples_without_labels,
-            convert_to_tensor=True,
-        )
-        similarity_scores = util.pytorch_cos_sim(embeddings[0], embeddings[1:])[0]
+        target_embedding = self.similarity_embedder(tuple([formatted_target]))
+        example_embeddings = self.similarity_embedder(formatted_examples_without_labels)
+
+        similarity_scores = util.pytorch_cos_sim(target_embedding, example_embeddings)[
+            0
+        ]
 
         sorted_indices = np.argsort(-similarity_scores)
         return self.training_data.select(
