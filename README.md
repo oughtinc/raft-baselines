@@ -1,4 +1,4 @@
-# RAFT Baselines
+# Setup
 
 This is the repository for the GPT-3 baselines described in the RAFT benchmark paper.
 
@@ -17,6 +17,12 @@ python setup.py develop
 
 You may have to run the above command with `sudo` prepended for permissions.
 
+# Starter Kit
+
+A [starter kit notebook](scripts/starter_kit.ipynb) walks through the basics of making predictions using models from the [HuggingFace Model Hub](https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads).
+
+# RAFT Predict
+
 Use the `raft_predict` script to run classifiers on the RAFT datasets. By default, the script will run on the first 5 test examples for each dataset. To use a random classifier on the first 10 examples from the ADE Corpus V2 dataset:
 
 ```buildoutcfg
@@ -34,7 +40,7 @@ In order to run experiments with GPT-3, you will need to have an OpenAI API key.
 echo OPENAI_API_KEY=$OPENAI_API_KEY > .env
 ```
 
-## Sacred Experiment Scripts
+## Sacred
 
 We use [Sacred](https://github.com/IDSIA/sacred) to track our experiments and outputs. This has no overhead at runtime, simply run either of our two experiment scripts with python like normal. You can change where tracking files get saved to by modifying the observer at the top of every experiment file, or you can change the details of the experiment via the various configuration parameters specified in the configs block.
 

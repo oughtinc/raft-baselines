@@ -1,11 +1,11 @@
 ID,Label
-50,verify_top_up
-51,disposable_card_limits
-52,Refund_not_showing_up
-53,declined_cash_withdrawal
-54,terminate_account
-55,direct_debit_payment_not_recognised
-56,wrong_amount_of_cash_received
-57,card_swallowed
-58,getting_spare_card
-59,change_pin
+50,not ADE-related
+51,not ADE-related
+52,not ADE-related
+53,not ADE-related
+54,not ADE-related
+55,not ADE-related
+56,not ADE-related
+57,not ADE-related
+58,not ADE-related
+59,not ADE-related
