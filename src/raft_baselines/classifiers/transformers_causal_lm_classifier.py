@@ -1,5 +1,4 @@
-from logging import Formatter
-from typing import Dict, Optional, List, Mapping
+from typing import Optional, List, Mapping
 
 import numpy as np
 import datasets
