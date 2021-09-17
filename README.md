@@ -17,10 +17,10 @@ python setup.py develop
 
 You may have to run the above command with `sudo` prepended for permissions.
 
-Use the `raft_predict` script to run classifiers on the RAFT datasets. By default, the script will run on the first 5 test examples for each dataset. To use a random classifier on the first 10 examples from the TAI safety research dataset:
+Use the `raft_predict` script to run classifiers on the RAFT datasets. By default, the script will run on the first 5 test examples for each dataset. To use a random classifier on the first 10 examples from the ADE Corpus V2 dataset:
 
 ```buildoutcfg
-python -m raft_baselines.scripts.raft_predict with n_test=10 'configs=["tai_safety_research"]' classifier_name=RandomClassifier
+python -m raft_baselines.scripts.raft_predict with n_test=10 'configs=["ade_corpus_v2"]' classifier_name=RandomClassifier
 ```
 
 The other classifiers available are:

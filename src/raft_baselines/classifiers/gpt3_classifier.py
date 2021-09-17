@@ -85,12 +85,11 @@ class GPT3Classifier(InContextClassifier):
     def _get_raw_probabilities(
         self,
         prompt: str,
-        engine: Optional[str] = None,
     ) -> List[float]:
         response = complete(
             prompt,
             temperature=0.0,
-            engine=engine or self.engine,
+            engine=self.engine,
             max_tokens=1,
         )
         logprobs: Dict[str, float] = response["choices"][0]["logprobs"]["top_logprobs"][

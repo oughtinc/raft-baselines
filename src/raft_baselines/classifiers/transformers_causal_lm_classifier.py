@@ -57,7 +57,6 @@ class TransformersCausalLMClassifier(InContextClassifier):
     def _get_raw_probabilities(
         self,
         prompt: str,
-        engine: Optional[str] = None,
     ) -> List[float]:
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
 

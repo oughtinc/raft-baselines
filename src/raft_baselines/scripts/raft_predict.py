@@ -75,7 +75,6 @@ def make_extra_kwargs(config):
 def make_predictions(
     train_dataset,
     test_dataset,
-    config,
     classifier_cls,
     extra_kwargs,
     n_test,

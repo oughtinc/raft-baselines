@@ -216,16 +216,14 @@ class InContextClassifier(Classifier):
     def _get_raw_probabilities(
         self,
         prompt: str,
-        engine: Optional[str] = None,
     ) -> List[float]:
         ...
 
     def _classify_prompt(
         self,
         prompt: str,
-        engine: Optional[str] = None,
     ) -> Dict[str, float]:
-        raw_p = self._get_raw_probabilities(prompt, engine)
+        raw_p = self._get_raw_probabilities(prompt)
         sum_p = np.sum(raw_p)
         if sum_p > 0:
             normalized_p = np.array(raw_p) / np.sum(raw_p)
@@ -240,6 +238,7 @@ class InContextClassifier(Classifier):
         self,
         target: Mapping[str, str],
         random_seed: Optional[int] = None,
+        should_print_prompt: bool = False,
     ) -> Dict[str, float]:
         ordered_target = {col: target[col] for col in self.input_cols if col in target}
 
@@ -251,4 +250,6 @@ class InContextClassifier(Classifier):
         # )
 
         prompt = self.format_prompt(ordered_target, example_dataset)
+        if should_print_prompt:
+            print(prompt)
         return self._classify_prompt(prompt)
