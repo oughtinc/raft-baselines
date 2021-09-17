@@ -19,7 +19,8 @@ class TransformersCausalLMClassifier(InContextClassifier):
         **kwargs,
     ) -> None:
         tokenizer = TransformersTokenizer(model_type)
-        self.model = AutoModelForCausalLM.from_pretrained(model_type)
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.model = AutoModelForCausalLM.from_pretrained(model_type).to(self.device)
         self.similarity_embedder = SentenceTransformersEmbedder()
 
         super().__init__(
@@ -58,10 +59,10 @@ class TransformersCausalLMClassifier(InContextClassifier):
         prompt: str,
         engine: Optional[str] = None,
     ) -> List[float]:
-        input_ids = self.tokenizer(prompt, return_tensors="pt")["input_ids"]
+        inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
 
         with torch.no_grad():
-            output = self.model(input_ids)
+            output = self.model(**inputs)
 
         next_token_probs = torch.softmax(output.logits[0][-1], dim=0)
 
