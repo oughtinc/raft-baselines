@@ -49,7 +49,7 @@ class TransformersCausalLMClassifier(InContextClassifier):
             0
         ]
 
-        sorted_indices = np.argsort(-similarity_scores)
+        sorted_indices = np.argsort(-similarity_scores.cpu())
         return self.training_data.select(
             list(reversed(sorted_indices[: self.num_prompt_training_examples]))
         )

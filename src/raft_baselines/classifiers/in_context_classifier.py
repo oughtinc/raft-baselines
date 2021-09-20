@@ -7,6 +7,7 @@ import importlib.resources
 
 import numpy as np
 import datasets
+import torch
 
 from raft_baselines.classifiers.classifier import Classifier
 from raft_baselines import data
@@ -224,6 +225,7 @@ class InContextClassifier(Classifier):
         prompt: str,
     ) -> Dict[str, float]:
         raw_p = self._get_raw_probabilities(prompt)
+        raw_p = torch.stack(raw_p).cpu().detach().numpy()
         sum_p = np.sum(raw_p)
         if sum_p > 0:
             normalized_p = np.array(raw_p) / np.sum(raw_p)
