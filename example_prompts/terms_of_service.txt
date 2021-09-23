@@ -13,17 +13,17 @@ Possible labels:
 1. not potentially unfair
 2. potentially unfair
 
-Sentence: You acknowledge that any reliance upon any such introduction, opinion, profile, advice, statement or information and any resulting participation or action shall be at your sole risk.
+Sentence: You acknowledge and agree that posting any such user content may result in immediate termination or suspension of your spotify account.
+Label: potentially unfair
+
+Sentence: You may be able to access certain third-party links, applications or content (``third-party applications'') via accounts related to our services.
 Label: not potentially unfair
-
-Sentence: We can each end this contract anytime we want.
-Label: potentially unfair
-
-Sentence: Supercell may reject, refuse to post or delete any user content for any or no reason, including, but not limited to, user content that in the sole judgment of supercell violates these terms of service.
-Label: potentially unfair
 
 Sentence: These terms, and any other policies or rules we reference in these terms, make up the entire agreement between you and us relating to the subject matter of these terms, and supersede all prior understandings of the parties relating to the subject matter of these terms, whether those prior understandings were electronic, oral or written, or whether established by custom, practice, policy or precedent, between you and us.
 Label: not potentially unfair
+
+Sentence: Supercell may reject, refuse to post or delete any user content for any or no reason, including, but not limited to, user content that in the sole judgment of supercell violates these terms of service.
+Label: potentially unfair
 
 Sentence: Tinder does not represent or warrant that (a) the service will be uninterrupted, secure or error free, (b) any defects or errors in the service will be corrected, or (c) that any content or information you obtain on or through the services will be accurate.
 Label: potentially unfair

@@ -8,154 +8,126 @@ Organization name: Central Research Laboratory,Hitachi Ltd. Kokubunji. Tokyo,Jap
 Paper title: Formation of Si-on-Insulator
 Label: company
 
-Organization name: Sony,Tokyo,Japan
-Paper title: A 3.1 to 5 GHz CMOS DSSS UWB transceiver for WP
-Label: company
-
-Organization name: Texas Instruments Bangalore and Texas Instruments,Dallas,TX
-Paper title: A DSL customer-premise equipment modem SoC with extended reach/
-Label: company
-
 Organization name: MAPS,Yongin,Korea
 Paper title: 21.8 An all-in-one (Qi, PMA
-Label: company
-
-Organization name: Memory Division, Samsung Electronics Co, Yongin-City, Gyeonggi-Do, Korea
-Paper title: Front-end-
 Label: company
 
 Organization name: Samsung Electronics Company Limited, Yongin si, Gyeonggi, South Korea
 Paper title: 1D thickness scaling study of phase change
 Label: company
 
-Organization name: Engim,Acton,MA,USA
-Paper title: A 180MS/s, 162Mb/s wideband three-
-Label: company
-
-Organization name: Syst. LSI Dev. Center,Mitsubishi Electr. Corp.,Hyogo,Japan
-Paper title: Single-
-Label: company
-
-Organization name: Illinois Univ.,Urbana,IL,USA
-Paper title: A 14 b 100 Msample/s CMOS DAC designed for spectral
-Label: university
-
-Organization name: imec from Samsung Electronics,Korea
-Paper title: First Demonstration of Low Temperature (≤500°C) CMOS
-Label: company
-
-Organization name: Matsushita Electric Industrial Limited, Takatsuki, Osaka, Japan
-Paper title: Role of non-radiative recombination in the
-Label: company
-
-Organization name: Semiconductor R&D Center, Samsung Electronics Co., Ltd, Yongin-City, Gyeonggi-Do, Korea (
-Label: company
-
-Organization name: R & D Center, Samsung Electronics Kiheung-Eup, Yongin-City, Kyungki-do, Korea
-Paper
-Label: company
-
-Organization name: Philips Composants et Semiconducteurs,Caen,France
-Paper title: A 12 b 50 M sample/s cascaded
-Label: company
-
-Organization name: Corp. Semicond. Dev. Div.,Matsushita Electr. Ind. Co. Ltd.,Kyoto,Japan
-
+Organization name: Semiconductor Research Center,Matsushita Electric Industrial Co.,Ltd.,Yagumo-nakamachi,Morig
 Label: company
 
 Organization name: Advanced Circuit Pursuit,Zollikon,Switzerland; ETH,Zurich,Switzerland
 Paper title: A 0.
 Label: company
 
-Organization name: National NanoFab Center, Daejeon, South Korea
-Paper title: 3-terminal nanoelectromechanical switching
-Label: research institute
-
-Organization name: ETH,Zurich,Switzerland; Advanced Circuit Pursuit,Zollikon,Switzerland
-Paper title: A 0.
-Label: university
-
-Organization name: Semiconductor Research Center,Matsushita Electric Industrial Co.,Ltd.,Yagumo-nakamachi,Morig
+Organization name: Engim,Acton,MA,USA
+Paper title: A 180MS/s, 162Mb/s wideband three-
 Label: company
 
-Organization name: imec,Heverlee,Belgium
-Paper title: 24.4 A 680nA fully integrated implantable EC
-Label: research institute
-
-Organization name: North Carolina State Univ.,Raleigh,NC,USA
-Paper title: 3Gb/s AC-coupled chip-to-
-Label: university
-
-Organization name: Fujitsu Laboratories Ltd.,Japan
-Paper title: Development of sub 10-µm ultra-thinning technology using device wafers
-Label: company
-
-Organization name: KUL, Leuven, Belgium
-Paper title: Benchmarking of monolithic 3D integrated MX2 FETs with Si
-Label: university
-
-Organization name: Pohang Univ. of Sci. & Technol.,South Korea
-Paper title: A 3Gb/s 8b single-ended
-Label: university
-
-Organization name: Toshiba at Albany NanoTech,NY,USA
-Paper title: Full metal gate with borderless contact for 14 nm and beyond
-Label: company
-
-Organization name: Technology Research Department,Association of Super-Advanced Electronics Technologies (ASET),,Higashi-koigakubo,K
-Label: research institute
-
-Organization name: Advanced LCD Technology Development Center Company Limited, Yokohama, Kanagawa, Japan
-Paper title: Sub-Micron CMOS /
+Organization name: R & D Center, Samsung Electronics Kiheung-Eup, Yongin-City, Kyungki-do, Korea
+Paper
 Label: company
 
 Organization name: Panasonic,Osaka,Japan
 Paper title: 30.1 8b Thin-film microprocessor using a hybrid oxide-organic complementary technology
 Label: company
 
-Organization name: Cisco Systems, Hong Kong, China
-Paper title: Characterizing Electromigration Effects in a 16nm FinFET Process Using a Circuit
+Organization name: Center for Semiconductor Research & Development,Toshiba Corporation,Japan
+Paper title: Physical understanding of Vth and Idsat variations
 Label: company
 
 Organization name: Imec,Leuven,Belgium
 Paper title: An Artificial Iris ASIC with High Voltage Liquid Crystal Driver, 10 n
 Label: research institute
 
-Organization name: Applied Science and Technology Research Institute,Hong Kong
-Paper title: A 48-mW 18-Gb/s fully integrated CMOS
+Organization name: ETH,Zurich,Switzerland; Advanced Circuit Pursuit,Zollikon,Switzerland
+Paper title: A 0.
+Label: university
+
+Organization name: imec from Samsung Electronics,Korea
+Paper title: First Demonstration of Low Temperature (≤500°C) CMOS
+Label: company
+
+Organization name: Technology Research Department,Association of Super-Advanced Electronics Technologies (ASET),,Higashi-koigakubo,K
 Label: research institute
 
-Organization name: Samsung Advanced Logic Lab,Austin,TX
-Paper title: High performance and low leakage current InGaAs-on-silicon FinF
+Organization name: Texas Instruments Bangalore and Texas Instruments,Dallas,TX
+Paper title: A DSL customer-premise equipment modem SoC with extended reach/
 Label: company
 
-Organization name: ULSI Device Dev. Labs.,NEC Corp.,Kanagawa,Japan
-Paper title: A crossing charge recycle refresh scheme
+Organization name: Memory Division, Samsung Electronics Co, Yongin-City, Gyeonggi-Do, Korea
+Paper title: Front-end-
 Label: company
 
-Organization name: Texas Instruments Inc, Dallas, TX, US
-Paper title: Damascene integration of copper and ultra-low-k xerog
+Organization name: Fujitsu Laboratories Ltd.,Japan
+Paper title: Development of sub 10-µm ultra-thinning technology using device wafers
 Label: company
+
+Organization name: National NanoFab Center, Daejeon, South Korea
+Paper title: 3-terminal nanoelectromechanical switching
+Label: research institute
+
+Organization name: Semiconductor R&D Center, Samsung Electronics Co., Ltd, Yongin-City, Gyeonggi-Do, Korea (
+Label: company
+
+Organization name: Pohang Univ. of Sci. & Technol.,South Korea
+Paper title: A 3Gb/s 8b single-ended
+Label: university
 
 Organization name: MPI für Mikrostrukturphysik, Halle, Germany
 Paper title: Dislocation engineering for a silicon
 Label: research institute
 
-Organization name: APA Optics, Inc., Blaine, MN, USA
-Paper title: High performance 0.25 /spl mu/m gate
+Organization name: Sony,Tokyo,Japan
+Paper title: A 3.1 to 5 GHz CMOS DSSS UWB transceiver for WP
 Label: company
 
-Organization name: Center for Semiconductor Research & Development,Toshiba Corporation,Japan
-Paper title: Physical understanding of Vth and Idsat variations
-Label: company
-
-Organization name: IBM Systems Group,Austin,TX
-Paper title: Design of the Power6 Microprocessor
-Label: company
-
-Organization name: MIRAI-ASET,Kawasaki,Japan
-Paper title: Strained SOI technology for high-performance, low-
+Organization name: Illinois Univ.,Urbana,IL,USA
+Paper title: A 14 b 100 Msample/s CMOS DAC designed for spectral
 Label: university
+
+Organization name: ULSI Device Dev. Labs.,NEC Corp.,Kanagawa,Japan
+Paper title: A crossing charge recycle refresh scheme
+Label: company
+
+Organization name: Syst. LSI Dev. Center,Mitsubishi Electr. Corp.,Hyogo,Japan
+Paper title: Single-
+Label: company
+
+Organization name: Matsushita Electric Industrial Limited, Takatsuki, Osaka, Japan
+Paper title: Role of non-radiative recombination in the
+Label: company
+
+Organization name: Corp. Semicond. Dev. Div.,Matsushita Electr. Ind. Co. Ltd.,Kyoto,Japan
+
+Label: company
+
+Organization name: KUL, Leuven, Belgium
+Paper title: Benchmarking of monolithic 3D integrated MX2 FETs with Si
+Label: university
+
+Organization name: imec,Heverlee,Belgium
+Paper title: 24.4 A 680nA fully integrated implantable EC
+Label: research institute
+
+Organization name: Applied Science and Technology Research Institute,Hong Kong
+Paper title: A 48-mW 18-Gb/s fully integrated CMOS
+Label: research institute
+
+Organization name: North Carolina State Univ.,Raleigh,NC,USA
+Paper title: 3Gb/s AC-coupled chip-to-
+Label: university
+
+Organization name: Philips Composants et Semiconducteurs,Caen,France
+Paper title: A 12 b 50 M sample/s cascaded
+Label: company
+
+Organization name: Samsung Advanced Logic Lab,Austin,TX
+Paper title: High performance and low leakage current InGaAs-on-silicon FinF
+Label: company
 
 Organization name: SoC R&D Center,Semiconductor Company,Toshiba Corp.,Isogo-ku,Yokohama,Japan
 Label: company
@@ -163,8 +135,28 @@ Label: company
 Organization name: Incubation Center,Renesas Electronics Corp.,Shimokuzawa,Chuou-ku,Sagamihara,
 Label: company
 
-Organization name: IBM Microelectron.,Burlington,VT,USA
-Paper title: A 500MHz multi-banked compilable DRAM macro
+Organization name: IBM Systems Group,Austin,TX
+Paper title: Design of the Power6 Microprocessor
+Label: company
+
+Organization name: APA Optics, Inc., Blaine, MN, USA
+Paper title: High performance 0.25 /spl mu/m gate
+Label: company
+
+Organization name: Texas Instruments Inc, Dallas, TX, US
+Paper title: Damascene integration of copper and ultra-low-k xerog
+Label: company
+
+Organization name: Cisco Systems, Hong Kong, China
+Paper title: Characterizing Electromigration Effects in a 16nm FinFET Process Using a Circuit
+Label: company
+
+Organization name: Toshiba at Albany NanoTech,NY,USA
+Paper title: Full metal gate with borderless contact for 14 nm and beyond
+Label: company
+
+Organization name: Advanced LCD Technology Development Center Company Limited, Yokohama, Kanagawa, Japan
+Paper title: Sub-Micron CMOS /
 Label: company
 
 Organization name: IBM Microelectronics, Burlington, VT, USA
@@ -175,12 +167,12 @@ Organization name: GLOBALFOUNDRIES Inc., Albany, NY, USA
 Paper title: Accurate performance evaluation for the horizontal nanosheet
 Label: company
 
-Organization name: Strategic Technology Group,Advanced Micro Devices,Sunnyvale,CA,USA
-Paper title: Collective-effect state variables for post-CM
-Label: company
+Organization name: MIRAI-ASET,Kawasaki,Japan
+Paper title: Strained SOI technology for high-performance, low-
+Label: university
 
-Organization name: IBM Semiconductor Research and Development Center (SRDC), Samsung Electronics Company Limited, Hopewell Junction, NY, USA
-Paper title
+Organization name: IBM Microelectron.,Burlington,VT,USA
+Paper title: A 500MHz multi-banked compilable DRAM macro
 Label: company
 
 Organization name: IBM Microelectron.,Hopewell Junction,NY,USA
@@ -193,6 +185,14 @@ Label: company
 
 Organization name: Intel,Hillsboro,OR
 Paper title: 25.5 A Self-Calibrated 1.2-to-3.
+Label: company
+
+Organization name: Strategic Technology Group,Advanced Micro Devices,Sunnyvale,CA,USA
+Paper title: Collective-effect state variables for post-CM
+Label: company
+
+Organization name: IBM Semiconductor Research and Development Center (SRDC), Samsung Electronics Company Limited, Hopewell Junction, NY, USA
+Paper title
 Label: company
 
 Organization name: QRE, Hillsboro, OR, USA
