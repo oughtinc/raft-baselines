@@ -5,3 +5,6 @@ openai
 sacred
 python-dotenv
 cachetools
+torch
+sentence-transformers
+ipykernel

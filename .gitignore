@@ -6,3 +6,6 @@ gpt3-baselines
 __pycache__
 prompts
 raft_baselines.egg-info
+
+# Jupyter Notebook
+.ipynb_checkpoints

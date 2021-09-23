@@ -1,5 +1,5 @@
 import datasets
-from typing import Callable, List, Mapping
+from typing import Callable, List, Mapping, Dict, Optional
 from abc import ABC, abstractmethod
 
 
@@ -17,7 +17,12 @@ class Classifier(ABC):
         ]
 
     @abstractmethod
-    def classify(self, target: Mapping[str, str]) -> Mapping[str, float]:
+    def classify(
+        self,
+        target: Mapping[str, str],
+        random_seed: Optional[int] = None,
+        should_print_prompt: bool = False,
+    ) -> Dict[str, float]:
         """
         :param target: Dict input with fields and natural language data within those fields.
         :return: Dict where the keys are class names and the values are probabilities.

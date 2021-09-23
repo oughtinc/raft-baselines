@@ -39,10 +39,8 @@ NUM_EXAMPLES = {
 def base_config():
     classifier_name = "GPT3Classifier"
     classifier_kwargs = {
-        # change to davinci to replicate results from the paper
-        "engine": "ada",
-        "use_task_specific_instructions": True,
-        "do_semantic_selection": True,
+        # uncomment to replicate results from the paper
+        # "engine": "davinci",
     }
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples
@@ -77,7 +75,6 @@ def make_extra_kwargs(config):
 def make_predictions(
     train_dataset,
     test_dataset,
-    config,
     classifier_cls,
     extra_kwargs,
     n_test,
@@ -143,6 +140,6 @@ def main(classifier_name):
     for config in unlabeled:
         extra_kwargs = make_extra_kwargs(config)
         labeled = make_predictions(
-            train[config], unlabeled[config], config, classifier_cls, extra_kwargs
+            train[config], unlabeled[config], classifier_cls, extra_kwargs
         )
         write_predictions(labeled, config)

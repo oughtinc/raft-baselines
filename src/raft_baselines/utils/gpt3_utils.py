@@ -1,40 +1,11 @@
 import openai
-from transformers import GPT2TokenizerFast
-import math
 from dotenv import load_dotenv
 import os
 import time
 from cachetools import cached, LRUCache
-
-
 from typing import List, Dict, Tuple, Any, cast
 
-
-def make_gpt2_tokenizer(*, local_files_only: bool = False) -> GPT2TokenizerFast:
-    return GPT2TokenizerFast.from_pretrained("gpt2", local_files_only=local_files_only)
-
-
-gpt2_tokenizer = make_gpt2_tokenizer()
-
-
-def num_tokens(text: str, use_tokenizer: bool = True) -> int:
-    estimated_characters_per_token = 4
-    return (
-        len(gpt2_tokenizer.tokenize(text))
-        if use_tokenizer
-        else math.ceil(len(text) / estimated_characters_per_token)
-    )
-
-
-def truncate_by_tokens(text: str, max_tokens: int) -> str:
-    if max_tokens is None or not text:
-        return text
-    encoding = gpt2_tokenizer(
-        text, truncation=True, max_length=max_tokens, return_offsets_mapping=True
-    )
-
-    return text[: encoding.offset_mapping[-1][1]]
-
+from raft_baselines.utils.tokenizers import TransformersTokenizer
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -93,9 +64,11 @@ def search(
 ) -> List[Dict[str, Any]]:
     response = None
     error = None
-    query = truncate_by_tokens(query, 1000)
+    tokenizer = TransformersTokenizer("gpt2")
+    query = tokenizer.truncate_by_tokens(query, 1000)
     short_enough_documents = [
-        truncate_by_tokens(document, 2034 - num_tokens(query)) for document in documents
+        tokenizer.truncate_by_tokens(document, 2034 - tokenizer.num_tokens(query))
+        for document in documents
     ]
 
     success = False
