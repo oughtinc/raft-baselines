@@ -39,12 +39,13 @@ NUM_EXAMPLES = {
 def base_config():
     classifier_name = "GPT3Classifier"
     classifier_kwargs = {
-        # uncomment to replicate results from the paper
-        # "engine": "davinci",
+        # change to davinci to replicate results from the paper
+        "engine": "ada",
     }
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples
     n_test = 5
+    random_seed = 42
 
 
 @raft_experiment.capture
@@ -79,6 +80,7 @@ def make_predictions(
     extra_kwargs,
     n_test,
     classifier_kwargs,
+    random_seed,
 ):
     classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
 
@@ -87,7 +89,7 @@ def make_predictions(
 
     def predict(example):
         del example["Label"]
-        output_probs = classifier.classify(example)
+        output_probs = classifier.classify(example, random_seed=random_seed)
         output = max(output_probs.items(), key=lambda kv_pair: kv_pair[1])
 
         example["Label"] = train_dataset.features["Label"].str2int(output[0])
@@ -140,6 +142,6 @@ def main(classifier_name):
     for config in unlabeled:
         extra_kwargs = make_extra_kwargs(config)
         labeled = make_predictions(
-            train[config], unlabeled[config], classifier_cls, extra_kwargs
+            train[config], unlabeled[config], classifier_cls, extra_kwargs, config
         )
         write_predictions(labeled, config)

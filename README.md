@@ -47,7 +47,7 @@ We use [Sacred](https://github.com/IDSIA/sacred) to track our experiments and ou
 ```buildoutcfg
 # For labeling the test set
 python -m raft_baselines.scripts.raft_predict
-# For tuning on the train set with LOO validation
+# For tuning various dimensions on the train set with LOO validation
 python -m raft_baselines.scripts.raft_train_experiment
 ```
 

@@ -74,4 +74,9 @@ class TransformersCausalLMClassifier(InContextClassifier):
 
             return next_token_probs[self.tokenizer(clas_str)["input_ids"][0]]
 
-        return [get_prob_for_class(clas) for clas in self.classes]
+        return (
+            torch.stack([get_prob_for_class(clas) for clas in self.classes])
+            .cpu()
+            .detach()
+            .numpy()
+        )

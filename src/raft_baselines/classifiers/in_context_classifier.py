@@ -250,4 +250,5 @@ class InContextClassifier(Classifier):
         prompt = self.format_prompt(ordered_target, example_dataset)
         if should_print_prompt:
             print(prompt)
+
         return self._classify_prompt(prompt)
