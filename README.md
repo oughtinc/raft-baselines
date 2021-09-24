@@ -34,6 +34,12 @@ The other classifiers available are:
 - `GPT3Classifier`: the one used for the GPT-3 baseline in the paper
 - `TransformersCausalLMClassifier`: takes as input a `model_type` string, and runs an arbitrary CausalLM from the [HuggingFace Model Hub](https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads)
 
+For example, to generate predictions from DistilGPT-2 on the first 10 examples of the ADE Corpus you can run:
+
+```buildoutcfg
+python -m raft_baselines.scripts.raft_predict with n_test=10 'configs=["ade_corpus_v2"]' classifier_name=TransformersCausalLMClassifier 'classifier_kwargs={"model_type":"gpt2"}'
+```
+
 In order to run experiments with GPT-3, you will need to have an OpenAI API key. Create a file called `.env` and put your API key there. Copy the format of `.env-example`:
 
 ```buildoutcfg

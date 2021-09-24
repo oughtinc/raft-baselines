@@ -40,7 +40,7 @@ def base_config():
     classifier_name = "GPT3Classifier"
     classifier_kwargs = {
         # change to davinci to replicate results from the paper
-        "engine": "ada",
+        # "engine": "ada",
     }
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples
@@ -83,6 +83,8 @@ def make_predictions(
     random_seed,
 ):
     classifier = classifier_cls(train_dataset, **classifier_kwargs, **extra_kwargs)
+    print(f"MODEL TYPE: {classifier.tokenizer.tokenizer.name_or_path}")
+
 
     if n_test > -1:
         test_dataset = test_dataset.select(range(n_test))
