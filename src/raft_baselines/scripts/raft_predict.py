@@ -25,13 +25,13 @@ NUM_EXAMPLES = {
     "banking_77": 10,
     "terms_of_service": 5,
     "tai_safety_research": 5,
-    "neurips_impact_statement_risks": 5,
+    "neurips_impact_statement_risks": 25,
     "overruling": 25,
-    "systematic_review_inclusion": 5,
+    "systematic_review_inclusion": 10,
     "one_stop_english": 5,
     "tweet_eval_hate": 50,
     "twitter_complaints": 25,
-    "semiconductor_org_types": 50,
+    "semiconductor_org_types": 5,
 }
 
 

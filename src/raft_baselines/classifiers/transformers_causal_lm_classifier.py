@@ -1,6 +1,5 @@
-from typing import Optional, List, Mapping
+from typing import List, Mapping
 
-import numpy as np
 import datasets
 import torch
 from transformers import AutoModelForCausalLM

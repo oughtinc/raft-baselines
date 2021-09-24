@@ -58,6 +58,8 @@ def loo_test(
             "use_task_specific_instructions": True,
             "do_semantic_selection": True,
         }
+    else:
+        raise ValueError(f"test_dimension {test_dimension} not recognized")
 
     classifier_cls = getattr(classifiers, classifier_name)
 
