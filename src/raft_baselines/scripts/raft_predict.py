@@ -142,6 +142,6 @@ def main(classifier_name):
     for config in unlabeled:
         extra_kwargs = make_extra_kwargs(config)
         labeled = make_predictions(
-            train[config], unlabeled[config], classifier_cls, extra_kwargs, config
+            train[config], unlabeled[config], classifier_cls, extra_kwargs
         )
         write_predictions(labeled, config)
