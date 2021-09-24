@@ -167,7 +167,8 @@ class InContextClassifier(Classifier):
     def select_training_examples(
         self, target: Mapping[str, str], random_seed: Optional[int] = None
     ) -> datasets.Dataset:
-        if not self.do_semantic_selection:
+        # handle edge case where target is blank (all the fields we selected are empty)
+        if not self.do_semantic_selection or not self.format_dict(target):
             random.seed(random_seed)
 
             n_ex = self.num_prompt_training_examples
@@ -225,7 +226,6 @@ class InContextClassifier(Classifier):
         prompt: str,
     ) -> Dict[str, float]:
         raw_p = self._get_raw_probabilities(prompt)
-        raw_p = torch.stack(raw_p).cpu().detach().numpy()
         sum_p = np.sum(raw_p)
         if sum_p > 0:
             normalized_p = np.array(raw_p) / np.sum(raw_p)
@@ -244,14 +244,12 @@ class InContextClassifier(Classifier):
     ) -> Dict[str, float]:
         ordered_target = {col: target[col] for col in self.input_cols if col in target}
 
-        example_dataset = self.select_training_examples(target, random_seed=random_seed)
-        # Uncomment below call and comment out above call to run without
-        # minor semantic search query formatting bug
-        # example_dataset = self.select_training_examples(
-        #     ordered_target, random_seed=random_seed
-        # )
+        example_dataset = self.select_training_examples(
+            ordered_target, random_seed=random_seed
+        )
 
         prompt = self.format_prompt(ordered_target, example_dataset)
         if should_print_prompt:
             print(prompt)
+
         return self._classify_prompt(prompt)

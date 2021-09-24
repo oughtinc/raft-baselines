@@ -84,26 +84,26 @@ Label: 77. wrong_exchange_rate_for_cash_withdrawal
 Query: After I transferred money the balance remained the same.
 Label: 7. balance_not_updated_after_bank_transfer
 
-Query: Why is there extra cash in my account?
-Label: 22. cash_withdrawal_not_recognised
+Query: Why is my money not in my account. I have already sent it out.
+Label: 8. balance_not_updated_after_cheque_or_cash_deposit
 
-Query: How long does a transfer from a UK account take? I just made one and it doesn't seem to be working, wondering if everything is okay
-Label: 7. balance_not_updated_after_bank_transfer
+Query: I didn't get all the cash I asked for
+Label: 76. wrong_amount_of_cash_received
 
 Query: Why am I unable to transfer money when I was able to before?
 Label: 9. beneficiary_not_allowed
 
-Query: What is the $1 transaction on my account?
-Label: 36. extra_charge_on_statement
-
-Query: I didn't get all the cash I asked for
-Label: 76. wrong_amount_of_cash_received
+Query: Why is there extra cash in my account?
+Label: 22. cash_withdrawal_not_recognised
 
 Query: I have a strange transaction for £1 on my statement, what is that?
 Label: 36. extra_charge_on_statement
 
 Query: I didn't make the direct debit payment on my account.
 Label: 30. direct_debit_payment_not_recognised
+
+Query: What is the $1 transaction on my account?
+Label: 36. extra_charge_on_statement
 
 Query: How can I tell the source for my available funds?
 Label: 71. verify_source_of_funds

@@ -8,15 +8,12 @@ Possible labels:
 1. TAI safety research
 2. not TAI safety research
 
-Title: Two Alternatives to Logical Counterfactuals
-Abstract Note: The following is a critique of the idea of logical counterfactuals. The idea of logical counterfactuals has appeared in previous agent foundations research (especially at MIRI): here, here. “…
-Publication Title: Unstable Ontology
-Item Type: blogPost
-Publication Year: 2020
-Label: TAI safety research
-
 Title: One Decade of Universal Artificial Intelligence
 Abstract Note: The first decade of this century has seen the nascency of the first mathematical theory of general artificial intelligence. This theory of Universal Artificial Intelligence (UAI) has made significant contributions to many theoretical, philosophical, and practical AI questions. In a series of papers culminating in book (Hutter, 2005), an exciting sound and complete mathematical model for a super intelligent agent (AIXI) has been developed and rigorously analyzed. While nowadays most AI researchers avoid discussing intelligence, the award-winning PhD thesis (Legg, 2008) provided the philosophical embedding and investigated the UAI-based universal measure of rational intelligence, which is formal, objective and non-anthropocentric. Recently, effective approximations of AIXI have been derived and experimentally investigated in JAIR paper (Veness et al. 2011). This practical breakthrough has resulted in some impressive applications, finally muting earlier critique that UAI is only a theory. For the first time, without providing any domain knowledge, the same agent is able to self-adapt to a diverse range of interactive environments. For instance, AIXI is able to learn from scratch to play TicTacToe, Pacman, Kuhn Poker, and other games by trial and error, without even providing the rules of the games. These achievements give new hope that the grand goal of Artificial General Intelligence is not elusive. This article provides an informal overview of UAI in context. It attempts to gently introduce a very
+Label: TAI safety research
+
+Title: Coherence arguments do not imply goal-directed behavior
+Abstract Note: One of the most pleasing things about probability and expected utility theory is that there are many coherence arguments that suggest that these are the “correct” ways to reason. If you deviate from what the theory prescribes, then you must be executing a dominated strategy. There must be some other strategy that never does any worse than your strategy, but does strictly better than your strategy with certainty in at least one situation. There’s a good explanation of these arguments here. We shouldn’t expect mere humans to be able to notice any failures of coherence in a superintelligent agent, since if we could notice these failures, so could the agent. So we should expect that powerful agents appear coherent to us. (Note that it is possible that the agent doesn’t fix the failures because it would not be worth it -- in this case, the argument says that we will not be able to notice any exploitable failures.) Taken together, these arguments suggest that we should model an agent much smarter than us as an expected utility (EU) maximizer. And many people agree that EU maximizers are dangerous. So does this mean we’re doomed? I don’t think so: it seems to me that the problems about EU maximizers that we’ve identified are actually about goal-directed behavior or explicit reward maximizers. The coherence theorems say nothing about whether an AI system must look like one of these
 Label: TAI safety research
 
 Title: Teaching A.I. Systems to Behave Themselves (Published 2017)
@@ -26,19 +23,19 @@ Item Type: newspaperArticle
 Publication Year: 2017
 Label: not TAI safety research
 
-Title: The Role and Limits of Principles in AI Ethics: Towards a Focus on Tensions
-Abstract Note: The last few years have seen a proliferation of principles for AI ethics. There is substantial overlap between different sets of principles, with widespread agreement that AI should be used for the common good, should not be used to harm people or undermine their rights, and should respect widely held values such as fairness, privacy, and autonomy. While articulating and agreeing on principles is important, it is only a starting point. Drawing on comparisons with the field of bioethics, we highlight some of the limitations of principles: in particular, they are often too broad and high-level to guide ethics in practice. We suggest that an important next step for the field of AI ethics is to focus on exploring the tensions that inevitably arise as we try to implement principles in practice. By explicitly recognising these tensions we can begin to make decisions about how they should be resolved in specific cases, and develop frameworks and guidelines for AI ethics that are rigorous and practically relevant. We discuss some different specific ways that tensions arise in AI ethics, and what processes might be needed to resolve them.
-Publication Title: AIES '19: Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society
-Item Type: conferencePaper
-Publication Year: 2019
-Label: TAI safety research
-
 Title: Advancing rational analysis to the algorithmic level
 Abstract Note: Abstract             The commentaries raised questions about normativity, human rationality, cognitive architectures, cognitive constraints, and the scope or resource rational analysis (RRA). We respond to these questions and clarify that RRA is a methodological advance that extends the scope of rational modeling to understanding cognitive processes, why they differ between people, why they change over time, and how they could be improved.
 Publication Title: Behavioral and Brain Sciences
 Item Type: journalArticle
 Publication Year: 2020
 Label: not TAI safety research
+
+Title: The Role and Limits of Principles in AI Ethics: Towards a Focus on Tensions
+Abstract Note: The last few years have seen a proliferation of principles for AI ethics. There is substantial overlap between different sets of principles, with widespread agreement that AI should be used for the common good, should not be used to harm people or undermine their rights, and should respect widely held values such as fairness, privacy, and autonomy. While articulating and agreeing on principles is important, it is only a starting point. Drawing on comparisons with the field of bioethics, we highlight some of the limitations of principles: in particular, they are often too broad and high-level to guide ethics in practice. We suggest that an important next step for the field of AI ethics is to focus on exploring the tensions that inevitably arise as we try to implement principles in practice. By explicitly recognising these tensions we can begin to make decisions about how they should be resolved in specific cases, and develop frameworks and guidelines for AI ethics that are rigorous and practically relevant. We discuss some different specific ways that tensions arise in AI ethics, and what processes might be needed to resolve them.
+Publication Title: AIES '19: Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society
+Item Type: conferencePaper
+Publication Year: 2019
+Label: TAI safety research
 
 Title: Computer Simulations as a Technological Singularity in the Empirical Sciences
 Abstract Note: SummaryIn this paper, I discuss the conditions necessary for computer simulations to qualify as a technological singularity in the empirical sciences. A technological singularity encompasses two claims: (a) the enhancement of human cognitive capacities by the computer, and (b) their displacement from the center of the production of knowledge. For computer simulations to be a technological singularity, then, they must fulfill points (a) and (b) above. Although point (a) is relatively unproblematic, point (b) needs further analysis. In particular, in order to show that humans could be displaced from the center of the production of knowledge, it is necessary to establish the reliability of computer simulations. That is, I need to show that computer simulations are reliable processes that render, most of the time, valid results. To be a reliable process, in turn, means that simulations accurately represent the target system and carry out error-free computations. I analyze verification and validation methods as the grounds for such representation accuracy and error-free computations. Since the aim is to entrench computer simulations as a technological singularity, the entire analysis must be careful to keep human agents out of the picture.

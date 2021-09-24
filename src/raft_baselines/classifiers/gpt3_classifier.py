@@ -11,6 +11,7 @@ from raft_baselines.utils.gpt3_utils import (
 from raft_baselines.utils.tokenizers import TransformersTokenizer
 
 GPT3_MAX_TOKENS = 2048
+tokenizer = TransformersTokenizer("gpt2")
 
 
 class GPT3Classifier(InContextClassifier):
@@ -21,8 +22,6 @@ class GPT3Classifier(InContextClassifier):
         search_engine: str = "ada",
         **kwargs,
     ) -> None:
-        tokenizer = TransformersTokenizer("gpt2")
-
         super().__init__(
             *args,
             tokenizer=tokenizer,

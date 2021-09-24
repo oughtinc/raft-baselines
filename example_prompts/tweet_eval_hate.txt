@@ -3,107 +3,101 @@ Possible labels:
 1. hate speech
 2. not hate speech
 
+Tweet: International migration from sub-Saharan Africa has grown dramatically since 2010
+Label: not hate speech
+
+Tweet: World Relief is continuing to provide legal aid and advocating for immigrant families who have been separated at the U.S.-Mexico border. You can
+Label: not hate speech
+
+Tweet: The Ethiopia-Eritrea rapprochement: what does it mean for refugees?
+Label: not hate speech
+
+Tweet: It's clear that the administration's attempts to punish local governments for refusing to cooperate with immigration enforcement are unconstitutional. The administration should focus on treating
+Label: not hate speech
+
+Tweet: The first sexual attack against a woman happened in Hungary. The criminal is a "legal" afghan rapefugee. This is how Or
+Label: hate speech
+
+Tweet: Syria's military continues to advance in the south west
+Label: not hate speech
+
+Tweet: President Trump Weekly Address ‘“ Immigration ReformÂ Needed‘¦
+Label: not hate speech
+
 Tweet: They do not need them, I do not need them nor do I require them to enrich my life. #Stoptheinvasion #Brexit #
 Label: hate speech
 
 Tweet: Why weren't the democrats in the streets marching for the separated families of people like Jamiel Shaw when he was separated from his son forever
 Label: hate speech
 
-Tweet: World Relief is continuing to provide legal aid and advocating for immigrant families who have been separated at the U.S.-Mexico border. You can
-Label: not hate speech
-
-Tweet: The first sexual attack against a woman happened in Hungary. The criminal is a "legal" afghan rapefugee. This is how Or
-Label: hate speech
-
-Tweet: It's clear that the administration's attempts to punish local governments for refusing to cooperate with immigration enforcement are unconstitutional. The administration should focus on treating
-Label: not hate speech
-
-Tweet: International migration from sub-Saharan Africa has grown dramatically since 2010
-Label: not hate speech
-
-Tweet: The Ethiopia-Eritrea rapprochement: what does it mean for refugees?
-Label: not hate speech
-
-Tweet: UK Pensioner Faces 350 Lashes In Saudi Arabia why does this country exist it does nothing for migrants picks on old men no help from anyone
-Label: not hate speech
-
-Tweet: Its time - to stop the immigration - to USA ! Specially from 40 muslim countries. The president named it: SHITHOLE-
-Label: hate speech
-
-Tweet: Talent- Meeting up with complete strangers for sex
+Tweet: UN wants ‘˜immediate halt’ to separation of migrant families in US #Trumpadministration #UnitedNations...
 Label: not hate speech
 
 Tweet: Anybody can dig a hole and plant a tree. But to make sure it survives, you have to nurture it, you have to suffer
 Label: not hate speech
 
-Tweet: Syria's military continues to advance in the south west
-Label: not hate speech
-
-Tweet: | Woman who accused Nelly of rape wants to drop charges
-Label: not hate speech
-
-Tweet: Germany Navy rescued 22.000 refugees in the middlesea. Germany has not enough refugees, it wants more! by state duty. The
-Label: not hate speech
-
-Tweet: “When Mexico sends its people, they’re not sending their best... They’re bringing drugs. They’re bringing
-Label: hate speech
-
-Tweet: Jennifer Lawrence is complaining about being a whore, meanwhile she's punching old Asian women in face who are sewing her costumes for her
-Label: not hate speech
-
-Tweet: This is outrageous! But, sadly, this kind of corruption is what we've gotten used to with our current administration! 😠
-Label: not hate speech
-
-Tweet: UN wants ‘˜immediate halt’ to separation of migrant families in US #Trumpadministration #UnitedNations...
+Tweet: Talent- Meeting up with complete strangers for sex
 Label: not hate speech
 
 Tweet: Important note: not all women do this and tale responsibility for their actions, just like not all men are assholes.
 Label: not hate speech
 
-Tweet: cormacs such a cunt won’t even let me squeeze his blackheads pussy bitch
+Tweet: Its time - to stop the immigration - to USA ! Specially from 40 muslim countries. The president named it: SHITHOLE-
 Label: hate speech
 
-Tweet: Stop trying to please everyone, you're not my cock... Please yourself
+Tweet: UK Pensioner Faces 350 Lashes In Saudi Arabia why does this country exist it does nothing for migrants picks on old men no help from anyone
 Label: not hate speech
 
-Tweet: We are excited to host the #ImmigrantStories film screening and panel today with @user to show how the Trump administration’s
+Tweet: This is outrageous! But, sadly, this kind of corruption is what we've gotten used to with our current administration! 😠
 Label: not hate speech
 
-Tweet: I didn’t realize girls who wear huge bows in their hair called other women “cunt”. “Northern Bell
-Label: not hate speech
-
-Tweet: Germany: Islamic-inspired children’s park in Berlin to introduce children to Islam and the Islamic culture of the refugees - Free Speech Time -
-Label: hate speech
-
-Tweet: #TakeAKnee trump's a chump! @user is the real deal-helping so many on his journey through greatness! Even
-Label: not hate speech
-
-Tweet: How keyboard gangsters feel leaving their stupid ass comments
+Tweet: Germany Navy rescued 22.000 refugees in the middlesea. Germany has not enough refugees, it wants more! by state duty. The
 Label: not hate speech
 
 Tweet: Women want u to automatically believe women who scream rape they don't understand our position....
 Label: hate speech
 
-Tweet: HOLLERINGGGGGGG. stupid baby bitch.
-Label: hate speech
-
-Tweet: US Navy Seal, which killed Osama wrote a book. It tells how this specialforces work today.
+Tweet: | Woman who accused Nelly of rape wants to drop charges
 Label: not hate speech
 
-Tweet: HOW REFRESHING! In South Korea, there is no such thing as 'political correctness" when it comes to dealing with Muslim refugee w
-Label: hate speech
+Tweet: I didn’t realize girls who wear huge bows in their hair called other women “cunt”. “Northern Bell
+Label: not hate speech
 
-Tweet: President Trump Weekly Address ‘“ Immigration ReformÂ Needed‘¦
+Tweet: We are excited to host the #ImmigrantStories film screening and panel today with @user to show how the Trump administration’s
+Label: not hate speech
+
+Tweet: Stop trying to please everyone, you're not my cock... Please yourself
 Label: not hate speech
 
 Tweet: New to Twitter-- any men on here know what the process is to get #verified?
 Label: not hate speech
 
+Tweet: US Navy Seal, which killed Osama wrote a book. It tells how this specialforces work today.
+Label: not hate speech
+
+Tweet: Jennifer Lawrence is complaining about being a whore, meanwhile she's punching old Asian women in face who are sewing her costumes for her
+Label: not hate speech
+
+Tweet: “When Mexico sends its people, they’re not sending their best... They’re bringing drugs. They’re bringing
+Label: hate speech
+
+Tweet: Germany: Islamic-inspired children’s park in Berlin to introduce children to Islam and the Islamic culture of the refugees - Free Speech Time -
+Label: hate speech
+
+Tweet: HOLLERINGGGGGGG. stupid baby bitch.
+Label: hate speech
+
 Tweet: Homeland Security says he is a REFUGEE.  Iraqi refugee charged with attempted murder of Colorado police officer - - @user
 Label: not hate speech
 
-Tweet: RT @user Her:I don't get what u want outta this relationship Him:Well, I was only looking for a bj
+Tweet: cormacs such a cunt won’t even let me squeeze his blackheads pussy bitch
+Label: hate speech
+
+Tweet: How keyboard gangsters feel leaving their stupid ass comments
 Label: not hate speech
+
+Tweet: HOW REFRESHING! In South Korea, there is no such thing as 'political correctness" when it comes to dealing with Muslim refugee w
+Label: hate speech
 
 Tweet: Curious to know how @user delivers emergency food supplies to #refugees and other vulnerable people around the world? Watch this video:
 Label: not hate speech
@@ -114,14 +108,11 @@ Label: not hate speech
 Tweet: I hate bitches that are always mad at the world for no reason like bitch stfu and be happy hoe
 Label: hate speech
 
-Tweet: @user Exactly! Why would Americans vote for anyone that supports these absurd policies? IMO it is treason and self destruction to vote for politicians that
-Label: hate speech
-
-Tweet: @user @user Just choke on your salad sandwich already. Those Men did not die during the Gulf War and do you really think that it
+Tweet: #TakeAKnee trump's a chump! @user is the real deal-helping so many on his journey through greatness! Even
 Label: not hate speech
 
-Tweet: @user It's kind of funny, really. Were the space aliens illegal? Now we need a wall & a roof! I think this country
-Label: hate speech
+Tweet: RT @user Her:I don't get what u want outta this relationship Him:Well, I was only looking for a bj
+Label: not hate speech
 
 Tweet: @user @user BUT. I would bet you're not looking for facts.  That's why you obfuscate.President Trump at NATO:
 Label: hate speech
@@ -129,26 +120,35 @@ Label: hate speech
 Tweet: @user @user @user Imagine THE SIZEof THAT RED WAVE !!GOD BLESS TRUMP!Build That Wall#BuildThatWall
 Label: hate speech
 
+Tweet: @user @user 2 hysterical women in the US Senate
+Label: hate speech
+
+Tweet: @user @user Just choke on your salad sandwich already. Those Men did not die during the Gulf War and do you really think that it
+Label: not hate speech
+
+Tweet: @user Noely I see you've become hysterical since I last saw you. Don't blam you one bit, you're in
+Label: not hate speech
+
+Tweet: @user Exactly! Why would Americans vote for anyone that supports these absurd policies? IMO it is treason and self destruction to vote for politicians that
+Label: hate speech
+
+Tweet: @user Going to be where no one will leave the house or even look at a woman because she will claim “rape”.…
+Label: hate speech
+
+Tweet: Dont worry @user you are and will always be the most hysterical woman.
+Label: hate speech
+
+Tweet: @user thanks for ruining a beloved song from “The Sound of Music” by using that extremely creepy electronic version in your commercial.
+Label: not hate speech
+
 Tweet: @user mmm perfect body and so am i am now come here girl i got a big cock for u to play with ;)
 Label: hate speech
 
 Tweet: @user One man one vote right?Yet here we have one man assuming he can demand the importation of millions of non citizens for  HIS
 Label: hate speech
 
-Tweet: @user Noely I see you've become hysterical since I last saw you. Don't blam you one bit, you're in
-Label: not hate speech
-
-Tweet: @user @user 2 hysterical women in the US Senate
+Tweet: @user It's kind of funny, really. Were the space aliens illegal? Now we need a wall & a roof! I think this country
 Label: hate speech
-
-Tweet: Dont worry @user you are and will always be the most hysterical woman.
-Label: hate speech
-
-Tweet: @user Going to be where no one will leave the house or even look at a woman because she will claim “rape”.…
-Label: hate speech
-
-Tweet: @user thanks for ruining a beloved song from “The Sound of Music” by using that extremely creepy electronic version in your commercial.
-Label: not hate speech
 
 Tweet: @user Skank traitor bitch @user
 Label: hate speech
