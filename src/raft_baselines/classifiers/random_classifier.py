@@ -1,5 +1,5 @@
 import random
-from typing import Mapping
+from typing import Mapping, Optional
 
 import datasets
 
@@ -13,7 +13,7 @@ class RandomClassifier(Classifier):
         super().__init__(training_data)
         random.seed(seed)
 
-    def classify(self, target: Mapping[str, str]) -> Mapping[str, float]:
+    def classify(self, target: Mapping[str, str], random_seed: Optional[int] = None) -> Mapping[str, float]:
         result = {c: 0.0 for c in self.classes}
         result[random.choice(self.classes)] = 1.0
 
