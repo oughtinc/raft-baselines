@@ -167,7 +167,8 @@ class InContextClassifier(Classifier):
     def select_training_examples(
         self, target: Mapping[str, str], random_seed: Optional[int] = None
     ) -> datasets.Dataset:
-        if not self.do_semantic_selection:
+        # handle edge case where target is blank (all the fields we selected are empty)
+        if not self.do_semantic_selection or not self.format_dict(target):
             random.seed(random_seed)
 
             n_ex = self.num_prompt_training_examples
