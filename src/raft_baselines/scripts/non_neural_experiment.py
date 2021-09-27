@@ -20,8 +20,7 @@ def base_config():
         "max_df": 1.0,
         "min_df": 0.0
     }
-    classifier_kwargs = {
-    }
+    classifier_kwargs = {}
     configs = datasets.get_dataset_config_names("ought/raft")
     # controls which dimension is tested, out of the 3 reported in the paper
     # Other options: do_semantic_selection and num_prompt_training_examples
