@@ -37,7 +37,7 @@ The other classifiers available are:
 For example, to generate predictions from DistilGPT-2 on the first 10 examples of the ADE Corpus you can run:
 
 ```buildoutcfg
-python -m raft_baselines.scripts.raft_predict with n_test=10 'configs=["ade_corpus_v2"]' classifier_name=TransformersCausalLMClassifier 'classifier_kwargs={"model_type":"gpt2"}'
+python -m raft_baselines.scripts.raft_predict with n_test=10 'configs=["ade_corpus_v2"]' classifier_name=TransformersCausalLMClassifier 'classifier_kwargs={"model_type":"distilgpt2"}'
 ```
 
 In order to run experiments with GPT-3, you will need to have an OpenAI API key. Create a file called `.env` and put your API key there. Copy the format of `.env-example`:
