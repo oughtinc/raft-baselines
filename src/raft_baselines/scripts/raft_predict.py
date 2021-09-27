@@ -42,6 +42,17 @@ def base_config():
         # change to davinci to replicate results from the paper
         # "engine": "ada",
     }
+    if classifier_name in ('NaiveBayesClassifier', 'SVMClassifier', 'AdaBoostClassifier'):
+        classifier_kwargs = {
+            "vectorizer_kwargs": {
+                "strip_accents": 'unicode',
+                "lowercase": True,
+                "ngram_range": (1, 5),
+                "max_df": 1.0,
+                "min_df": 0.0
+             },
+            "model_kwargs": {}
+        }
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples
     n_test = 5
