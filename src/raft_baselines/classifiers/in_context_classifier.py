@@ -7,7 +7,6 @@ import importlib.resources
 
 import numpy as np
 import datasets
-import torch
 
 from raft_baselines.classifiers.classifier import Classifier
 from raft_baselines import data
