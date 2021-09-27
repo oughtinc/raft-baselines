@@ -47,4 +47,4 @@ class TransformersZeroShotPipelineClassifier(Classifier):
         target_str = self.format_dict(ordered_target)
 
         output = self.clf(target_str, candidate_labels=self.classes)
-        return {clas: score for clas, score in zip(self.classes, output["scores"])}
+        return {clas: score for clas, score in zip(output["labels"], output["scores"])}
