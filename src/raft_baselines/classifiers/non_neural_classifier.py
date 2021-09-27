@@ -10,8 +10,10 @@ from raft_baselines.classifiers.classifier import Classifier
 
 class NonNeuralClassifier(Classifier):
     def __init__(self, training_data: datasets.Dataset,
-                 **vectorizer_kwargs):
+                 vectorizer_kwargs: Dict = None, model_kwargs: Dict = None, **kwargs):
         super().__init__(training_data)
+        if vectorizer_kwargs is None:
+            vectorizer_kwargs = {}
         cleaned_text_train = [self.stringify_row(row) for row in self.training_data]
 
         self.vectorizer = CountVectorizer(**vectorizer_kwargs).fit(cleaned_text_train)
@@ -21,10 +23,6 @@ class NonNeuralClassifier(Classifier):
     def stringify_row(self, row):
         return ". ".join(row[input_col] for input_col in self.input_cols
                          if input_col in row)
-
-    @abstractmethod
-    def train(self, **classifier_kwargs):
-        return NotImplementedError
 
     @abstractmethod
     def _classify(self, vector_input):

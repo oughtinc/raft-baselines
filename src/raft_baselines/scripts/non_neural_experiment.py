@@ -12,15 +12,17 @@ raft_experiment.observers.append(observer)
 
 @raft_experiment.config
 def base_config():
-    classifier_name = "NaiveBayesClassifier"
-    vectorizer_kwargs = {
-        "strip_accents": 'unicode',
-        "lowercase": True,
-        "ngram_range": (1, 4),
-        "max_df": 1.0,
-        "min_df": 0.0
+    classifier_name = "AdaBoostClassifier"
+    classifier_kwargs = {
+        "vectorizer_kwargs": {
+            "strip_accents": 'unicode',
+            "lowercase": True,
+            "ngram_range": (1, 5),
+            "max_df": 1.0,
+            "min_df": 0.0
+         },
+        "model_kwargs": {}
     }
-    classifier_kwargs = {}
     configs = datasets.get_dataset_config_names("ought/raft")
     # controls which dimension is tested, out of the 3 reported in the paper
     # Other options: do_semantic_selection and num_prompt_training_examples
@@ -38,7 +40,7 @@ def load_datasets_train(configs):
 
 @raft_experiment.capture
 def test_experiment(
-    train_datasets, classifier_name, vectorizer_kwargs,
+    train_datasets, classifier_name,
     classifier_kwargs, random_seed
 ):
     classifier_cls = getattr(classifiers, classifier_name)
@@ -54,8 +56,7 @@ def test_experiment(
 
             # Non-neural classifiers (i.e. non-GPT style) should be explicitly trained
             #   (mostly, this is to allow two separate kwargs arguments)
-            classifier = classifier_cls(train, **vectorizer_kwargs)
-            classifier.train(**classifier_kwargs)
+            classifier = classifier_cls(train, **classifier_kwargs)
 
             def predict(example):
                 del example["Label"]

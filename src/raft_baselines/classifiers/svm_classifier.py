@@ -14,13 +14,16 @@ class DummyClassifier:
 
 
 class SVMClassifier(NonNeuralClassifier):
-    def train(self, **classifier_kwargs):
+    def __init__(self, training_data, vectorizer_kwargs, model_kwargs, **kwargs):
+        super().__init__(training_data, vectorizer_kwargs, model_kwargs, **kwargs)
+        if model_kwargs is None:
+            model_kwargs = {}
         # Sometimes breaks if there's only one label in the training data.
         # Hack-y solution.
         if len(set(self.training_data['Label'])) == 1:
             self.classifier = DummyClassifier(self.training_data['Label'][0])
             return
-        self.classifier = LinearSVC(**classifier_kwargs)
+        self.classifier = LinearSVC(**model_kwargs)
         self.classifier.fit(self.vectorized_training_data, self.training_data['Label'])
 
     def _classify(self, vector_input):
