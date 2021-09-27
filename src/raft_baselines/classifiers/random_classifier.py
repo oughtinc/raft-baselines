@@ -1,5 +1,5 @@
 import random
-from typing import Mapping
+from typing import Mapping, Optional
 
 import datasets
 
@@ -16,7 +16,8 @@ class RandomClassifier(Classifier):
     def train(self, **classifier_kwargs):
         pass
 
-    def classify(self, target, random_seed=None, should_print_prompt=False):
+    def classify(self, target: Mapping[str, str], random_seed: Optional[int] = None,
+                 should_print_prompt: bool = False) -> Mapping[str, float]:
         if random_seed is not None:
             random.seed(random_seed)
         result = {c: 0.0 for c in self.classes}

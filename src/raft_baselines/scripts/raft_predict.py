@@ -40,7 +40,7 @@ def base_config():
     classifier_name = "GPT3Classifier"
     classifier_kwargs = {
         # change to davinci to replicate results from the paper
-        "engine": "ada",
+        # "engine": "ada",
     }
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples
