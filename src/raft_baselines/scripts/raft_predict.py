@@ -53,6 +53,12 @@ def base_config():
              },
             "model_kwargs": {}
         }
+        if classifier_name == "NaiveBayesClassifier":
+            classifier_kwargs['model_kwargs']['alpha'] = 0.05
+        elif classifier_name == "AdaBoostClassifier":
+            classifier_kwargs['model_kwargs']['max_depth'] = 3
+            classifier_kwargs['model_kwargs']['n_estimators'] = 100
+
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples
     n_test = 5
@@ -128,9 +134,14 @@ def prepare_predictions_folder():
 def write_predictions(labeled, config):
     int2str = labeled.features["Label"].int2str
 
-    sacred_pred_file = os.path.join(observer.dir, "predictions", f"{config}.csv")
+    config_dir = os.path.join(observer.dir, "predictions", config)
+    if os.path.isdir(config_dir):
+        shutil.rmtree(config_dir)
+    os.mkdir(config_dir)
 
-    with open(sacred_pred_file, "w", newline="") as f:
+    pred_file = os.path.join(config_dir, "predictions.csv")
+
+    with open(pred_file, "w", newline="") as f:
         writer = csv.writer(
             f,
             quotechar='"',
