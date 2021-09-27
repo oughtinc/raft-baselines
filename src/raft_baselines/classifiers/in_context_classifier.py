@@ -202,11 +202,16 @@ class InContextClassifier(Classifier):
         if self.truncation_params is None:
             raise ValueError("No truncation strategy provided.")
 
+        num_examples = len(example_dataset) if example_dataset else 0
         max_end_example_tokens, max_train_example_tokens = self.max_example_lengths(
-            len(example_dataset), target
+            num_examples, target
         )
-        example_str = self.render_examples(
-            example_dataset, max_tokens_per_example=max_train_example_tokens
+        example_str = (
+            self.render_examples(
+                example_dataset, max_tokens_per_example=max_train_example_tokens
+            )
+            if example_dataset
+            else ""
         )
         example_str_and_sep = "" if example_str == "" else example_str + self.separator
 
@@ -243,8 +248,10 @@ class InContextClassifier(Classifier):
     ) -> Dict[str, float]:
         ordered_target = {col: target[col] for col in self.input_cols if col in target}
 
-        example_dataset = self.select_training_examples(
-            ordered_target, random_seed=random_seed
+        example_dataset = (
+            self.select_training_examples(ordered_target, random_seed=random_seed)
+            if self.num_prompt_training_examples > 0
+            else None
         )
 
         prompt = self.format_prompt(ordered_target, example_dataset)
