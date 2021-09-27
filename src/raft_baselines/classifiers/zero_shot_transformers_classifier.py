@@ -44,7 +44,7 @@ class TransformersZeroShotPipelineClassifier(Classifier):
         :return: Dict where the keys are class names and the values are probabilities.
         """
         ordered_target = {col: target[col] for col in self.input_cols if col in target}
-        target_str = self.format_dict(target)
+        target_str = self.format_dict(ordered_target)
 
         output = self.clf(target_str, candidate_labels=self.classes)
         return {clas: score for clas, score in zip(self.classes, output["scores"])}
