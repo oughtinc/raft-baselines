@@ -13,6 +13,9 @@ class RandomClassifier(Classifier):
         super().__init__(training_data)
         random.seed(seed)
 
+    def train(self, **classifier_kwargs):
+        pass
+
     def classify(self, target, random_seed=None, should_print_prompt=False):
         if random_seed is not None:
             random.seed(random_seed)

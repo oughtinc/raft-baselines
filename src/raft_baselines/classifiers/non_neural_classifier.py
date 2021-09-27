@@ -26,10 +26,14 @@ class NonNeuralClassifier(Classifier):
     def train(self, **classifier_kwargs):
         return NotImplementedError
 
+    @abstractmethod
+    def _classify(self, vector_input):
+        return NotImplementedError
+
     def classify(self, target: Mapping[str, str], random_seed: Optional[int] = None,
                  should_print_prompt: bool = False) -> Dict[str, float]:
         simple_input = self.stringify_row(target)
         vector_input = self.vectorizer.transform((simple_input,))
-        result = self.classifier.predict_proba(vector_input)
+        result = self._classify(vector_input)
         return {self.class_label_to_string(int(cls)): prob
                 for prob, cls in zip(result[0], self.classifier.classes_)}
