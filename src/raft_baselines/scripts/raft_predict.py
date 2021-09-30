@@ -40,12 +40,13 @@ def base_config():
     classifier_name = "GPT3Classifier"
     classifier_kwargs = {
         # change to davinci to replicate results from the paper
-        "engine": "ada",
+        # "engine": "ada",
     }
     configs = datasets.get_dataset_config_names("ought/raft")
     # set n_test to -1 to run on all test examples
     n_test = 5
     random_seed = 42
+    zero_shot = False
 
 
 @raft_experiment.capture
@@ -62,10 +63,11 @@ def load_datasets_train(configs):
     return train_datasets, test_datasets
 
 
-def make_extra_kwargs(config):
+@raft_experiment.capture
+def make_extra_kwargs(config: str, zero_shot: bool):
     extra_kwargs = {
         "config": config,
-        "num_prompt_training_examples": NUM_EXAMPLES[config],
+        "num_prompt_training_examples": NUM_EXAMPLES[config] if not zero_shot else 0,
     }
     if config == "banking_77":
         extra_kwargs["add_prefixes"] = True
