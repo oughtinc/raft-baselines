@@ -4,3 +4,4 @@ from .transformers_causal_lm_classifier import TransformersCausalLMClassifier
 from .naive_bayes_classifier import NaiveBayesClassifier
 from .svm_classifier import SVMClassifier
 from .adaboost_classifier import AdaBoostClassifier
+from .zero_shot_transformers_classifier import TransformersZeroShotPipelineClassifier

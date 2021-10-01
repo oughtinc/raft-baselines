@@ -19,7 +19,7 @@ You may have to run the above command with `sudo` prepended for permissions.
 
 # Starter Kit
 
-A [starter kit notebook](src/raft_baselines/scripts/starter_kit.ipynb) walks through the basics of making predictions using models from the [HuggingFace Model Hub](https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads).
+A [starter kit notebook](src/raft_baselines/scripts/starter_kit.ipynb) walks through the basics of making predictions using models from the [HuggingFace Model Hub](https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads). There's also a [Colab version](https://colab.research.google.com/drive/1TQtHG-Wf2CgYGSD9e7_uJWIdiK5HNniV).
 
 # RAFT Predict
 
