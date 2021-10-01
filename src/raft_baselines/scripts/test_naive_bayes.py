@@ -1,10 +1,9 @@
 import datasets
 
 from raft_baselines.classifiers import NaiveBayesClassifier
-from raft_baselines.classifiers import RandomClassifier
 
 train = datasets.load_dataset(
-    "ought/raft", "banking_77", split="train"
+    "ought/raft", "neruips_impact_statement_risks", split="train"
 )
 
 classifier = NaiveBayesClassifier(train)
