@@ -3,7 +3,7 @@ import datasets
 from raft_baselines.classifiers import NaiveBayesClassifier
 
 train = datasets.load_dataset(
-    "ought/raft", "neruips_impact_statement_risks", split="train"
+    "ought/raft", "neurips_impact_statement_risks", split="train"
 )
 
 classifier = NaiveBayesClassifier(train)
