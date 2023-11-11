@@ -2,13 +2,15 @@ from typing import Dict, Optional, List, Mapping
 
 import numpy as np
 import datasets
+from sentence_transformers import util
+import torch
 
 from raft_baselines.classifiers.in_context_classifier import InContextClassifier
 from raft_baselines.utils.gpt3_utils import (
     complete,
-    search,
 )
 from raft_baselines.utils.tokenizers import TransformersTokenizer
+from raft_baselines.utils.embedders import OpenAIEmbedder
 
 GPT3_MAX_TOKENS = 2048
 tokenizer = TransformersTokenizer("gpt2")
@@ -18,19 +20,18 @@ class GPT3Classifier(InContextClassifier):
     def __init__(
         self,
         *args,
-        engine: str = "ada",
-        search_engine: str = "ada",
+        model: str = "ada",
         **kwargs,
     ) -> None:
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.model: str = model
+        self.similarity_embedder = OpenAIEmbedder(max_tokens=GPT3_MAX_TOKENS)
         super().__init__(
             *args,
             tokenizer=tokenizer,
             max_tokens=GPT3_MAX_TOKENS,
             **kwargs,
         )
-
-        self.engine: str = engine
-        self.search_engine: str = search_engine
 
     def semantically_select_training_examples(
         self, target: Mapping[str, str]
@@ -41,23 +42,19 @@ class GPT3Classifier(InContextClassifier):
             )
             for row in self.training_data
         )
+        formatted_target = self.format_dict(target)
 
-        search_results = search(
-            formatted_examples_without_labels,
-            self.format_dict(target),
-            self.search_engine,
-        )
+        # adapted from https://towardsdatascience.com/semantic-similarity-using-transformers-8f3cb5bf66d6
+        target_embedding = self.similarity_embedder(tuple([formatted_target]))
+        example_embeddings = self.similarity_embedder(formatted_examples_without_labels)
+        
+        similarity_scores = util.pytorch_cos_sim(target_embedding, example_embeddings)[
+            0
+        ]
+        
+        print(self.device)
 
-        sorted_indices = list(
-            map(
-                lambda result: result["document"],  # type: ignore
-                sorted(
-                    search_results,
-                    key=lambda result: -result["score"],  # type: ignore
-                ),
-            )
-        )
-
+        sorted_indices = torch.argsort(-similarity_scores.to(self.device))
         return self.training_data.select(
             list(reversed(sorted_indices[: self.num_prompt_training_examples]))
         )
@@ -88,10 +85,10 @@ class GPT3Classifier(InContextClassifier):
         response = complete(
             prompt,
             temperature=0.0,
-            engine=self.engine,
+            model=self.model,
             max_tokens=1,
         )
-        logprobs: Dict[str, float] = response["choices"][0]["logprobs"]["top_logprobs"][
+        logprobs: Dict[str, float] = response.choices[0].logprobs.top_logprobs[
             0
         ]
 
